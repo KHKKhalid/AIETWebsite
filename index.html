@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Alexandria Higher Institute of Engineering & Technology</title>
+    <!-- jQuery -->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!--nicscroll -->
+    <script src="js/jquery.nicescroll.js"></script>
+    <script type="text/javascript">$(document).ready(function() { $("html").niceScroll({cursorcolor:"#8d1f1e",cursorwidth:"7px"});});</script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(
+
+  function() { 
+
+    $(".vnav").niceScroll({cursorcolor:"#00F"});
+
+  }
+
+);
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+  .vid-header {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .blue-effect {
+  width: 100%;
+  height: 101vh;
+  z-index: -99;                          
+  background: -webkit-linear-gradient(rgba(0, 0, 48, 0.37), #FFF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(0, 0, 48, 0.37), #FFF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(0, 0, 48, 0.37), #FFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(141, 31, 30, 0.69), rgba(255, 255, 255, 0.79)); /* Standard syntax (must be last) */                          
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  }
+  .vid-header video {
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+    -webkit-filter: blur(1px) brightness(1.2) contrast(0.8) grayscale(0.2) sepia(0.6);
+  }
+
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+  }
+  .mainTxt {
+    color: #8d1f1e;
+    margin-top: 70px;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+  .navbar-default {
+    background-color: rgba(3, 1, 25, 0.32);
+    border-color: transparent;
+    box-shadow: 0px 2px 15px black;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: white;
+  }
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #8D1F1E;
+    background-color: rgba(3, 1, 25, 0.32);
+    box-shadow: 0px 2px 15px black;
+  }
+  .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #8D1F1E;
+    background-color: rgba(3, 1, 25, 0.32);
+    box-shadow: 0px 2px 15px black;    
+  }
+  .dropdown-menu {
+    background-color: rgba(3, 1, 25, 0.8);
+  }
+  .dropdown-menu>li>a {
+    color: #8D1F1E;
+  }
+  .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: white;
+    background-color: transparent;
+  }
+  .dropdown-menu .divider {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
+  }
+  .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: none;
+  }
+  @media (max-width: 767px){
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+}
+}
+  .fa-bars {
+    color: #B51918;
+    font-size: 23px;
+    cursor: pointer;
+  }
+  .VerticalMenu {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    z-index: 9999999999;
+    margin-top: 53px;
+    overflow: hidden;
+    background-color: rgb(3, 1, 25);
+    -webkit-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
+    -moz-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
+    box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
+    color: #B51918;
+    display: none;
+  }
+  .panel-group {
+    margin-bottom: 0;
+  }
+  .panel-default>.panel-heading {
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+  a:focus, a:hover {
+    text-decoration: none;
+  }
+  .panel {
+    background-color: transparent;
+    border: none;
+  }
+  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: transparent;
+    background-color: black; 
+  }
+  .btn.focus, .btn:focus, .btn:hover {
+    color: #B51918;
+  }
+  .btn {
+    background-color: transparent;
+    color: #B51918
+  }
+  .fa {
+    color: #B51918;
+  }
+  .fa-search {
+    color: #FFFFFF;
+  }
+  .input-group-addon {
+    background-color: #B41817;
+    border: 1px solid #B41817;
+    border-radius: 0;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  /***** MODAL PROPERTIES *****/
+ .modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background:transparent;
+    border:none;
+    outline:none;
+}
+.modal-content iframe {
+    border:none;
+    padding:0;
+    margin:0;
+}
+.close {
+    font-size: 80px;
+    margin:-20px 0 0 0;
+}
+/***** MEDIA QUERIES *****/
+ @media only screen and (max-width: 641px) {
+    /***** MODAL PROPERTIES *****/
+    .modal-body {
+        height:100px;
+        padding:0;
+        margin: 0;
+    }
+    .modal-content {
+        padding:0;
+        margin: 0;
+    }
+    .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 15px;
+    }
+    .close {
+        margin:-12px 0 0 0;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /***** MODAL PROPERTIES *****/
+    .close {
+        font-size: 80px;
+        margin:30px -43px -20px 100px;
+    }
+}
+.Tour {
+  width: 100%;
+  height: 100%;
+}
+.Tour:hover {
+  background-color: transparent; 
+}
+.Tour:focus {
+  background-color: transparent;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+.btn-default {
+  border-color: transparent;
+}
+.btn-default:hover {
+  border-color: transparent;
+}
+.tourVid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-filter: blur(2px);
+  transition: all 1s ease;
+}
+.tourVid:hover {
+  -webkit-filter: blur(1px) brightness(1.6);
+  transition: all 1s ease;
+  width: 200%;
+  height: 200%;
+}
+.events h4 {
+  color: #B51918;
+}
+</style>    
+
+  </head>
+  <body>
+    <div class='VerticalMenu'>
+      <div class="input-group">
+  <input type="text" class="form-control" placeholder="What can we help you find?" aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2"><i class='fa fa-search'></i></span>
+</div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <i class='fa fa-user'></i> Quality Assurance Center
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <button class='btn'>Vision & Mission</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class='fa fa-user'></i> Staff
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <button class='btn'>Acadimic Staff</button>
+        <button class='btn'>Assisting Staff</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class='fa fa-user'></i> Medical Excuses
+        </a>
+      </h4>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class='fa fa-user'></i> Continuing Education
+        </a>
+      </h4>
+    </div>
+  </div>
+</div>    
+</div>
+ 
+
+    <section class='vid-header'>
+      <div class='blue-effect'></div>
+
+      <video autoplay loop poster="video.jpg" id="bgvid">
+          <source src="img/video.mp4" type="video/mp4">
+      </video>
+
+
+
+
+      <center>
+        <img class='logo' src="img/logo.png">
+        <h1 class='mainTxt'>Alexandria Higher Institute of Engineering & Technology</h1>
+      </center>
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">
+        <i class='fa fa-bars'></i>
+        <script type="text/javascript">
+          $(function(){
+            $('.fa-bars').click(function() {
+              $('.VerticalMenu').addClass('animated slideInLeft');
+              $('.VerticalMenu').toggle();
+            });
+          });
+        </script>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Admission Requirements</a></li>
+            <li><a href="#">Fees</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acadmeics <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">curriculum & course synopses</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Acadmeic Rules</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Q A & Accreditation</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Acadimic Calender <span class="sr-only"></span></a></li>
+        <li><a href="#">Summer Training</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Activities <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Student Union</a></li>
+            <li><a href="#">Clubs & Societies</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Achievements</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</nav>
+  <script type="text/javascript">
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+  </script>
+
+
+
+
+
+
+    </section>
+
+
+
+<!-- Second Section -->
+<section class='events'>
+
+    <center><div class='col-xs-1' style='background-color:#b51918; height:200px; padding:0;'><img src="img/events.jpg"></div></center>
+
+    <div class='col-xs-8' style='height:200px;'>
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class='col-xs-3' style='background-color:black; height:200px; padding-left: 0; padding-right: 0; overflow:hidden'>
+      <!-- Large modal -->
+        <a href="#" class="btn btn-default Tour" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s">
+            <img class='tourVid' src="img/Tour.jpg">
+          <div style='margin-top:25%; position: relative;'>
+          <i style='font-size:35px;' class='fa fa-play-circle-o'></i>
+          <h4>Take A Tour</h4>
+        </div></a>
+
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <div>
+                    <iframe width="100%" height="350" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  autoPlayYouTubeModal();
+
+  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+  function autoPlayYouTubeModal() {
+      var trigger = $("body").find('[data-toggle="modal"]');
+      trigger.click(function () {
+          var theModal = $(this).data("target"),
+              videoSRC = $(this).attr("data-theVideo"),
+              videoSRCauto = videoSRC + "?autoplay=1";
+          $(theModal + ' iframe').attr('src', videoSRCauto);
+          $(theModal + ' button.close').click(function () {
+              $(theModal + ' iframe').attr('src', videoSRC);
+          });
+          $('.modal').click(function () {
+              $(theModal + ' iframe').attr('src', videoSRC);
+          });
+      });
+  }
+</script>
+
+    </div>
+</section>
+
+<div class='clearfix'></div>
+
+  <!-- Stay Connected Section -->
+  <section class='stay' style='background-color:blue; height:200px;'>
+
+      <div class='social col-xs-3 col-xs-push-1' style='background-color:red; height:200px;'>
+        <div style='margin-top:20px;'>
+        <h3>Stay Connected</h3><br>
+        <div>
+          <li class='fa fa-facebook'></li>
+          <li class='fa fa-facebook'></li>
+          <li class='fa fa-facebook'></li>
+          <li class='fa fa-facebook'></li>
+          </div>
+        </div>
+      </div>
+
+      <div class='subs col-xs-9' style='background-color:yellow; height:200px;'>
+        <center>
+        <h1>subscribe to our official newsletter</h1>
+        </center>
+      </div>
+
+  </section>
+
+
+
+
+  </body>
+</html>
