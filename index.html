@@ -118,25 +118,6 @@
     color: white;
 }
 }
-  .fa-bars {
-    color: #B51918;
-    font-size: 23px;
-    cursor: pointer;
-  }
-  .VerticalMenu {
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    z-index: 9999999999;
-    margin-top: 53px;
-    overflow: hidden;
-    background-color: rgb(3, 1, 25);
-    -webkit-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
-    -moz-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
-    box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
-    color: #B51918;
-    display: none;
-  }
   .panel-group {
     margin-bottom: 0;
   }
@@ -169,6 +150,64 @@
   .fa-search {
     color: #FFFFFF;
   }
+  .fa-bars.ClickedIn
+  {
+	color:#777777; 
+	background-color:rgba(0, 0, 0, 0.2); 
+  }
+  .fa-bars {
+    font-size: 23px;
+    cursor: pointer;
+  }
+  .VerticalMenu {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    z-index: 9999999999;
+    margin-top: 53px;
+    overflow: hidden;
+    background-color: rgb(3, 1, 25);
+    -webkit-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
+    -moz-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
+    box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
+    color: #B51918;
+    display: none;
+  }
+	.verticalMenuItems
+	{
+		padding:4%;
+	}
+	.verticalMenuItems:hover 
+	{
+		-webkit-animation: verticalMenuItemsAnim 0.7s ease-in-out; /* Chrome, Safari, Opera */
+		-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+		-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+		animation: verticalMenuItemsAnim 0.7s ease-in-out;
+		animation-fill-mode: forwards;
+		animation-iteration-count: 1;
+	}
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes verticalMenuItemsAnim 
+	{
+		to 
+		{
+			border-radius: 1%;
+			font-weight:bold;
+			background-color: #01031E;
+			box-shadow:6px 6px 7px 3px black;
+		}
+	}
+	/* Standard syntax */
+	@keyframes verticalMenuItemsAnim 
+	{
+		to 
+		{
+			border-radius: 1%;
+			font-weight:bold;
+			background-color: #01031E;
+			box-shadow:6px 6px 7px 3px black;
+		}
+	}
   .input-group-addon {
     background-color: #B41817;
     border: 1px solid #B41817;
@@ -601,7 +640,6 @@ p, h1, h2, h3, h4, h5, h6 {
     float: left;
     margin-right: 10px;
 }
-
 </style>    
 
   </head>
@@ -615,7 +653,7 @@ p, h1, h2, h3, h4, h5, h6 {
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <a class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           <i class='fa fa-user'></i> Quality Assurance Center
         </a>
       </h4>
@@ -629,7 +667,7 @@ p, h1, h2, h3, h4, h5, h6 {
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           <i class='fa fa-user'></i> Staff
         </a>
       </h4>
@@ -644,7 +682,7 @@ p, h1, h2, h3, h4, h5, h6 {
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           <i class='fa fa-user'></i> Medical Excuses
         </a>
       </h4>
@@ -653,7 +691,7 @@ p, h1, h2, h3, h4, h5, h6 {
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           <i class='fa fa-user'></i> Continuing Education
         </a>
       </h4>
@@ -696,14 +734,60 @@ p, h1, h2, h3, h4, h5, h6 {
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand">
-        <i class='fa fa-bars'></i>
+        <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%;"></i>
         <script type="text/javascript">
-          $(function(){
-            $('.fa-bars').click(function() {
-              $('.VerticalMenu').addClass('animated slideInLeft');
-              $('.VerticalMenu').toggle();
-            });
-          });
+			var verticalNavBarShown = false;
+			
+			// Show or hide vertical nav bar
+			function ToggleVerticalNavBar(toggle)
+			{
+				verticalNavBarShown = toggle;
+				if(toggle == false)
+				{
+					$('.fa-bars').removeClass('ClickedIn');
+					$('.VerticalMenu').addClass('animated reversedSlideInLeft');
+				}
+				else
+				{
+					$('.fa-bars').addClass('ClickedIn');
+					$('.VerticalMenu').addClass('animated slideInLeft');
+				}
+				$('.VerticalMenu').toggle(1000, function(){});
+			}
+			
+			$(function()
+			{
+				// When the toggle button (bars) have been clicked...
+				$('.fa-bars').click(function() 
+				{
+					ToggleVerticalNavBar(!verticalNavBarShown);
+				});
+			});
+
+			$(document).on( 'click', function ( e ) 
+			{
+				// See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
+				if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
+				{
+					if(verticalNavBarShown)
+						ToggleVerticalNavBar(false);
+				}
+			});
+					
+			// Handle key presses...
+			$(document).on( 'keydown', function ( e ) 
+			{
+				// If the ESC key (value 27) has been pressed...
+				if ( e.keyCode === 27 ) 
+				{
+					// See if the vertical menu is shown
+					if(verticalNavBarShown)
+					{
+						// It's shown. Hide it!
+						ToggleVerticalNavBar(false);
+					}
+				}
+			});
         </script>
       </a>
     </div>
