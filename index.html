@@ -274,6 +274,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .events h4 {
   color: #B51918;
 }
+.stay {
+  background-image: url(img/Stay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
 </style>    
 
   </head>
@@ -478,7 +486,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
     <div class='col-xs-3' style='background-color:black; height:200px; padding-left: 0; padding-right: 0; overflow:hidden'>
       <!-- Large modal -->
-        <a href="#" class="btn btn-default Tour" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s">
+        <a href="#" class="btn btn-default Tour" data-toggle="modal" data-target="#videoModal" data-theVideo="img/video.mp4">
             <img class='tourVid' src="img/Tour.jpg">
           <div style='margin-top:25%; position: relative;'>
           <i style='font-size:35px;' class='fa fa-play-circle-o'></i>
@@ -524,23 +532,29 @@ p, h1, h2, h3, h4, h5, h6 {
 <div class='clearfix'></div>
 
   <!-- Stay Connected Section -->
-  <section class='stay' style='background-color:blue; height:200px;'>
+  <section class='stay' style='height:200px; color:white'>
 
-      <div class='social col-xs-3 col-xs-push-1' style='background-color:red; height:200px;'>
-        <div style='margin-top:20px;'>
+      <div class='social col-xs-3 col-xs-push-1' style=' height:200px;'>
+        <div style='margin: 50px 0px 50px 0px;'>
         <h3>Stay Connected</h3><br>
-        <div>
-          <li class='fa fa-facebook'></li>
-          <li class='fa fa-facebook'></li>
-          <li class='fa fa-facebook'></li>
-          <li class='fa fa-facebook'></li>
-          </div>
+        <div style='font-size:30px;'>
+          <li class='fa fa-facebook-square' style='padding:5px;'></li>
+          <li class='fa fa-twitter-square' style='padding:5px;'></li>
+          <li class='fa fa-google-plus-square' style='padding:5px;'></li>
+          <li class='fa fa-youtube-square' style='padding:5px;'></li>
+        </div>
         </div>
       </div>
 
-      <div class='subs col-xs-9' style='background-color:yellow; height:200px;'>
-        <center>
-        <h1>subscribe to our official newsletter</h1>
+      <div class='subs col-xs-9' style='height:200px;'>
+        <center style='margin: 50px 0px 50px 0px;'>
+        <h1>subscribe to our official newsletter</h1><br>
+              <div class="input-group col-xs-7">
+                <input type="text" class="form-control" placeholder="Your email address">
+                <span class="input-group-btn">
+                  <button class="btn btn-danger" type="button">Subscribe</button>
+                </span>
+              </div><!-- /input-group -->
         </center>
       </div>
 
