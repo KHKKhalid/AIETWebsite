@@ -684,6 +684,64 @@ body {
     -webkit-transform: scale(1.0);
   }
 }
+#AboutUsText:hover
+{
+	-webkit-animation: AboutUsTextAnim 0.7s ease-in-out; /* Chrome, Safari, Opera */
+	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	animation: AboutUsTextAnim 0.7s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes AboutUsTextAnim 
+{
+	to 
+	{
+		color: rgba(0,0,0,0.6); 
+	}
+}
+/* Standard syntax */
+@keyframes AboutUsTextAnim 
+{
+	to 
+	{
+		color: rgba(0,0,0,0.6); 
+	}
+}
+
+#AboutUsText:hover #AboutUsArrow  
+{
+  animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-animation-iteration-count: infinite;  /* Chrome, Safari, Opera */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake 
+{
+  10%, 90% 
+  {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% 
+  {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% 
+  {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% 
+  {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 </style>    
 
   </head>
@@ -758,6 +816,11 @@ body {
       <center>
         <img class='logo' src="img/logo.png">
         <h1 class='mainTxt'>Alexandria Higher Institute of Engineering & Technology</h1>
+		<a id="AboutUsText" href="pages/aboutus.html" style="display:block; color: transparent; text-shadow: 0 0 1px rgba(0,0,0,0.5); padding:1%; border-radius:2%; width:50%;">
+		Alexandria Higher Institute of Engineering & Technology (AIET) is a private institute of higher education founded in 1996 and owned by "Mohamed-Ragab Foundation for Social Development" which is a non-profit organization registered under No. SR 1075 with the Egyptian Government.
+		&nbsp;&nbsp;The motivation behind establishing this private institute is to fulfill the industry needs in Egypt for engineers well-educated and trained in modern engineering and technological fields...
+		<p><span style="font-weight:bold; color:#666666;">Read more</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-eye" id="AboutUsArrow" style="font-size:150%; color:rgba(0,0,0, 0.5);"></span></p>
+		</a>
       </center>
 
 
@@ -860,7 +923,6 @@ body {
         <li><a href="#">Acadimic Calender <span class="sr-only"></span></a></li>
         <li><a href="#">Summer Training</a></li>
         <li><a href="#">Contact Us</a></li>
-        <li><a href="#">About Us</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
