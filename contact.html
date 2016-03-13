@@ -36,6 +36,11 @@ body {
       -o-transition: all 1s ease;
       transition: all 1s ease;
       margin-top: 53px;
+          font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #666;
 
 }
   .navbar {
@@ -376,16 +381,97 @@ body {
         <div class='container'>
 
           <div class='col-xs-7' style=''>
-            <div><h3>Contact Us</h3></div>
+            <h4 style='
+                        color: #444;
+                        margin-bottom: 16px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #eee;
+                        font-weight: 300;'>
+              <span style='border-bottom: 1px solid #ee3733; padding-bottom: 8px;'>Contact Us</span>
+            </h4>
+            <br>
+            <div class="input-group col-xs-12">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          
+            <br>
+            <div class="input-group col-xs-12">
+            <input type="text" class="form-control" placeholder="Email">
+          </div>
+          
+            <br>
+            <div class="input-group col-xs-12">
+            <input type="text" class="form-control" placeholder="Subject">
           </div>
 
-          <div class='col-xs-5' style='background-color:blue; height:100px;'></div>
+          <br>
+          <div class="form-group">
+            <textarea class="form-control" rows="10" id="Message"></textarea>
+          </div>
+
+          <button style='
+                background-color: #ee3733;
+                color: white;
+                font-weight: 400;
+                border: none;
+                padding: 7px 20px 7px 20px;
+                -webkit-transition: all 0.3s ease-in-out;
+                -webkit-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+          ' type="button" class="btn btn-danger">SEND</button>
+          
+          </div>
+
+          <div class='col-xs-5'>
+                        <h4 style='
+                        color: #444;
+                        margin-bottom: 16px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #eee;
+                        font-weight: 300;'>
+              <span style='border-bottom: 1px solid #ee3733; padding-bottom: 8px;'>Information</span>
+            </h4>
+            <br>
+
+            <p style='color: #666; font-size:13px; line-height:22px'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
+
+            <hr>
+
+                        <!-- Info - Icons List -->
+            <ul style='
+                      list-style-type: none;
+                      margin-bottom: 6px;
+                      padding: 0;
+                      margin: 0;
+            'class="icons-list">
+              <li style='margin-bottom: 4px;'><i style='color:#ee3733' class="fa fa-globe">  </i> <strong>Address:</strong> Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</li>
+              <li style='margin-bottom: 4px;'><i style='color:#ee3733' class="fa fa-envelope-o"></i> <strong>Email:</strong> Help@aiet.com</li>
+              <li style='margin-bottom: 4px;'><i style='color:#ee3733' class="fa fa-mobile"></i> <strong>Phone:</strong> +12 345 678 001</li>
+            </ul> <br>
+
+                                    <h4 style='
+                        color: #444;
+                        margin-bottom: 16px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #eee;
+                        font-weight: 300;'>
+              <span style='border-bottom: 1px solid #ee3733; padding-bottom: 8px;'>Working Hours</span>
+            </h4>
+                        <ul class="list-unstyled">
+              <li><strong>Monday - Friday</strong> - 9am to 5pm</li>
+              <li><strong>Saturday</strong> - 9am to 2pm</li>
+              <li><strong>Sunday</strong> - Closed</li>
+            </ul>
+
+
+
+
+          </div>
 
         </div>
       </section>
 
 
-
+<br><br>
 
 
 
@@ -628,7 +714,7 @@ $(function(){
   
   //Check to see if the window is top if not then display button
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 400) {
+    if ($(this).scrollTop() > 1) {
       $('.scrollToTop').fadeIn();
     } else {
       $('.scrollToTop').fadeOut();
