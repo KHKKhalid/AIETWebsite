@@ -30,6 +30,13 @@
     <![endif]-->
 
 <style type="text/css">
+body {
+      webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+
+}
   .vid-header {
     width: 100%;
     height: 100vh;
@@ -79,6 +86,11 @@
     background-color: rgba(3, 1, 25, 0.32);
     border-color: transparent;
     box-shadow: 0px 2px 15px black;
+    webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+
   }
   .navbar-default .navbar-nav>li>a {
     color: white;
@@ -741,6 +753,30 @@ body {
   {
     transform: translate3d(4px, 0, 0);
   }
+  
+.scrollToTop{
+  color: #FFFFFF;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 38px;
+  cursor: pointer;
+  background-color: rgba(10, 16, 23, 0.71);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+        webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+
+
+}
+.scrollToTop:hover{
+  color: #B51918;
+  border-radius: 0px;
 }
 </style>    
 
@@ -1168,6 +1204,84 @@ body {
   </section>
 <br>
 
+  <!-- LATEST NEWS SECTION -->
+  <section class='stay' style='height:400px; color:white'>
+
+<section class='events'>
+
+    <center><div class='col-xs-1' style='background-color:#b51918; height:400px; padding:0;'><img src="img/news.png"></div></center>
+
+    <div class='col-xs-8' style='height:200px;'>
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+            <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class='col-xs-3' style='background-color:black; height:400px; padding-left: 0; padding-right: 0; overflow:hidden'>
+<div class="fb-page" 
+  data-href="https://www.facebook.com/facebook"
+  data-width="380" 
+  data-hide-cover="false"
+  data-show-facepile="false" 
+  data-show-posts="false"></div>
+    </div>
+</section>
+
+  </section>
+
+
 
   <!-- Featuerd instructors -->
   <section class='staff' style='margin-top:50px;'>
@@ -1507,7 +1621,94 @@ $(function(){
  </script>  
 </section>
 
+<!-- scroll to top -->
+<i class="scrollToTop fa fa-angle-up"></i>
 
+  <script type="text/javascript">
+  $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 400) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+  </script>
+
+  <!-- nav bar animation with scroll to top button -->
+    <script type="text/javascript">
+  $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 400) {
+      $('.navbar-default').css('background-color', 'rgb(3, 1, 25) ');
+    } else {
+      $('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.32)');
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+  </script>
+
+</div>
+<!-- Footer section -->
+<footer class='footerSec' style='background-color: #0A1017; color: #FFF; padding: 30px 0 30px 0;'>
+  <div class='container text-center'>
+
+  <div class='col-xs-3'>
+    <img src="img/logo1.png">
+    <br><br>
+    <big style='padding-bottom: 10px;'>Alexandria Institute Of Engineering And Technology - AIET</big>
+  </div>
+
+  <div class='col-xs-3'>
+    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>Connect</big><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-envelope'></i>Help@aiet.com</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-map-marker'></i>Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-phone'></i>+2 0123 456789</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-envelope'></i>Help@aiet.com</small><br><br>
+  </div>
+
+  <div class='col-xs-3'>
+    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>About</big><br><br>
+    <a style='color:white' href=""><small>about us</small></a><br><br>
+    <a style='color:white' href=""><small>our staff</small></a><br><br>
+    <a style='color:white' href=""><small>our partners</small></a><br><br>
+    <a style='color:white' href=""><small>careers</small></a><br><br>
+  </div>
+
+  <div class='col-xs-3'>
+    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>Site map</big><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+  </div>
+
+  <hr>
+
+  </div>
+    <p class='col-xs-12 text-center' style='font-size: 11px; bottom: -15px; background-color: #0C1621;'>&copy; 2015-2016 AIET, All Rights Reserved.</p>
+
+</footer>
 
   </body>
 </html>
