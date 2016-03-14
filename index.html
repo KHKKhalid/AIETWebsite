@@ -640,7 +640,50 @@ p, h1, h2, h3, h4, h5, h6 {
     float: left;
     margin-right: 10px;
 }
-</style>    
+/*LOADING PAGE*/
+body {
+  overflow: hidden;
+}
+.spinner {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  margin: 20vh auto 0;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #8d1f1e;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}</style>    
 
   </head>
   <body>
@@ -1302,12 +1345,81 @@ p, h1, h2, h3, h4, h5, h6 {
   </section>
 
 
-  <!--Map-->
-  <section style='padding-left:0; padding-right:0;' class='col-xs-12'>
-    <iframe style='width:100%' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.01287928744!2d29.952811685333522!3d31.220372569018775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c4eaa14cda71%3A0x5eb5b68bb3a870fe!2z2YXYudmH2K8g2KfZhNin2LPZg9mG2K_YsdmK2Kkg2KfZhNi52KfZhNmJINmE2YTZh9mG2K_Ys9ipINmI2KfZhNiq2YPZhtmI2YTZiNis2YrYpw!5e0!3m2!1sar!2seg!4v1457773813407" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+<!-- Loading Page -->
+<section style='background: #0A1017; color: #FFF; position: fixed; left: 0; top: 0; width:100%; height: 100%; z-index: 9999;' class='bgOverlay'>
+
+  <div class='loading-content'>
+
+<div class="spinner">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>
+
+  <!-- Tips -->
+  <section class='tips' style='margin-top: 30vh'>
+    <center>
+        <img src='img/lamp.png'>
+    </center>
+
+
+                    <div class="col-md-12">
+                        <div class="carousel slide" data-ride="carousel" id="quote-carouse2">
+
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner text-center">
+
+                                <!-- Quote 1 -->
+                                <div class="item active">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+
+                                                <p>Tip: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. !</p>
+                                            </div>
+                                        </div>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+
+                                                <p>ملاحظة : يمكنك زيارة صفحة كذا لفعل كذا كذا !</p>
+                                            </div>
+                                        </div>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+
+                                                <p>Tip: check that page pla pla pla plaaaa. !</p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
   </section>
 
 
+  </div>
+
+<script type="text/javascript">
+$(function(){
+
+  $(window).load(function(){
+    $('body').css('overflow', 'auto')
+    $('.loading-content').fadeOut(1000, function(){
+      $(this).parent().fadeOut(1000, function(){
+        (this).remove();
+      })
+    })
+  });
+
+});
+</script>
+</section>
 
 
 
