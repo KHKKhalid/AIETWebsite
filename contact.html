@@ -245,46 +245,32 @@ body {
 body {
   overflow: hidden;
 }
-.spinner {
+.loading_hourglass_container 
+{
   width: 90px;
   height: 90px;
   position: relative;
   margin: 20vh auto 0;
 }
 
-.double-bounce1, .double-bounce2 {
+.loading_hourglass 
+{
+  font-size:700%;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background-color: #8d1f1e;
+  background-color: transparent;
   opacity: 0.6;
   position: absolute;
   top: 0;
   left: 0;
-  
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
+	-webkit-animation:spin 4s linear infinite;
+	-moz-animation:spin 4s linear infinite;
+	animation:spin 4s linear infinite;
 }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-.double-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
-
-@-webkit-keyframes sk-bounce {
-  0%, 100% { -webkit-transform: scale(0.0) }
-  50% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bounce {
-  0%, 100% { 
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 50% { 
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-  }
-}
 .scrollToTop{
   color: #FFFFFF;
   position: fixed;
@@ -616,11 +602,10 @@ body {
 
   <div class='loading-content'>
 
-<div class="spinner">
-  <div class="double-bounce1"></div>
-  <div class="double-bounce2"></div>
-</div>
-<br><br><br><br>
+	<div class="loading_hourglass_container">
+		<div class="loading_hourglass fa fa-hourglass-half" style="color:white;"></div>
+	</div>
+	<br><br><br><br>
   <section class='happyS' style='margin-top:50px;'>
     <center>
     <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
