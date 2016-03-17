@@ -164,8 +164,8 @@ body {
   }
   .fa-bars.ClickedIn
   {
-	color:#777777; 
-	background-color:rgba(0, 0, 0, 0.2); 
+  color:#777777; 
+  background-color:rgba(0, 0, 0, 0.2); 
   }
   .fa-bars {
     font-size: 23px;
@@ -185,41 +185,41 @@ body {
     color: #B51918;
     display: none;
   }
-	.verticalMenuItems
-	{
-		padding:4%;
-	}
-	.verticalMenuItems:hover 
-	{
-		-webkit-animation: verticalMenuItemsAnim 0.7s ease-in-out; /* Chrome, Safari, Opera */
-		-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
-		-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
-		animation: verticalMenuItemsAnim 0.7s ease-in-out;
-		animation-fill-mode: forwards;
-		animation-iteration-count: 1;
-	}
-	/* Chrome, Safari, Opera */
-	@-webkit-keyframes verticalMenuItemsAnim 
-	{
-		to 
-		{
-			border-radius: 1%;
-			font-weight:bold;
-			background-color: #01031E;
-			box-shadow:6px 6px 7px 3px black;
-		}
-	}
-	/* Standard syntax */
-	@keyframes verticalMenuItemsAnim 
-	{
-		to 
-		{
-			border-radius: 1%;
-			font-weight:bold;
-			background-color: #01031E;
-			box-shadow:6px 6px 7px 3px black;
-		}
-	}
+  .verticalMenuItems
+  {
+    padding:4%;
+  }
+  .verticalMenuItems:hover 
+  {
+    -webkit-animation: verticalMenuItemsAnim 0.7s ease-in-out; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+    animation: verticalMenuItemsAnim 0.7s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes verticalMenuItemsAnim 
+  {
+    to 
+    {
+      border-radius: 1%;
+      font-weight:bold;
+      background-color: #01031E;
+      box-shadow:6px 6px 7px 3px black;
+    }
+  }
+  /* Standard syntax */
+  @keyframes verticalMenuItemsAnim 
+  {
+    to 
+    {
+      border-radius: 1%;
+      font-weight:bold;
+      background-color: #01031E;
+      box-shadow:6px 6px 7px 3px black;
+    }
+  }
   .input-group-addon {
     background-color: #B41817;
     border: 1px solid #B41817;
@@ -309,16 +309,23 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 200%;
   height: 200%;
 }
-.events h4 {
-  color: #B51918;
-}
-.stay {
+.eventsBox {
   background-image: url(img/Stay.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 
+}
+.events h4 {
+  color: #B51918;
+}
+.stay {
+    background-image: url(img/Stay.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 /* staff section */
@@ -582,7 +589,11 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 17px;
 }
 
-.btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
+.btn{ 
+  width:32px; 
+  height:32px; 
+  line-height:18px;  
+}
 .staffName {
    color: #B51918;
 
@@ -734,6 +745,39 @@ body {
 .readMore:hover {
   color: white;
 }
+.box {border:2px solid #B51918;}
+.box h2 {background:#B51918;color:white;padding:10px;}
+.box p {color:#333;padding:10px;}
+.box {
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-topleft:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-top-left-radius:5px;
+}
+.panel {
+  margin-bottom: 0px
+}
+.readMore {
+      width: auto;
+    background-color: #ee3733;
+    padding: 5px 15px;
+    color: #fff;
+    margin-right: 5px;
+    font-weight: 300;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+    -o-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+    -moz-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+    -webkit-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+    border: 0;
+}
 </style>    
 
   </head>
@@ -830,58 +874,58 @@ body {
       <a class="navbar-brand">
         <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%;"></i>
         <script type="text/javascript">
-			var verticalNavBarShown = false;
-			
-			// Show or hide vertical nav bar
-			function ToggleVerticalNavBar(toggle)
-			{
-				verticalNavBarShown = toggle;
-				if(toggle == false)
-				{
-					$('.fa-bars').removeClass('ClickedIn');
-					$('.VerticalMenu').addClass('animated reversedSlideInLeft');
-				}
-				else
-				{
-					$('.fa-bars').addClass('ClickedIn');
-					$('.VerticalMenu').addClass('animated slideInLeft');
-				}
-				$('.VerticalMenu').toggle(1000, function(){});
-			}
-			
-			$(function()
-			{
-				// When the toggle button (bars) have been clicked...
-				$('.fa-bars').click(function() 
-				{
-					ToggleVerticalNavBar(!verticalNavBarShown);
-				});
-			});
+      var verticalNavBarShown = false;
+      
+      // Show or hide vertical nav bar
+      function ToggleVerticalNavBar(toggle)
+      {
+        verticalNavBarShown = toggle;
+        if(toggle == false)
+        {
+          $('.fa-bars').removeClass('ClickedIn');
+          $('.VerticalMenu').addClass('animated reversedSlideInLeft');
+        }
+        else
+        {
+          $('.fa-bars').addClass('ClickedIn');
+          $('.VerticalMenu').addClass('animated slideInLeft');
+        }
+        $('.VerticalMenu').toggle(1000, function(){});
+      }
+      
+      $(function()
+      {
+        // When the toggle button (bars) have been clicked...
+        $('.fa-bars').click(function() 
+        {
+          ToggleVerticalNavBar(!verticalNavBarShown);
+        });
+      });
 
-			$(document).on( 'click', function ( e ) 
-			{
-				// See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
-				if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
-				{
-					if(verticalNavBarShown)
-						ToggleVerticalNavBar(false);
-				}
-			});
-					
-			// Handle key presses...
-			$(document).on( 'keydown', function ( e ) 
-			{
-				// If the ESC key (value 27) has been pressed...
-				if ( e.keyCode === 27 ) 
-				{
-					// See if the vertical menu is shown
-					if(verticalNavBarShown)
-					{
-						// It's shown. Hide it!
-						ToggleVerticalNavBar(false);
-					}
-				}
-			});
+      $(document).on( 'click', function ( e ) 
+      {
+        // See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
+        if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
+        {
+          if(verticalNavBarShown)
+            ToggleVerticalNavBar(false);
+        }
+      });
+          
+      // Handle key presses...
+      $(document).on( 'keydown', function ( e ) 
+      {
+        // If the ESC key (value 27) has been pressed...
+        if ( e.keyCode === 27 ) 
+        {
+          // See if the vertical menu is shown
+          if(verticalNavBarShown)
+          {
+            // It's shown. Hide it!
+            ToggleVerticalNavBar(false);
+          }
+        }
+      });
         </script>
       </a>
     </div>
@@ -910,7 +954,7 @@ body {
         <li><a href="#">Acadimic Calender <span class="sr-only"></span></a></li>
         <li><a href="#">Summer Training</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-		<li><a href="#">About Us</a></li>
+    <li><a href="#">About Us</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -938,115 +982,42 @@ body {
   </script>
 
 
-
-
-
-
     </section>
 
 <!-- About us Section -->
-<section class='aboutUs'>
+    <section class='aboutUs'>
+      <div class='container' style='padding: 0px; margin-top:50px; margin-bottom: 50px; '>
 
-    <center><div class='col-xs-1' style='background-color:#b51918; height:200px; padding:0;'><img src="img/aboutUs.jpg"></div></center>
+      <div class='bigTitle col-lg-6'>
+        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>More</strong> About Us</h1>
+        <p>Alexandria Higher Institute of Engineering & Technology</p>
 
-    <div class='col-xs-8' style='height:200px;'>
-      <p style='margin: 10px 0 10px 0;'>
-        Alexandria Higher Institute of Engineering & Technology (AIET) is a private institute of higher education founded in 1996 and owned by "Mohamed-Ragab Foundation for Social Development" which is a non-profit organization registered under No. SR 1075 with the Egyptian Government.
+        <br>
 
-        The motivation behind establishing this private institute is to fulfill the industry needs in Egypt for engineers well-educated and trained in modern engineering and technological fields. 
+        <!-- paragraph -->
+        <p style='color: #666; font-size: 13px; line-height: 22px; margin: 0; font-family: 'Open Sans', sans-serif;'>
+          Alexandria Higher Institute of Engineering & Technology (AIET) is a private institute of higher education founded in 1996 and owned by "Mohamed-Ragab Foundation for Social Development" which is a non-profit organization registered under No. SR 1075 with the Egyptian Government.
 
-        Engineering technology is a relatively new discipline. The programs of study at AIET are designed to meet the growing need created by the technological revolution for college-educated problem solvers who can support the engineering process by bridging the gap between the blueprints and the production line.The AIET Institute is a co-educational where women are admitted, parallel to men, to all departments. The language of instruction is English.
+          The motivation behind establishing this private institute is to fulfill the industry needs in Egypt for engineers well-educated and trained in modern engineering and technological fields. 
 
-        The main objective of the AIET Institute is to share in the education of the Egyptian youth as well as those from other countries, and in the advancement of knowledge.<a href="#" class="btn btn-danger readMore">Read more <span class="glyphicon glyphicon-chevron-right"></span></a>
-      </p>
-      
-    </div>
-    
+          Engineering technology is a relatively new discipline. The programs of study at AIET are designed to meet the growing need created by the technological revolution for college-educated problem solvers who can support the engineering process by bridging the gap between the blueprints and the production line.The AIET Institute is a co-educational where women are admitted, parallel to men, to all departments. The language of instruction is English.
 
-    <div class='col-xs-3' style='background-color:black; height:200px; padding-left: 0; padding-right: 0; overflow:hidden'>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators" style='margin-bottom: 80px;'>
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="img/Tour.jpg" alt="...">
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-    <div class="item">
-      <img src="img/1.jpg" alt="...">
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span style='margin-top: 80px; font-size: 43px; color: #EEE' class="fa fa-angle-double-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span style='margin-top: 80px; font-size: 43px; color: #EEE' class="fa fa-angle-double-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-    </div>
-</section>
-
-
-<!-- Second Section -->
-<section class='events'>
-
-    <center><div class='col-xs-1' style='background-color:#b51918; height:200px; padding:0;'><img src="img/events.jpg"></div></center>
-
-    <div class='col-xs-8' style='height:200px;'>
-      <div class='col-xs-6' style='height:100px;'>
-        <div style='padding-top: 20px;'>
-        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
-        </div>
+          The main objective of the AIET Institute is to share in the education of the Egyptian youth as well as those from other countries, and in the advancement of knowledge.
+        </p>
+        <br>
+        <a style='width: auto' href="#" class="btn btn-danger readMore">Read More <span class="glyphicon glyphicon-share-alt"></span></a>
       </div>
 
-      <div class='col-xs-6' style='height:100px;'>
-        <div style='padding-top: 20px;'>
-        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
-        </div>
-      </div>
 
-      <div class='col-xs-6' style='height:100px;'>
-        <div style='padding-top: 20px;'>
-        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
-        </div>
-      </div>
 
-      <div class='col-xs-6' style='height:100px;'>
-        <div style='padding-top: 20px;'>
-        <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>Arduino Workshop</h4><p>9:00 AM CS04</p></div>
-        </div>
-      </div>
-    </div>
-    
 
-    <div class='col-xs-3' style='background-color:black; height:200px; padding-left: 0; padding-right: 0; overflow:hidden'>
+          <div class='col-lg-6' style='background-color:black; height:327px; overflow:hidden'>
       <!-- Large modal -->
         <a href="#" class="btn btn-default Tour" data-toggle="modal" data-target="#videoModal" data-theVideo="img/video.mp4">
             <img class='tourVid' src="img/Tour.jpg">
-          <div style='margin-top:25%; position: relative;'>
-          <i style='font-size:35px;' class='fa fa-play-circle-o'></i>
-          <h4>Take A Tour</h4>
-        </div></a>
+          <i style='font-size: 72px; position: relative; padding: 118px 50px 100px 212px;' class='fa fa-play-circle-o'></i>
+          <h4 style='position: relative; bottom: 71px; left: 170px; font-size: 30px;'>Take A Tour</h4>
+        </a>
 
 <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
     <div class="modal-dialog">
@@ -1082,20 +1053,32 @@ body {
 </script>
 
     </div>
-</section>
+
+
+      
+    
+
+
+      </div>
+      </section>
+
+
+
 
 
 
 <div class='clearfix'></div>
 
   <!-- LATEST NEWS SECTION -->
-  <section class='stay' style='height:400px; color:white'>
+  <div class="panel panel-default">
+  <div class="panel-heading" style='background-color: #B51918;'>
+    <h3 class="panel-title">Latest news</h3>
+  </div>
+  <div class="panel-body" style='padding: 0;'>
+      <section class='stay' style='height:400px; color:white'>
 
-<section class='events'>
 
-    <center><div class='col-xs-1' style='background-color:#b51918; height:400px; padding:0;'><img src="img/news.png"></div></center>
-
-    <div class='col-xs-8' style='height:200px;'>
+    <div class='col-xs-9' style='height:200px;'>
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
@@ -1152,70 +1135,74 @@ body {
       </div>
     </div>
 
-    <div class='col-xs-3'>
-	<iframe style="border:none; height:400px; width:322px;" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Faiet.edu.eg&amp;width=322&amp;colorscheme=light&amp;show_faces=true&amp;stream=true&amp;header=true&amp;height=400" scrolling="yes" allowTransparency="true" frameborder="0"></iframe>
-	</div>
+    <div class='col-xs-3' style='padding:0'>
+  <iframe style="border:none; height:400px; width:100%" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Faiet.edu.eg&amp;width=322&amp;colorscheme=light&amp;show_faces=true&amp;stream=true&amp;header=true&amp;height=400" scrolling="yes" allowTransparency="true" frameborder="0"></iframe>
+  </div>
 </section>
 
-  </section>
+
+  </div>
+</div>
+
+
 
   <br>
   
   <!-- Count Down Section -->
           <script type="text/javascript">
-		  
-		  // This variable is used to indicate whether the counter has finished its job or not
-		  var alreadyDoneCounting = false; 
+      
+      // This variable is used to indicate whether the counter has finished its job or not
+      var alreadyDoneCounting = false; 
           
-		  $(function() {
+      $(function() {
             $(window).scroll(function()
-			{
-				// If the counter has never started...
-				if(!alreadyDoneCounting)
-				{
-					var countDownOffset = $('.countDown').offset(); // Get offset of 'countDown' element
-					
-					// See if the user has scrolled our page enough to 'countDown' element top edgle
-					if ($('body').scrollTop() > ((countDownOffset.top - window.innerHeight) + 15))
-					{
-						// Start counting
-						start_count();
-					}
-				}
+      {
+        // If the counter has never started...
+        if(!alreadyDoneCounting)
+        {
+          var countDownOffset = $('.countDown').offset(); // Get offset of 'countDown' element
+          
+          // See if the user has scrolled our page enough to 'countDown' element top edgle
+          if ($('body').scrollTop() > ((countDownOffset.top - window.innerHeight) + 15))
+          {
+            // Start counting
+            start_count();
+          }
+        }
             });
         });
 
-		
-		// Starts counting professors, students and etc...
+    
+    // Starts counting professors, students and etc...
         function start_count()
-		{
-			// Indicate that the counter has started at least once.
-			alreadyDoneCounting = true;
-			
-			// Do the counting...
-			$('.studentCount').jQuerySimpleCounter({
-				start:  0,
-				end:    470,
-				duration: 5000,
-			});
+    {
+      // Indicate that the counter has started at least once.
+      alreadyDoneCounting = true;
+      
+      // Do the counting...
+      $('.studentCount').jQuerySimpleCounter({
+        start:  0,
+        end:    470,
+        duration: 5000,
+      });
 
-			$('.professorCount').jQuerySimpleCounter({
-				start:  0,
-				end:    60,
-				duration: 3000,
-			});
+      $('.professorCount').jQuerySimpleCounter({
+        start:  0,
+        end:    60,
+        duration: 3000,
+      });
 
-			$('.assistantCount').jQuerySimpleCounter({
-				start:  0,
-				end:    80,
-				duration: 3000,
-			});
+      $('.assistantCount').jQuerySimpleCounter({
+        start:  0,
+        end:    80,
+        duration: 3000,
+      });
 
-			$('.deptCount').jQuerySimpleCounter({
-				start:  0,
-				end:    4,
-				duration: 3000,
-			});
+      $('.deptCount').jQuerySimpleCounter({
+        start:  0,
+        end:    4,
+        duration: 3000,
+      });
         }
         </script>
 
@@ -1440,7 +1427,10 @@ body {
               <div class="input-group col-xs-7">
                 <input type="text" class="form-control" placeholder="Your email address">
                 <span class="input-group-btn">
-                  <button class="btn btn-danger" type="button">Subscribe</button>
+                  <button style='width: auto;    height: 34px;
+    background-color: #B51918;
+    color: white;
+    border-color: white;' class="btn btn-danger" type="button">Subscribe</button>
                 </span>
               </div><!-- /input-group -->
         </center>
