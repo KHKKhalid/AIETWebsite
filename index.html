@@ -739,46 +739,104 @@ body {
 .carousel-indicators .active {
   background-color: #B51918;
 }
-.readMore {
-  border-radius: 5px;
-  width: auto;
-  height: auto;
+.readMore 
+{
+	color:black;
+	border-radius: 1%;
+	border-style: solid;
+	border-color:black;
+	width: auto;
+	height: auto;
+    background-color: transparent;
+    padding: 2%;
+	font-weight:bold;
 }
-.readMore:hover {
-  color: white;
+.readMore:hover 
+{
+	color:black;
+	-webkit-animation: readMoreAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
+	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	animation: readMoreAnim 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
 }
-.box {border:2px solid #B51918;}
-.box h2 {background:#B51918;color:white;padding:10px;}
-.box p {color:#333;padding:10px;}
-.box {
-    -moz-border-radius-topright:5px;
-    -moz-border-radius-topleft:5px;
-    -webkit-border-top-right-radius:5px;
-    -webkit-border-top-left-radius:5px;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes readMoreAnim 
+{
+	to 
+	{
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+}
+/* Standard syntax */
+@keyframes readMoreAnim 
+{
+	to
+	{
+		background-color: rgba(0, 0, 0, 0.1);
+	}
 }
 .panel {
   margin-bottom: 0px
 }
-.readMore {
-      width: auto;
-    background-color: #ee3733;
-    padding: 5px 15px;
-    color: #fff;
-    margin-right: 5px;
-    font-weight: 300;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -o-border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    -o-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    -moz-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    -webkit-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    border: 0;
+#keepintouch_icon:hover
+{
+   animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+   transform: translate3d(0, 0, 0);
+   backface-visibility: hidden;
+   perspective: 1000px;
+   -webkit-animation-iteration-count: infinite;  /* Chrome, Safari, Opera */
+   animation-iteration-count: infinite;
+}
+ 
+ @keyframes shake 
+ {
+   10%, 90% 
+   {
+     transform: translate3d(-1px, 0, 0);
+   }
+   
+   20%, 80% 
+   {
+     transform: translate3d(2px, 0, 0);
+   }
+ 
+   30%, 50%, 70% 
+   {
+     transform: translate3d(-4px, 0, 0);
+   }
+ 
+   40%, 60% 
+   {
+     transform: translate3d(4px, 0, 0);
+   }
+ }
+
+#keepintouch_subscribe_button:hover 
+{
+	-webkit-animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
+	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes keepintouch_subscribe_buttonAnim 
+{
+	to 
+	{
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+}
+/* Standard syntax */
+@keyframes keepintouch_subscribe_buttonAnim 
+{
+	to
+	{
+		background-color: rgba(255, 255, 255, 0.5);
+	}
 }
 </style>    
 
@@ -991,7 +1049,7 @@ body {
       <div class='container' style='padding: 0px; padding-top:50px; padding-bottom:50px; margin-bottom: 20px;'>
 
       <div class='bigTitle col-md-6 col-sm-6 col-xs-12'>
-        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>More</strong> about us...</h1>
+        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Who are we?</strong></h1>
         <br>
 
         <!-- paragraph -->
@@ -1005,7 +1063,7 @@ body {
           The main objective of the AIET Institute is to share in the education of the Egyptian youth as well as those from other countries, and in the advancement of knowledge...
         </p>
         <br>
-        <a style='width: auto' href="#" class="btn btn-danger readMore">Read More <span class="glyphicon glyphicon-share-alt"></span></a>
+        <a style='width: auto' href="#" class="readMore">Know more about us &nbsp;&nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
       </div>
 
 
@@ -1058,17 +1116,13 @@ body {
       </section>
 
 
-
-
-
-
 <div class='clearfix'></div>
 
 <!-- latest events section -->
 <section class='events'>
   <div class='container'>
 
-    <h1 class='text-center' style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Our</strong> Latest events</h1>
+    <h1 class='text-center' style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Events</strong></h1>
 
         <!-- EVENT BOX START -->
         <div class='col-sm-4 col-xs-6' style='padding-top: 20px; padding-bottom: 20px;'>
@@ -1121,7 +1175,7 @@ body {
   <!-- LATEST NEWS SECTION -->
   <div class="panel panel-default">
   <div class="panel-heading" style='background-color: #f6f7f8; color: #333; border-bottom: 4px solid #B51918;'>
-    <h3 class="panel-title">Latest News & Announcements</h3>
+    <h3 class="text-center"><strong>Latest News</strong></h3>
   </div>
   <div class="panel-body" style='padding: 0;'>
       <section class='stay' style='height:400px; color:white'>
@@ -1264,7 +1318,7 @@ body {
           <h2 style='padding-right: 5px;'>+</h2>
           <h2 class='studentCount'></h2>
           </div>
-          <h2>Yearly student</h2>
+          <h2>Students</h2>
       </div>
 
       <div class='col-xs-3 text-center' style='height:200px; padding:30px 0 30px 0;'>
@@ -1272,7 +1326,7 @@ body {
           <div style='display: inline-flex; padding-bottom: 20px; '>
           <h2 class='professorCount'></h2>
           </div>
-          <h2>Academic professor</h2>
+          <h2>Professors</h2>
       </div>
 
       <div class='col-xs-3 text-center' style='height:200px; padding:30px 0 30px 0;'>
@@ -1280,7 +1334,7 @@ body {
           <div style='display: inline-flex; padding-bottom: 20px; '>
           <h2 class='assistantCount'></h2>
           </div>
-          <h2>Teaching assistant</h2>
+          <h2>Assistants</h2>
       </div>
 
       <div class='col-xs-3 text-center' style='height:200px; padding:30px 0 30px 0;'>
@@ -1455,32 +1509,44 @@ body {
   </section>
 
 
- <!-- Stay Connected Section -->
+ <!-- Contacts Section -->
   <section class='stay' style='height:200px; color:white'>
 
       <div class='social col-xs-3 col-xs-push-1' style=' height:200px;'>
-        <div style='margin: 50px 0px 50px 0px;'>
-        <h3>Stay Connected</h3><br>
-        <div style='font-size:30px;'>
-          <li class='fa fa-facebook-square' style='padding:5px;'></li>
-          <li class='fa fa-twitter-square' style='padding:5px;'></li>
-          <li class='fa fa-google-plus-square' style='padding:5px;'></li>
-          <li class='fa fa-youtube-square' style='padding:5px;'></li>
+        <div style='margin: 50px 0px 50px 0px; padding:3%; border-radius:2%; text-align:center; background-color:rgba(0, 0, 0, 0.8);'>
+        <h3>Apps</h3><br>
+        <div style='font-size:40px;'>
+          <a href="https://www.facebook.com/aiet.edu.eg/" class='fa fa-facebook-square' id="keepintouch_icon" style='cursor:pointer; padding:5px; color:#3b5998;'></a>
+          <a href="https://twitter.com/aiet_edu_eg" class='fa fa-twitter-square' id="keepintouch_icon" style='cursor:pointer; padding:5px; color:#00aced;'></a>
         </div>
         </div>
       </div>
 
       <div class='subs col-xs-9 counterStart' style='height:200px;'>
-        <center style='margin: 50px 0px 50px 0px;'>
-        <h1>subscribe to our official newsletter</h1><br>
+        <center style='margin: 30px 0px 50px 0px;'>
+        <h2>Keep in touch</h2><br>
+		<p>subscribe to get the latest news delivered to your mail box.</p><br>
               <div class="input-group col-xs-7">
-                <input type="text" class="form-control" placeholder="Your email address">
+			  <script>
+				function OnWriteInSubscribeBox()
+				{
+					// If there's at least one character in text area
+					if(document.getElementById("keepintouch_subscribe_input").value)
+					{
+						// Enable the subscribe button
+						document.getElementById("keepintouch_subscribe_button").disabled = false;
+					}
+					else
+					{
+						// Text area is empty. Disable the subscribe button.
+						document.getElementById("keepintouch_subscribe_button").disabled = true;
+					}
+				}
+				</script>
+                <input id="keepintouch_subscribe_input" oninput="OnWriteInSubscribeBox()" type="text" class="form-control" placeholder="your email address (e.g my_name@server.com)">
                 <span class="input-group-btn">
-                  <button style='width: auto;    height: 34px;
-    background-color: #B51918;
-    color: white;
-    border-color: white;' class="btn btn-danger" type="button">Subscribe</button>
-                </span>
+					<button id="keepintouch_subscribe_button" class="btn btn-danger" disabled style='width: auto; height: 34px; background-color: #B51918; color: white; border-color: white; font-weight:bold;' type="button">SUBSCRIBE</button>
+				</span>
               </div><!-- /input-group -->
         </center>
       </div>
