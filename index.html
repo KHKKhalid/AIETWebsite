@@ -753,10 +753,6 @@ body {
 }
 .readMore:hover 
 {
-	
-}
-.readMore:hover 
-{
 	color:black;
 	-webkit-animation: readMoreAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
 	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
@@ -783,6 +779,64 @@ body {
 }
 .panel {
   margin-bottom: 0px
+}
+#keepintouch_icon:hover
+{
+   animation: shake 1.2s cubic-bezier(.36,.07,.19,.97) both;
+   transform: translate3d(0, 0, 0);
+   backface-visibility: hidden;
+   perspective: 1000px;
+   -webkit-animation-iteration-count: infinite;  /* Chrome, Safari, Opera */
+   animation-iteration-count: infinite;
+}
+ 
+ @keyframes shake 
+ {
+   10%, 90% 
+   {
+     transform: translate3d(-1px, 0, 0);
+   }
+   
+   20%, 80% 
+   {
+     transform: translate3d(2px, 0, 0);
+   }
+ 
+   30%, 50%, 70% 
+   {
+     transform: translate3d(-4px, 0, 0);
+   }
+ 
+   40%, 60% 
+   {
+     transform: translate3d(4px, 0, 0);
+   }
+ }
+
+#keepintouch_subscribe_button:hover 
+{
+	-webkit-animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
+	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes keepintouch_subscribe_buttonAnim 
+{
+	to 
+	{
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+}
+/* Standard syntax */
+@keyframes keepintouch_subscribe_buttonAnim 
+{
+	to
+	{
+		background-color: rgba(255, 255, 255, 0.5);
+	}
 }
 </style>    
 
@@ -1455,32 +1509,44 @@ body {
   </section>
 
 
- <!-- Stay Connected Section -->
+ <!-- Contacts Section -->
   <section class='stay' style='height:200px; color:white'>
 
       <div class='social col-xs-3 col-xs-push-1' style=' height:200px;'>
-        <div style='margin: 50px 0px 50px 0px;'>
-        <h3>Stay Connected</h3><br>
-        <div style='font-size:30px;'>
-          <li class='fa fa-facebook-square' style='padding:5px;'></li>
-          <li class='fa fa-twitter-square' style='padding:5px;'></li>
-          <li class='fa fa-google-plus-square' style='padding:5px;'></li>
-          <li class='fa fa-youtube-square' style='padding:5px;'></li>
+        <div style='margin: 50px 0px 50px 0px; padding:3%; border-radius:2%; text-align:center; background-color:rgba(0, 0, 0, 0.8);'>
+        <h3>Apps</h3><br>
+        <div style='font-size:40px;'>
+          <a href="https://www.facebook.com/aiet.edu.eg/" class='fa fa-facebook-square' id="keepintouch_icon" style='cursor:pointer; padding:5px; color:#3b5998;'></a>
+          <a href="https://twitter.com/aiet_edu_eg" class='fa fa-twitter-square' id="keepintouch_icon" style='cursor:pointer; padding:5px; color:#00aced;'></a>
         </div>
         </div>
       </div>
 
       <div class='subs col-xs-9 counterStart' style='height:200px;'>
-        <center style='margin: 50px 0px 50px 0px;'>
-        <h1>subscribe to our official newsletter</h1><br>
+        <center style='margin: 30px 0px 50px 0px;'>
+        <h2>Keep in touch</h2><br>
+		<p>subscribe to get the latest news delivered to your mail box.</p><br>
               <div class="input-group col-xs-7">
-                <input type="text" class="form-control" placeholder="Your email address">
+			  <script>
+				function OnWriteInSubscribeBox()
+				{
+					// If there's at least one character in text area
+					if(document.getElementById("keepintouch_subscribe_input").value)
+					{
+						// Enable the subscribe button
+						document.getElementById("keepintouch_subscribe_button").disabled = false;
+					}
+					else
+					{
+						// Text area is empty. Disable the subscribe button.
+						document.getElementById("keepintouch_subscribe_button").disabled = true;
+					}
+				}
+				</script>
+                <input id="keepintouch_subscribe_input" oninput="OnWriteInSubscribeBox()" type="text" class="form-control" placeholder="your email address (e.g my_name@server.com)">
                 <span class="input-group-btn">
-                  <button style='width: auto;    height: 34px;
-    background-color: #B51918;
-    color: white;
-    border-color: white;' class="btn btn-danger" type="button">Subscribe</button>
-                </span>
+					<button id="keepintouch_subscribe_button" class="btn btn-danger" disabled style='width: auto; height: 34px; background-color: #B51918; color: white; border-color: white; font-weight:bold;' type="button">SUBSCRIBE</button>
+				</span>
               </div><!-- /input-group -->
         </center>
       </div>
