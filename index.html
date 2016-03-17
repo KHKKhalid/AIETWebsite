@@ -739,46 +739,50 @@ body {
 .carousel-indicators .active {
   background-color: #B51918;
 }
-.readMore {
-  border-radius: 5px;
-  width: auto;
-  height: auto;
+.readMore 
+{
+	color:black;
+	border-radius: 1%;
+	border-style: solid;
+	border-color:black;
+	width: auto;
+	height: auto;
+    background-color: transparent;
+    padding: 2%;
+	font-weight:bold;
 }
-.readMore:hover {
-  color: white;
+.readMore:hover 
+{
+	
 }
-.box {border:2px solid #B51918;}
-.box h2 {background:#B51918;color:white;padding:10px;}
-.box p {color:#333;padding:10px;}
-.box {
-    -moz-border-radius-topright:5px;
-    -moz-border-radius-topleft:5px;
-    -webkit-border-top-right-radius:5px;
-    -webkit-border-top-left-radius:5px;
+.readMore:hover 
+{
+	color:black;
+	-webkit-animation: readMoreAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
+	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	animation: readMoreAnim 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes readMoreAnim 
+{
+	to 
+	{
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+}
+/* Standard syntax */
+@keyframes readMoreAnim 
+{
+	to
+	{
+		background-color: rgba(0, 0, 0, 0.1);
+	}
 }
 .panel {
   margin-bottom: 0px
-}
-.readMore {
-      width: auto;
-    background-color: #ee3733;
-    padding: 5px 15px;
-    color: #fff;
-    margin-right: 5px;
-    font-weight: 300;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -o-border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    -o-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    -moz-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    -webkit-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-    border: 0;
 }
 </style>    
 
@@ -991,7 +995,7 @@ body {
       <div class='container' style='padding: 0px; padding-top:50px; padding-bottom:50px; margin-bottom: 20px;'>
 
       <div class='bigTitle col-md-6 col-sm-6 col-xs-12'>
-        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>More</strong> about us...</h1>
+        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Who are we?</strong></h1>
         <br>
 
         <!-- paragraph -->
@@ -1005,7 +1009,7 @@ body {
           The main objective of the AIET Institute is to share in the education of the Egyptian youth as well as those from other countries, and in the advancement of knowledge...
         </p>
         <br>
-        <a style='width: auto' href="#" class="btn btn-danger readMore">Read More <span class="glyphicon glyphicon-share-alt"></span></a>
+        <a style='width: auto' href="#" class="readMore">Know more about us &nbsp;&nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
       </div>
 
 
@@ -1058,17 +1062,13 @@ body {
       </section>
 
 
-
-
-
-
 <div class='clearfix'></div>
 
 <!-- latest events section -->
 <section class='events'>
   <div class='container'>
 
-    <h1 class='text-center' style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Our</strong> Latest events</h1>
+    <h1 class='text-center' style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Events</strong></h1>
 
         <!-- EVENT BOX START -->
         <div class='col-sm-4 col-xs-6' style='padding-top: 20px; padding-bottom: 20px;'>
@@ -1121,7 +1121,7 @@ body {
   <!-- LATEST NEWS SECTION -->
   <div class="panel panel-default">
   <div class="panel-heading" style='background-color: #f6f7f8; color: #333; border-bottom: 4px solid #B51918;'>
-    <h3 class="panel-title">Latest News & Announcements</h3>
+    <h3 class="text-center"><strong>Latest News</strong></h3>
   </div>
   <div class="panel-body" style='padding: 0;'>
       <section class='stay' style='height:400px; color:white'>
