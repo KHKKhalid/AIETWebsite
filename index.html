@@ -20,8 +20,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
     <!-- animate -->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,7 +41,15 @@ body {
       -moz-transition: all 1s ease;
       -o-transition: all 1s ease;
       transition: all 1s ease;
-
+}
+strong, .fInstructors, .HappysFont {
+  font-family: 'Exo', sans-serif;
+}
+p, a, small, big {
+  font-family: 'Ubuntu', sans-serif;
+}
+h4 {
+  font-family: 'Dosis', sans-serif;
 }
   .vid-header {
     width: 100%;
@@ -79,7 +91,7 @@ body {
   .mainTxt {
     color: #8d1f1e;
     margin-top: 70px;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Playfair Display', serif;
   }
   .navbar {
     margin-bottom: 0px;
@@ -730,19 +742,33 @@ body {
 }
 .readMore 
 {
-	color:black;
-	border-radius: 1%;
-	border-style: solid;
-	border-color:black;
-	width: auto;
-	height: auto;
-    background-color: transparent;
-    padding: 2%;
-	font-weight:bold;
-}
+    width: auto;
+    display: inline-block;
+    color: #fff;
+    margin-right: 5px;
+    font-weight: 300;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+    -o-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+    -moz-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
+    -webkit-box-shadow: 0 4px 0 #B51918 inset;
+    border: 0;
+    font-weight: 400;
+    background-color: black;
+    font-size: 14px;
+    padding: 9px 22px;
+  }
 .readMore:hover 
 {
 	color:black;
+  background-color: #B51918;
 	-webkit-animation: readMoreAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
 	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
 	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
@@ -840,6 +866,7 @@ body {
     border-radius: 0px;
     margin-right: -20px;
     min-width: 130px;
+    z-index: 99999999999999;
 
 }
 .lang-btn:hover {
@@ -872,6 +899,135 @@ body {
       -moz-transition: all 3s ease;
       -o-transition: all 3s ease;
       transition: all 3s ease;
+}
+/*Loading screen*/
+.sk-circle {
+  margin: 100px auto;
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+.sk-circle .sk-child {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sk-circle .sk-child:before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  background-color: white;
+  border-radius: 100%;
+  -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+          animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+}
+.sk-circle .sk-circle2 {
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg); }
+.sk-circle .sk-circle3 {
+  -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+          transform: rotate(60deg); }
+.sk-circle .sk-circle4 {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+.sk-circle .sk-circle5 {
+  -webkit-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+          transform: rotate(120deg); }
+.sk-circle .sk-circle6 {
+  -webkit-transform: rotate(150deg);
+      -ms-transform: rotate(150deg);
+          transform: rotate(150deg); }
+.sk-circle .sk-circle7 {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+.sk-circle .sk-circle8 {
+  -webkit-transform: rotate(210deg);
+      -ms-transform: rotate(210deg);
+          transform: rotate(210deg); }
+.sk-circle .sk-circle9 {
+  -webkit-transform: rotate(240deg);
+      -ms-transform: rotate(240deg);
+          transform: rotate(240deg); }
+.sk-circle .sk-circle10 {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg); }
+.sk-circle .sk-circle11 {
+  -webkit-transform: rotate(300deg);
+      -ms-transform: rotate(300deg);
+          transform: rotate(300deg); }
+.sk-circle .sk-circle12 {
+  -webkit-transform: rotate(330deg);
+      -ms-transform: rotate(330deg);
+          transform: rotate(330deg); }
+.sk-circle .sk-circle2:before {
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s; }
+.sk-circle .sk-circle3:before {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; }
+.sk-circle .sk-circle4:before {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s; }
+.sk-circle .sk-circle5:before {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s; }
+.sk-circle .sk-circle6:before {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s; }
+.sk-circle .sk-circle7:before {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s; }
+.sk-circle .sk-circle8:before {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s; }
+.sk-circle .sk-circle9:before {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s; }
+.sk-circle .sk-circle10:before {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s; }
+.sk-circle .sk-circle11:before {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s; }
+.sk-circle .sk-circle12:before {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s; }
+
+@-webkit-keyframes sk-circleBounceDelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes sk-circleBounceDelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.lobsterFont {
+  font-family: 'Lobster', cursive;
+}
+.input-group .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child) {
+  color: #B51918;
+  font-family: 'Ubuntu', sans-serif;
 
 }
 </style>    
@@ -1106,11 +1262,11 @@ body {
       <div class='container' style='padding: 0px; padding-top:50px; padding-bottom:50px; margin-bottom: 20px;'>
 
       <div class='bigTitle col-md-6 col-sm-6 col-xs-12'>
-        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Who are we?</strong></h1>
+        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>About AIET</strong></h1>
         <br>
 
         <!-- paragraph -->
-        <p style='color: #666; font-size: 13px; line-height: 22px; margin: 0; font-family: 'Open Sans', sans-serif;'>
+        <p style='color: #666; font-size: 14px; line-height: 22px; margin: 0; font-family: 'Open Sans', sans-serif;'>
           Alexandria Higher Institute of Engineering & Technology (AIET) is a private institute of higher education founded in 1996 and owned by "Mohamed-Ragab Foundation for Social Development" which is a non-profit organization registered under No. SR 1075 with the Egyptian Government.
 
           The motivation behind establishing this private institute is to fulfill the industry needs in Egypt for engineers well-educated and trained in modern engineering and technological fields. 
@@ -1120,54 +1276,49 @@ body {
           The main objective of the AIET Institute is to share in the education of the Egyptian youth as well as those from other countries, and in the advancement of knowledge...
         </p>
         <br>
-        <a style='width: auto' href="#" class="readMore">Know more about us &nbsp;&nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
+        <a style='width: auto;' href="#" class="readMore">Know more about us &nbsp;&nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
       </div>
 
 
 
-            <div></div>
           <div class='col-md-6 col-sm-6 col-xs-12' style='background-color:black; height:327px; overflow:hidden'>
-      <!-- Large modal -->
-        <a href="#" class="btn btn-default Tour" data-toggle="modal" data-target="#videoModal" data-theVideo="img/video.mp4">
-            <img class='tourVid' src="img/Tour.jpg">
-          <i style='font-size: 72px; position: relative; padding: 118px 50px 100px 212px;' class='fa fa-play-circle-o'></i>
-          <h4 style='position: relative; bottom: 71px; left: 170px; font-size: 30px;'>Take A Tour</h4>
-        </a>
 
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                <div>
-                    <iframe width="100%" height="350" src=""></iframe>
-                </div>
-            </div>
-        </div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators" style='bottom: 14vh;' >
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner"role="listbox">
+    <div class="item active">
+      <img src="img/1.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
     </div>
+    <div class="item">
+      <img src="img/Tour.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" >
+    <span style='margin-top: 3em; font-size: 50px;' class="fa fa-angle-double-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" >
+    <span style='margin-top: 3em; font-size: 50px;' class="fa fa-angle-double-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<script type="text/javascript">
-  autoPlayYouTubeModal();
 
-  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-  function autoPlayYouTubeModal() {
-      var trigger = $("body").find('[data-toggle="modal"]');
-      trigger.click(function () {
-          var theModal = $(this).data("target"),
-              videoSRC = $(this).attr("data-theVideo"),
-              videoSRCauto = videoSRC + "?autoplay=1";
-          $(theModal + ' iframe').attr('src', videoSRCauto);
-          $(theModal + ' button.close').click(function () {
-              $(theModal + ' iframe').attr('src', videoSRC);
-          });
-          $('.modal').click(function () {
-              $(theModal + ' iframe').attr('src', videoSRC);
-          });
-      });
-  }
-</script>
-
-    </div>
+          </div>
 
       </div>
       </section>
@@ -1179,7 +1330,7 @@ body {
 <section class='events'>
   <div class='container'>
 
-    <h1 class='text-center' style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>Events</strong></h1>
+    <h1 class='text-center' style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444; background-color: #F6F7F8; border-bottom: 4px solid #B51918;'><strong>Events</strong></h1>
 
         <!-- EVENT BOX START -->
         <div class='col-sm-4 col-xs-6' style='padding-top: 20px; padding-bottom: 20px;'>
@@ -1231,8 +1382,8 @@ body {
 
   <!-- LATEST NEWS SECTION -->
   <div class="panel panel-default">
-  <div class="panel-heading" style='background-color: #f6f7f8; color: #333; border-bottom: 4px solid #B51918;'>
-    <h3 class="text-center"><strong>Latest News</strong></h3>
+  <div class="panel-heading" style='background-color: #f6f7f8; color: #333; border-bottom: 4px solid #B51918; '>
+    <h3 class="text-center"><strong>Latest News & Announcements</strong></h3>
   </div>
   <div class="panel-body" style='padding: 0;'>
       <section class='stay' style='height:400px; color:white'>
@@ -1242,55 +1393,55 @@ body {
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM in classroom 04</p></div>
         </div>
       </div>
 
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
         </div>
       </div>
 
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
         </div>
       </div>
 
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
         </div>
       </div>
             <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
         </div>
       </div>
 
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
         </div>
       </div>
 
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
         </div>
       </div>
 
       <div class='col-xs-6' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
-        <div class='col-xs-8'><h4>News title</h4><p>9:00 AM CS04</p></div>
+        <div class='col-xs-8'><h4 class='lobsterFont'>News title</h4><p class='lobsterFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
         </div>
       </div>
     </div>
@@ -1367,7 +1518,7 @@ body {
         </script>
 
   <section class='countDown'>
-    <div class='container'>
+    <div class='container lobsterFont'>
 
       <div class='col-xs-3 text-center' style='height:200px; padding:30px 0 30px 0;'>
           <i class='col-xs-12 fa fa-users' style='font-size: 45px;'></i><br><br><br><br>
@@ -1379,7 +1530,7 @@ body {
       </div>
 
       <div class='col-xs-3 text-center' style='height:200px; padding:30px 0 30px 0;'>
-          <i class='col-xs-12 fa fa-users' style='font-size: 45px;'></i><br><br><br><br>
+          <i class='col-xs-12 fa fa-graduation-cap' style='font-size: 45px;'></i><br><br><br><br>
           <div style='display: inline-flex; padding-bottom: 20px; '>
           <h2 class='professorCount'></h2>
           </div>
@@ -1387,7 +1538,7 @@ body {
       </div>
 
       <div class='col-xs-3 text-center' style='height:200px; padding:30px 0 30px 0;'>
-          <i class='col-xs-12 fa fa-users' style='font-size: 45px;'></i><br><br><br><br>
+          <i class='col-xs-12 fa fa-angellist' style='font-size: 45px;'></i><br><br><br><br>
           <div style='display: inline-flex; padding-bottom: 20px; '>
           <h2 class='assistantCount'></h2>
           </div>
@@ -1395,7 +1546,7 @@ body {
       </div>
 
       <div class='col-xs-3 text-center' style='height:200px; padding:30px 0 30px 0;'>
-          <i class='col-xs-12 fa fa-users' style='font-size: 45px;'></i><br><br><br><br>
+          <i class='col-xs-12 fa fa-pie-chart' style='font-size: 45px;'></i><br><br><br><br>
           <div style='display: inline-flex; padding-bottom: 20px; '>
           <h2 class='deptCount'></h2>
           </div>
@@ -1409,7 +1560,7 @@ body {
   <!-- Featuerd instructors -->
   <section class='staff' style='margin-top:50px;'>
 
-    <h1 class='text-center'>Featured instructors</h1>
+    <h1 class='text-center fInstructors'>Featured instructors</h1>
     <center>
     <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
       <span style="font-size: 40px; background-color: #FFFFFF; padding: 0 10px;">
@@ -1570,19 +1721,22 @@ body {
   <section class='stay' style='height:200px; color:white'>
 
       <div class='social col-xs-3 col-xs-push-1' style=' height:200px;'>
-        <div style='margin: 50px 0px 50px 0px; padding:3%; border-radius:2%; text-align:center; background-color:rgba(0, 0, 0, 0.8);'>
-        <h3>Apps</h3><br>
-        <div style='font-size:40px;'>
-          <a href="https://www.facebook.com/aiet.edu.eg/" class='fa fa-facebook-square' id="keepintouch_icon" style='cursor:pointer; padding:5px; color:#3b5998;'></a>
-          <a href="https://twitter.com/aiet_edu_eg" class='fa fa-twitter-square' id="keepintouch_icon" style='cursor:pointer; padding:5px; color:#00aced;'></a>
+        <div style='margin: 50px 0px 50px 0px; padding:3%; border-radius:2%; text-align:center; background-color:rgba(0, 0, 0, 0.8); box-shadow: 0px 2px 15px black;
+'>
+        <h3 class='lobsterFont'>Social Networks</h3><br>
+        <div style='font-size:30px;'>
+          <li class='fa fa-facebook-square' style='padding:5px; color: #3B579D'></li>
+          <li class='fa fa-twitter-square' style='padding:5px; color: #00ACED'></li>
+          <li class='fa fa-google-plus-square' style='padding:5px; color: #CC3333'></li>
+          <li class='fa fa-youtube-square' style='padding:5px; color: #E62117;'></li>
         </div>
         </div>
       </div>
 
       <div class='subs col-xs-9 counterStart' style='height:200px;'>
         <center style='margin: 30px 0px 50px 0px;'>
-        <h2>Keep in touch</h2><br>
-		<p>subscribe to get the latest news delivered to your mail box.</p><br>
+        <h2 class='lobsterFont'>Keep in touch</h2><br>
+		<p style='color: rgba(240, 248, 255, 0.79);  box-shadow: 0px 2px 15px black;'>subscribe to get the latest news delivered to your mail box.</p><br>
               <div class="input-group col-xs-7">
 			  <script>
 				function OnWriteInSubscribeBox()
@@ -1600,7 +1754,8 @@ body {
 					}
 				}
 				</script>
-                <input id="keepintouch_subscribe_input" oninput="OnWriteInSubscribeBox()" type="text" class="form-control" placeholder="your email address (e.g my_name@server.com)">
+                <input id="keepintouch_subscribe_input" oninput="OnWriteInSubscribeBox()" type="text" class="form-control" placeholder="your email address (e.g my_name@mail.com)" style=' box-shadow: 0px 2px 15px black;
+'>
                 <span class="input-group-btn">
 					<button id="keepintouch_subscribe_button" class="btn btn-danger" disabled style='width: auto; height: 34px; background-color: #B51918; color: white; border-color: white; font-weight:bold;' type="button">SUBSCRIBE</button>
 				</span>
@@ -1613,7 +1768,7 @@ body {
 
   <!-- Our Happy Students -->
   <section class='happyS' style='margin-top:50px;'>
-        <h1 class='text-center'>Our Happy Students</h1>
+        <h1 class='text-center HappysFont'>Our Happy Students</h1>
     <center>
     <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
       <span style="font-size: 40px; background-color: #FFFFFF; padding: 0 10px;">
@@ -1694,9 +1849,20 @@ body {
 
   <div class='loading-content'>
 
-	<div class="loading_hourglass_container">
-		<div class="loading_hourglass fa fa-hourglass-half" style="color:white;"></div>
-	</div>
+<div class="sk-circle">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
 	<br><br><br><br>
   <section class='happyS' style='margin-top:50px;'>
     <center>
@@ -1766,6 +1932,7 @@ body {
 
 
   </div>
+
 <script type="text/javascript">
 $(function(){
 
@@ -1784,7 +1951,7 @@ $(function(){
   $('.carousel').carousel({
    interval: 3000
   });
- </script>  
+ </script> 
 </section>
 
 <!-- scroll to top -->
