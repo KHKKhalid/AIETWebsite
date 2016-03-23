@@ -1218,18 +1218,6 @@ body {
   </div>
 </div>    
 </div>
- 
-
-
-
-
-
-
-
-
-
-
-
 
 <nav class="navbar navbar-default navbar-fixed-top">
 
@@ -1389,74 +1377,7 @@ body {
     <div class="zoom"></div>
   </div>
   <div class="file_viewer">
-
-
-    <!-- content to change start -->
-    <div class='contentToLoad'>
-
-      <!-- breadcrumb -->
-      <ol class="breadcrumb">
-        <li>..</li>
-        <li class="active"><a href="#">Lectures</a></li>
-      </ol>
-
-
-
-          <div class='container'>
-
-            <center class='col-sm-3' onclick="LoadFolder('PreparatoryLevel.html')">
-          <div class="folderContainer">
-        <div class="folder">
-          <i class="fa fa-cogs"></i>
-        </div>
-        <p style='margin-top: 7px; background-color: rgba(51, 51, 51, 0.8); color: white; border-radius: 5px; padding: 0px 10px 0px 10px; cursor: pointer;'>Preparatory Level</p>
-          </div>
-          </center>
-
-
-            <center class='col-sm-3' onclick="LoadFolder('FirstLevel.html')">
-          <div class="folderContainer">
-        <div class="folder">
-          <i class="fa fa-cogs"></i>
-        </div>
-        <p style='margin-top: 7px; background-color: rgba(51, 51, 51, 0.8); color: white; border-radius: 5px; padding: 0px 10px 0px 10px; cursor: pointer;'>First Level</p>
-          </div>
-          </center>
-
-
-            <center class='col-sm-3' onclick="LoadFolder('SecondLevel.html')">
-          <div class="folderContainer">
-        <div class="folder">
-          <i class="fa fa-cogs"></i>
-        </div>
-        <p style='margin-top: 7px; background-color: rgba(51, 51, 51, 0.8); color: white; border-radius: 5px; padding: 0px 10px 0px 10px; cursor: pointer;'>Second Level</p>
-          </div>
-          </center>
-
-
-            <center class='col-sm-3' onclick="LoadFolder('ThirdLevel.html')">
-          <div class="folderContainer">
-        <div class="folder">
-          <i class="fa fa-cogs"></i>
-        </div>
-        <p style='margin-top: 7px; background-color: rgba(51, 51, 51, 0.8); color: white; border-radius: 5px; padding: 0px 10px 0px 10px; cursor: pointer;'>Third Level</p>
-          </div>
-          </center>
-
-
-            <center class='col-sm-3' onclick="LoadFolder('FourthLevel.html')">
-          <div class="folderContainer">
-        <div class="folder">
-          <i class="fa fa-cogs"></i>
-        </div>
-        <p style='margin-top: 7px; background-color: rgba(51, 51, 51, 0.8); color: white; border-radius: 5px; padding: 0px 10px 0px 10px; cursor: pointer;'>Fourth Level</p>
-          </div>
-          </center>
-
-        </div>
-            </div><!-- content to change end -->
-
-
+  
   </div>
 </div>
 
@@ -1464,7 +1385,7 @@ body {
 <script type="text/javascript">
 
 	// This function loads an HTML file into the 'file_viewer' div element
-	function LoadFolder(folder_name)
+	function LoadFile(folder_name)
 	{
 		$('.contentToLoad').fadeOut(1000, 
 			function()
@@ -1473,6 +1394,9 @@ body {
 			}
 		);
 	}
+	
+	// Load AllYears.html file by default
+	LoadFile('AllYears.html');
 </script> 
 
 
