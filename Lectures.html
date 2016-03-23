@@ -1388,7 +1388,7 @@ body {
     </div>
     <div class="zoom"></div>
   </div>
-  <div class="page">
+  <div class="file_viewer">
 
 
     <!-- content to change start -->
@@ -1404,7 +1404,7 @@ body {
 
           <div class='container'>
 
-            <center class='col-sm-3 plvl'>
+            <center class='col-sm-3' onclick="LoadFolder('PreparatoryLevel.html')">
           <div class="folderContainer">
         <div class="folder">
           <i class="fa fa-cogs"></i>
@@ -1414,7 +1414,7 @@ body {
           </center>
 
 
-            <center class='col-sm-3'>
+            <center class='col-sm-3' onclick="LoadFolder('FirstLevel.html')">
           <div class="folderContainer">
         <div class="folder">
           <i class="fa fa-cogs"></i>
@@ -1424,7 +1424,7 @@ body {
           </center>
 
 
-            <center class='col-sm-3'>
+            <center class='col-sm-3' onclick="LoadFolder('SecondLevel.html')">
           <div class="folderContainer">
         <div class="folder">
           <i class="fa fa-cogs"></i>
@@ -1434,7 +1434,7 @@ body {
           </center>
 
 
-            <center class='col-sm-3'>
+            <center class='col-sm-3' onclick="LoadFolder('ThirdLevel.html')">
           <div class="folderContainer">
         <div class="folder">
           <i class="fa fa-cogs"></i>
@@ -1444,7 +1444,7 @@ body {
           </center>
 
 
-            <center class='col-sm-3'>
+            <center class='col-sm-3' onclick="LoadFolder('FourthLevel.html')">
           <div class="folderContainer">
         <div class="folder">
           <i class="fa fa-cogs"></i>
@@ -1452,9 +1452,6 @@ body {
         <p style='margin-top: 7px; background-color: rgba(51, 51, 51, 0.8); color: white; border-radius: 5px; padding: 0px 10px 0px 10px; cursor: pointer;'>Fourth Level</p>
           </div>
           </center>
-
-          <!-- just a testing txt -->
-          <h1 class='klk'>klk</h1>
 
         </div>
             </div><!-- content to change end -->
@@ -1464,20 +1461,19 @@ body {
 </div>
 
 <!-- controlling the folder -js- -->
-        <script type="text/javascript">
-           $(document).ready(function(){
+<script type="text/javascript">
 
-               $('.klk').click(function(){
-                $('.contentToLoad').fadeOut(1000, function(){
-
-                  $('.page').load('PreparatoryLevel.html');
-                  
-                });
-                
-               });
-
-           });
-        </script> 
+	// This function loads an HTML file into the 'file_viewer' div element
+	function LoadFolder(folder_name)
+	{
+		$('.contentToLoad').fadeOut(1000, 
+			function()
+			{
+			  $('.file_viewer').load('lectures/' + folder_name);
+			}
+		);
+	}
+</script> 
 
 
 
