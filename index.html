@@ -196,7 +196,7 @@ h4 {
     width: 250px;
     position: fixed;
     z-index: 9999999999;
-    margin-top: 53px;
+    margin-top: 6.3%;
     overflow: hidden;
     background-color: rgb(3, 1, 25);
     -webkit-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
@@ -1148,8 +1148,18 @@ body {
         }
         else
         {
-          $('.fa-bars').addClass('ClickedIn');
-          $('.VerticalMenu').addClass('animated slideInLeft');
+			$('.fa-bars').addClass('ClickedIn');
+			$('.VerticalMenu').addClass('animated slideInLeft');
+			
+			// See if the top nav bar is scrolled or not to show our vertical menu with a proper height (margin from top side)
+			if(TopNavBarScrolled)
+			{
+				$('.VerticalMenu').css('margin-top', '3.8%');
+			}
+			else
+			{
+				$('.VerticalMenu').css('margin-top', '6.3%');
+			}
         }
         $('.VerticalMenu').toggle(1000, function(){});
       }
@@ -1975,11 +1985,23 @@ $(function(){
 				TopNavBarScrolled = true;
 				$('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
 				$('.navbar-default').css('height', 'auto');
+				
+				// Handle vertical bar height
+				if(verticalNavBarShown)
+				{
+					$('.VerticalMenu').css('margin-top', '3.8%');
+				}
 			} 
 			else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
 			{
 				TopNavBarScrolled = false;
 				$('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
+				
+				// Handle vertical bar height
+				if(verticalNavBarShown)
+				{
+					$('.VerticalMenu').css('margin-top', '6.3%');
+				}
 			}
 		});
   
