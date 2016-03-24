@@ -105,7 +105,7 @@ h4 {
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    height: 66px;
+    height: auto;
 
   }
   .navbar-default .navbar-nav>li>a {
@@ -1961,29 +1961,35 @@ $(function(){
   
 });
   </script>
-
+	
   <!-- navbar animation with scroll to top button -->
     <script type="text/javascript">
-  $(document).ready(function(){
+	var TopNavBarScrolled = false;
+	$(document).ready(function()
+	{
+		//Check to see if the window is top if not then display button
+		$(window).scroll(function()
+		{
+			if ($(this).scrollTop() > 400 && !TopNavBarScrolled) 
+			{
+				TopNavBarScrolled = true;
+				$('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
+				$('.navbar-default').css('height', 'auto');
+			} 
+			else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
+			{
+				TopNavBarScrolled = false;
+				$('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
+			}
+		});
   
-  //Check to see if the window is top if not then display button
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 400) {
-      $('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.32) ');
-      $('.navbar-default').css('height', 'auto');
-    } else {
-      $('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
-      $('.navbar-default').css('height', '66px');
-    }
-  });
-  
-  //Click event to scroll to top
-  $('.scrollToTop').click(function(){
-    $('html, body').animate({scrollTop : 0},800);
-    return false;
-  });
-  
-});
+	  //Click event to scroll to top
+	  $('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	  });
+	  
+	});
   </script>
 
 
