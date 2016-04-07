@@ -1022,225 +1022,23 @@ body {
 
   </head>
   <body>
-    <div class='VerticalMenu'>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          <i class='fa fa-user'></i> Quality Assurance Center
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <button class='btn'>Vision & Mission</button>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          <i class='fa fa-user'></i> Staff
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <button class='btn'>Acadimic Staff</button>
-        <button class='btn'>Assisting Staff</button>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <i class='fa fa-user'></i> Medical Excuses
-        </a>
-      </h4>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <i class='fa fa-user'></i> Continuing Education
-        </a>
-      </h4>
-    </div>
-  </div>
-</div>    
-</div>
- 
-
+	<div class="navbar_container"></div>
+	
+	<script>
+	$( ".navbar_container" ).load( "navbar.html" );
+	</script>
+	
     <section class='vid-header'>
       <div class='blue-effect'></div>
 
       <video autoplay loop poster="video.jpg" id="bgvid">
           <source src="img/video.mp4" type="video/mp4">
       </video>
-
-
-
-
+	  
       <center>
         <img class='logo' src="img/logo.png">
         <h1 class='mainTxt' style="font-family: 'Play', sans-serif;">Alexandria Higher Institute of Engineering & Technology</h1>
       </center>
-
-
-<nav class="navbar navbar-default navbar-fixed-top">
-
-  <div style='' class='tiny-nav'>
-
-    <form class="navbar-form navbar-left col-lg-11 col-xs-6" role="search" style='margin-top: 0; margin-bottom: 0; padding-left: 0;'>
-      <div class="input-group">
-        <input style='height: 32px;' type="text" class="form-control" placeholder="What can we help you find" aria-describedby="basic-addon2">
-        <span class="input-group-addon" id="basic-addon2"><i class='fa fa-search' style='height: 5px; font-size: 10px;'></i></span>
-      </div>
-</form>
-
-
-<!-- Single button -->
-<a style='color: white; float: right; padding-right: 8px;' href="#">العربية <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/ar.png"></a>
-<a style='color: white; float: right; padding-right: 8px' href="#">English <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/en.png"></a>
-
-</div>
-
-<div style='background-color: rgb(3, 1, 25)' class='clearfix'></div>
-
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand">
-        <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%;"></i>
-        <script type="text/javascript">
-      var verticalNavBarShown = false;
-      
-      // Show or hide vertical nav bar
-      function ToggleVerticalNavBar(toggle)
-      {
-        verticalNavBarShown = toggle;
-        if(toggle == false)
-        {
-          $('.fa-bars').removeClass('ClickedIn');
-          $('.VerticalMenu').addClass('animated reversedSlideInLeft');
-        }
-        else
-        {
-			$('.fa-bars').addClass('ClickedIn');
-			$('.VerticalMenu').addClass('animated slideInLeft');
-			
-			// See if the top nav bar is scrolled or not to show our vertical menu with a proper height (margin from top side)
-			if(TopNavBarScrolled)
-			{
-				$('.VerticalMenu').css('margin-top', '3.8%');
-			}
-			else
-			{
-				$('.VerticalMenu').css('margin-top', '6.3%');
-			}
-        }
-        $('.VerticalMenu').toggle(1000, function(){});
-      }
-      
-      $(function()
-      {
-        // When the toggle button (bars) have been clicked...
-        $('.fa-bars').click(function() 
-        {
-          ToggleVerticalNavBar(!verticalNavBarShown);
-        });
-      });
-
-      $(document).on( 'click', function ( e ) 
-      {
-        // See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
-        if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
-        {
-          if(verticalNavBarShown)
-            ToggleVerticalNavBar(false);
-        }
-      });
-          
-      // Handle key presses...
-      $(document).on( 'keydown', function ( e ) 
-      {
-        // If the ESC key (value 27) has been pressed...
-        if ( e.keyCode === 27 ) 
-        {
-          // See if the vertical menu is shown
-          if(verticalNavBarShown)
-          {
-            // It's shown. Hide it!
-            ToggleVerticalNavBar(false);
-          }
-        }
-      });
-        </script>
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-		<li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Admission Requirements</a></li>
-            <li><a href="#">Fees</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acadmeics <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Departments</a></li>
-            <li><a href="#">curriculum & course synopses</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Acadmeic Rules</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Q A & Accreditation</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Acadimic Calender <span class="sr-only"></span></a></li>
-        <li><a href="#">Summer Training</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Activities <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Student Union</a></li>
-            <li><a href="#">Clubs & Societies</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Achievements</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</nav>
-  <script type="text/javascript">
-    $('ul.nav li.dropdown').hover(function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    });
-  </script>
-
 
     </section>
 
@@ -1959,67 +1757,6 @@ $(function(){
   
 });
   </script>
-	
-  <!-- navbar animation with scroll to top button -->
-    <script type="text/javascript">
-	var TopNavBarScrolled = false;
-	$(document).ready(function()
-	{
-		//Check to see if the window is top if not then display button
-		$(window).scroll(function()
-		{
-			if ($(this).scrollTop() > 400 && !TopNavBarScrolled) 
-			{
-				TopNavBarScrolled = true;
-				$('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
-				$('.navbar-default').css('height', 'auto');
-				
-				// Handle vertical bar height
-				if(verticalNavBarShown)
-				{
-					$('.VerticalMenu').css('margin-top', '3.8%');
-				}
-			} 
-			else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
-			{
-				TopNavBarScrolled = false;
-				$('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
-				
-				// Handle vertical bar height
-				if(verticalNavBarShown)
-				{
-					$('.VerticalMenu').css('margin-top', '6.3%');
-				}
-			}
-		});
-  
-	  //Click event to scroll to top
-	  $('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	  });
-	  
-	});
-  </script>
-
-
-  <!-- Tiny navbar animation -->
-    <script type="text/javascript">
-  $(document).ready(function(){
-  
-  //Check to see if the window is top if not then display button
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 50) {
-      $('.tiny-nav').fadeOut(500);
-    } else {
-      $('.tiny-nav').fadeIn(500);
-    }
-  });
-  
-  
-});
-  </script>
-
 
 </div>
 <!-- Footer section -->
