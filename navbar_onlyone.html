@@ -1,0 +1,175 @@
+<div class='VerticalMenu'>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <i class='fa fa-user'></i> Quality Assurance Center
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <button class='btn'>Vision & Mission</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class='fa fa-user'></i> Staff
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <button class='btn'>Acadimic Staff</button>
+        <button class='btn'>Assisting Staff</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class='fa fa-user'></i> Medical Excuses
+        </a>
+      </h4>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class='fa fa-user'></i> Continuing Education
+        </a>
+      </h4>
+    </div>
+  </div>
+</div>    
+</div>
+ 
+ <nav class="navbar navbar-default navbar-fixed-top">
+
+<div style='background-color: rgb(3, 1, 25)' class='clearfix'></div>
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">
+        <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%;"></i>
+        <script type="text/javascript">
+      var verticalNavBarShown = false;
+      
+      // Show or hide vertical nav bar
+      function ToggleVerticalNavBar(toggle)
+      {
+        verticalNavBarShown = toggle;
+        if(toggle == false)
+        {
+          $('.fa-bars').removeClass('ClickedIn');
+          $('.VerticalMenu').addClass('animated reversedSlideInLeft');
+        }
+        else
+        {
+			$('.fa-bars').addClass('ClickedIn');
+			$('.VerticalMenu').addClass('animated slideInLeft');
+        }
+        $('.VerticalMenu').toggle(1000, function(){});
+      }
+      
+      $(function()
+      {
+        // When the toggle button (bars) have been clicked...
+        $('.fa-bars').click(function() 
+        {
+          ToggleVerticalNavBar(!verticalNavBarShown);
+        });
+      });
+
+      $(document).on( 'click', function ( e ) 
+      {
+        // See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
+        if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
+        {
+          if(verticalNavBarShown)
+            ToggleVerticalNavBar(false);
+        }
+      });
+          
+      // Handle key presses...
+      $(document).on( 'keydown', function ( e ) 
+      {
+        // If the ESC key (value 27) has been pressed...
+        if ( e.keyCode === 27 ) 
+        {
+          // See if the vertical menu is shown
+          if(verticalNavBarShown)
+          {
+            // It's shown. Hide it!
+            ToggleVerticalNavBar(false);
+          }
+        }
+      });
+        </script>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+		<li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Admission Requirements</a></li>
+            <li><a href="#">Fees</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acadmeics <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">curriculum & course synopses</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Acadmeic Rules</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Q A & Accreditation</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Acadimic Calender <span class="sr-only"></span></a></li>
+        <li><a href="#">Summer Training</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Activities <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Student Union</a></li>
+            <li><a href="#">Clubs & Societies</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Achievements</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</nav>
+  <script type="text/javascript">
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+  </script>
