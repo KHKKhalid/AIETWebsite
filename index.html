@@ -25,8 +25,9 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
     <!-- animate -->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -65,12 +66,13 @@ h4 {
   background: -webkit-linear-gradient(rgba(0, 0, 48, 0.37), #FFF); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(rgba(0, 0, 48, 0.37), #FFF); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(rgba(0, 0, 48, 0.37), #FFF); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(141, 31, 30, 0.69), rgba(255, 255, 255, 0.79)); /* Standard syntax (must be last) */                          
+  background: linear-gradient(rgba(141, 31, 30, 0.69), rgba(255, 255, 255, 0.79)); /* Standard syntax (must be last) */
   position: absolute;
   top: 0;
   bottom: 0;
+  transition: all 5s ease;
   }
-  .vid-header video {
+  .vid-header video, .bgphoto {
     position: absolute; 
     right: 0; 
     bottom: 0;
@@ -113,13 +115,13 @@ h4 {
   }
   .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: #C4302F;
-	font-weight:bold;
+  font-weight:bold;
     background-color: rgba(3, 1, 25, 0.32);
     box-shadow: 0px 2px 15px black;
   }
   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #C4302F;
-	font-weight:bold;
+  font-weight:bold;
     background-color: rgba(3, 1, 25, 0.32);
     box-shadow: 0px 2px 15px black;    
   }
@@ -129,7 +131,7 @@ h4 {
   }
   .dropdown-menu>li>a {
     color: #C4302F;
-	font-weight:bold;
+  font-weight:bold;
   }
   .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     color: white;
@@ -738,36 +740,36 @@ body {
     -webkit-box-shadow: 0 4px 0 #B51918 inset;
     border: 0;
     font-weight: 400;
-    background-color: black;
+    background-color: rgba(3, 1, 25, 0.85);
     font-size: 14px;
     padding: 9px 22px;
   }
 .readMore:hover 
 {
-	color:black;
+  color:black;
   background-color: #B51918;
-	-webkit-animation: readMoreAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
-	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
-	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
-	animation: readMoreAnim 0.5s ease-in-out;
-	animation-fill-mode: forwards;
-	animation-iteration-count: 1;
+  -webkit-animation: readMoreAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+  -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+  animation: readMoreAnim 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes readMoreAnim 
 {
-	to 
-	{
-		background-color: rgba(0, 0, 0, 0.1);
-	}
+  to 
+  {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 /* Standard syntax */
 @keyframes readMoreAnim 
 {
-	to
-	{
-		background-color: rgba(0, 0, 0, 0.1);
-	}
+  to
+  {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 .panel {
   margin-bottom: 0px
@@ -807,28 +809,28 @@ body {
 
 #keepintouch_subscribe_button:hover 
 {
-	-webkit-animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
-	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
-	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
-	animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out;
-	animation-fill-mode: forwards;
-	animation-iteration-count: 1;
+  -webkit-animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+  -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+  animation: keepintouch_subscribe_buttonAnim 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes keepintouch_subscribe_buttonAnim 
 {
-	to 
-	{
-		background-color: rgba(255, 255, 255, 0.5);
-	}
+  to 
+  {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
 /* Standard syntax */
 @keyframes keepintouch_subscribe_buttonAnim 
 {
-	to
-	{
-		background-color: rgba(255, 255, 255, 0.5);
-	}
+  to
+  {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border: none;
@@ -1007,39 +1009,307 @@ body {
   font-family: 'Ubuntu', sans-serif;
 
 }
-.gradientGrayBG
+.aboutUs
 {
-	background: rgba(249,249,249,1);
-	background: -moz-linear-gradient(45deg, rgba(249,249,249,1) 0%, rgba(249,249,249,1) 2%, rgba(201,201,201,1) 100%);
-	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(249,249,249,1)), color-stop(2%, rgba(249,249,249,1)), color-stop(100%, rgba(201,201,201,1)));
-	background: -webkit-linear-gradient(45deg, rgba(249,249,249,1) 0%, rgba(249,249,249,1) 2%, rgba(201,201,201,1) 100%);
-	background: -o-linear-gradient(45deg, rgba(249,249,249,1) 0%, rgba(249,249,249,1) 2%, rgba(201,201,201,1) 100%);
-	background: -ms-linear-gradient(45deg, rgba(249,249,249,1) 0%, rgba(249,249,249,1) 2%, rgba(201,201,201,1) 100%);
-	background: linear-gradient(45deg, rgba(249,249,249,1) 0%, rgba(249,249,249,1) 2%, rgba(201,201,201,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#c9c9c9', GradientType=1 );
+  background-color: white;
 }
 </style>    
 
   </head>
   <body>
-	<div class="navbar_container"></div>
-	
-	<script>
-	$( ".navbar_container" ).load( "navbar.html" );
-	</script>
-	
+    <div class='VerticalMenu'>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <i class='fa fa-user'></i> Quality Assurance Center
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <button class='btn'>Vision & Mission</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class='fa fa-user'></i> Staff
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <button class='btn'>Acadimic Staff</button>
+        <button class='btn'>Assisting Staff</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class='fa fa-user'></i> Medical Excuses
+        </a>
+      </h4>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class='fa fa-user'></i> Continuing Education
+        </a>
+      </h4>
+    </div>
+  </div>
+</div>    
+</div>
+ 
+
     <section class='vid-header'>
       <div class='blue-effect'></div>
 
-      <video autoplay loop poster="video.jpg" id="bgvid">
+          <img class="bgphoto" src="img/video.jpg">
+
+      <video preload="none" loop poster="video.jpg" id="bgvid" style='display: none;'>
           <source src="img/video.mp4" type="video/mp4">
       </video>
-	  
+      <script type="text/javascript">
+        $(function(){
+
+          //playing the video
+
+          $('.fa-play-circle').click(function(){
+            $('.vid-header').css({"position": "fixed", "z-index": "99999999999999"});
+            $("#bgvid").prop('autoplay', true);
+            $("#bgvid").attr("preload", "auto");
+            $('#bgvid').fadeIn();
+            $('.bgphoto').fadeOut();
+            $('.landing-content').fadeOut();
+            $('.fa-stop-circle').fadeIn();
+            $('.navbar').css({
+              "opacity": ".2",
+              "-webkit-filter": "blur(2px)",
+              "-moz-filter": "blur(5px)",
+              "-o-filter": "blur(5px)",
+              "-ms-filter": "blur(5px)",
+              "filter": "blur(5px)",
+            });
+          })
+
+          //hover effects
+
+          $('.fa-play-circle').mouseenter(function(){
+            $('.blue-effect').css({
+                "transition": "all 5s ease",
+                "background": "-webkit-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)",/* For Safari 5.1 to 6.0 */
+                "background": "-o-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Opera 11.1 to 12.0 */
+                "background": "-moz-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Firefox 3.6 to 15 */
+                "background": "linear-gradient(rgba(141, 31, 30, 0.69), rgba(255, 255, 255, 0.57))", /* Standard syntax (must be last) */
+            });
+          });
+          
+          $('.fa-play-circle').mouseleave(function(){
+            $('.blue-effect').css({
+                "background": "-webkit-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)",/* For Safari 5.1 to 6.0 */
+                "background": "-o-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Opera 11.1 to 12.0 */
+                "background": "-moz-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Firefox 3.6 to 15 */
+                "background": "linear-gradient(rgba(141, 31, 30, 0.69), rgba(255, 255, 255, 0.79))", /* Standard syntax (must be last) */
+            });
+
+          });
+          
+
+          // Stoping the video
+
+          $('.fa-stop-circle').click(function(){
+            $('.vid-header').css({"position": "static"});
+            $('#bgvid').fadeOut();
+            $('.bgphoto').fadeIn();
+            $('.landing-content').fadeIn();
+            $('.fa-stop-circle').fadeOut();
+            $('.navbar').css({
+              "opacity": "1",
+              "-webkit-filter": "blur(0px)",
+              "-moz-filter": "blur(5px)",
+              "-o-filter": "blur(5px)",
+              "-ms-filter": "blur(5px)",
+              "filter": "blur(5px)",
+            });
+          });
+
+
+
+        });
+      </script>
+
+
+
+
       <center>
+      <div class="landing-content" style='transition: all 1s ease;'>
         <img class='logo' src="img/logo.png">
-        <h1 class='mainTxt' style="font-family: 'Play', sans-serif;">Alexandria Higher Institute of Engineering & Technology</h1>
-        <p>ksjddddddd</p>
+        <h1 class='mainTxt' style="font-family: 'Playfair Display', serif; cursor: pointer;">Alexandria Higher Institute of Engineering & Technology</h1>
+        <i style='font-size: 90px; padding-top: 30px; cursor: pointer;' class="fa fa-play-circle"></i>
+      </div>
+      <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; opacity: .4;' class="fa fa-stop-circle"></i>
       </center>
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div style='' class='tiny-nav'>
+
+    <form class="navbar-form navbar-left col-lg-11 col-xs-6" role="search" style='margin-top: 0; margin-bottom: 0; padding-left: 0;'>
+      <div class="input-group">
+        <input style='height: 32px;' type="text" class="form-control" placeholder="What can we help you find" aria-describedby="basic-addon2">
+        <span class="input-group-addon" id="basic-addon2"><i class='fa fa-search' style='height: 5px; font-size: 10px;'></i></span>
+      </div>
+</form>
+
+
+<!-- Single button -->
+<a style='color: white; float: right; padding-right: 8px; padding-top: 10px;' href="#">العربية<img style='width: 20px; height: 20px; margin-left: 15px;' src="img/ar.png"></a>
+<a style='color: white; float: right; padding-right: 40px; padding-top: 10px;' href="#">English <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/en.png"></a>
+
+</div>
+
+<div style='background-color: rgb(3, 1, 25)' class='clearfix'></div>
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">
+        <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%;"></i>
+        <script type="text/javascript">
+      var verticalNavBarShown = false;
+      
+      // Show or hide vertical nav bar
+      function ToggleVerticalNavBar(toggle)
+      {
+        verticalNavBarShown = toggle;
+        if(toggle == false)
+        {
+          $('.fa-bars').removeClass('ClickedIn');
+          $('.VerticalMenu').addClass('animated reversedSlideInLeft');
+        }
+        else
+        {
+      $('.fa-bars').addClass('ClickedIn');
+      $('.VerticalMenu').addClass('animated slideInLeft');
+      
+      // See if the top nav bar is scrolled or not to show our vertical menu with a proper height (margin from top side)
+      if(TopNavBarScrolled)
+      {
+        $('.VerticalMenu').css('margin-top', '3.8%');
+      }
+      else
+      {
+        $('.VerticalMenu').css('margin-top', '6.3%');
+      }
+        }
+        $('.VerticalMenu').toggle(1000, function(){});
+      }
+      
+      $(function()
+      {
+        // When the toggle button (bars) have been clicked...
+        $('.fa-bars').click(function() 
+        {
+          ToggleVerticalNavBar(!verticalNavBarShown);
+        });
+      });
+
+      $(document).on( 'click', function ( e ) 
+      {
+        // See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
+        if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
+        {
+          if(verticalNavBarShown)
+            ToggleVerticalNavBar(false);
+        }
+      });
+          
+      // Handle key presses...
+      $(document).on( 'keydown', function ( e ) 
+      {
+        // If the ESC key (value 27) has been pressed...
+        if ( e.keyCode === 27 ) 
+        {
+          // See if the vertical menu is shown
+          if(verticalNavBarShown)
+          {
+            // It's shown. Hide it!
+            ToggleVerticalNavBar(false);
+          }
+        }
+      });
+        </script>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+    <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Admission Requirements</a></li>
+            <li><a href="#">Fees</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acadmeics <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">curriculum & course synopses</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Acadmeic Rules</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Q A & Accreditation</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Acadimic Calender <span class="sr-only"></span></a></li>
+        <li><a href="#">Summer Training</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Activities <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Student Union</a></li>
+            <li><a href="#">Clubs & Societies</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Achievements</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</nav>
+  <script type="text/javascript">
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+  </script>
+
 
     </section>
 
@@ -1111,7 +1381,7 @@ body {
 
   <!-- EVENTS SECTION -->
 <div class="panel panel-default">
-  <div class="panel-heading" style='background-color: #CED2D6; color: #333; border-bottom: 4px solid #B51918; '>
+  <div class="panel-heading" style='background-color: rgba(3, 1, 25, 0.85); color: white; border-bottom: 4px solid #B51918; '>
     <h3 class="text-center"><strong>Events</strong></h3>
   </div>
   <div class="panel-body" style='padding: 0;'>
@@ -1169,7 +1439,7 @@ body {
 
   <!-- LATEST NEWS SECTION -->
   <div class="panel panel-default">
-  <div class="panel-heading" style='background-color: #CED2D6; color: #333; border-bottom: 4px solid #B51918; '>
+  <div class="panel-heading" style='background-color: rgba(3, 1, 25, 0.85); color: white; border-bottom: 4px solid #B51918; '>
     <h3 class="text-center"><strong>News & Announcements</strong></h3>
   </div>
   <div class="panel-body" style='padding: 0;'>
@@ -1509,8 +1779,8 @@ body {
         <h3 style="font-family: 'Ubuntu', sans-serif; font-weight:bold; border-bottom: thin solid #333333;">Social Networks</h3><br>
         <div style='font-size:30px;'>
           <a target="_blank" href="https://www.facebook.com/aiet.edu.eg/" class='fa fa-facebook-square' style='padding:5px; color: #3B579D'></a>
-		  <a target="_blank" href="https://www.linkedin.com/company/alexandria-higher-institute-for-engineering-and-technology" class='fa fa-linkedin-square' style='padding:5px; color: #007bb5'></a>
-		  <a target="_blank" href="https://en.wikipedia.org/wiki/Alexandria_Higher_Institute_of_Engineering_and_Technology" class='fa fa-wikipedia-w' style='padding:5px; color: #EEEEEE'></a>
+      <a target="_blank" href="https://www.linkedin.com/company/alexandria-higher-institute-for-engineering-and-technology" class='fa fa-linkedin-square' style='padding:5px; color: #007bb5'></a>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Alexandria_Higher_Institute_of_Engineering_and_Technology" class='fa fa-wikipedia-w' style='padding:5px; color: #EEEEEE'></a>
         </div>
         </div>
       </div>
@@ -1518,28 +1788,28 @@ body {
       <div class='subs col-sm-9 col-xs-12 counterStart' style='height:200px;'>
         <center style='margin: 30px 0px 50px 0px;'>
         <h2 style="font-family: 'Ubuntu', sans-serif; font-weight:bold;">Keep in touch</h2><br>
-		<p style='color: rgba(240, 248, 255, 0.9);'>subscribe to get the latest news delivered to your mail box.</p><br>
+    <p style='color: rgba(240, 248, 255, 0.9);'>subscribe to get the latest news delivered to your mail box.</p><br>
               <div class="input-group col-sm-7 col-xs-12">
-			  <script>
-				function OnWriteInSubscribeBox()
-				{
-					// If there's at least one character in text area
-					if(document.getElementById("keepintouch_subscribe_input").value)
-					{
-						// Enable the subscribe button
-						document.getElementById("keepintouch_subscribe_button").disabled = false;
-					}
-					else
-					{
-						// Text area is empty. Disable the subscribe button.
-						document.getElementById("keepintouch_subscribe_button").disabled = true;
-					}
-				}
-				</script>
+        <script>
+        function OnWriteInSubscribeBox()
+        {
+          // If there's at least one character in text area
+          if(document.getElementById("keepintouch_subscribe_input").value)
+          {
+            // Enable the subscribe button
+            document.getElementById("keepintouch_subscribe_button").disabled = false;
+          }
+          else
+          {
+            // Text area is empty. Disable the subscribe button.
+            document.getElementById("keepintouch_subscribe_button").disabled = true;
+          }
+        }
+        </script>
                 <input id="keepintouch_subscribe_input" oninput="OnWriteInSubscribeBox()" type="text" class="form-control col-xs-12" placeholder="your email address (e.g my_name@mail.com)" style=' box-shadow: 0px 2px 15px black;'>
                 <span class="input-group-btn">
-					<button id="keepintouch_subscribe_button" class="btn btn-danger" disabled style='width: auto; height: 34px; background-color: #B51918; color: white; border-color: white; font-weight:bold;' type="button">SUBSCRIBE</button>
-				</span>
+          <button id="keepintouch_subscribe_button" class="btn btn-danger" disabled style='width: auto; height: 34px; background-color: #B51918; color: white; border-color: white; font-weight:bold;' type="button">SUBSCRIBE</button>
+        </span>
               </div><!-- /input-group -->
         </center>
       </div>
@@ -1626,6 +1896,7 @@ body {
 
 
 <!-- Loading Page -->
+
 <section style='background: #0A1017; color: #FFF; position: fixed; left: 0; top: 0; width:100%; height: 100%; z-index: 9999;' class='bgOverlay'>
 
   <div class='loading-content'>
@@ -1644,7 +1915,7 @@ body {
   <div class="sk-circle11 sk-child"></div>
   <div class="sk-circle12 sk-child"></div>
 </div>
-	<br><br><br><br>
+  <br><br><br><br>
   <section class='happyS' style='margin-top:50px;'>
     <center>
     <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
@@ -1758,15 +2029,110 @@ $(function(){
   
 });
   </script>
+  
+  <!-- navbar animation with scroll to top button -->
+    <script type="text/javascript">
+  var TopNavBarScrolled = false;
+  $(document).ready(function()
+  {
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function()
+    {
+      if ($(this).scrollTop() > 400 && !TopNavBarScrolled) 
+      {
+        TopNavBarScrolled = true;
+        $('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
+        $('.navbar-default').css('height', 'auto');
+        
+        // Handle vertical bar height
+        if(verticalNavBarShown)
+        {
+          $('.VerticalMenu').css('margin-top', '3.8%');
+        }
+      } 
+      else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
+      {
+        TopNavBarScrolled = false;
+        $('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
+        
+        // Handle vertical bar height
+        if(verticalNavBarShown)
+        {
+          $('.VerticalMenu').css('margin-top', '6.3%');
+        }
+      }
+    });
+  
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
+  </script>
+
+
+  <!-- Tiny navbar animation -->
+    <script type="text/javascript">
+  $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 50) {
+      $('.tiny-nav').fadeOut(500);
+    } else {
+      $('.tiny-nav').fadeIn(500);
+    }
+  });
+  
+  
+});
+  </script>
+
 
 </div>
 <!-- Footer section -->
-<div class="footer_container"></div>
+<footer class='footerSec' style='background-color: #0A1017; color: #FFF; padding: 30px 0 30px 0;'>
+  <div class='container text-center'>
 
-<script>
-$( ".footer_container" ).load( "footer.html" );
-</script>
+  <div class='col-sm-3 col-xs-12'>
+    <img src="img/logo1.png">
+    <br><br>
+    <big style='padding-bottom: 10px;'>Alexandria Institute Of Engineering And Technology - AIET</big>
+  </div>
 
+  <div class='col-sm-3 col-xs-12'>
+    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>Connect</big><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-envelope'></i>Help@aiet.com</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-map-marker'></i>Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-phone'></i>+2 0123 456789</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-envelope'></i>Help@aiet.com</small><br><br>
+  </div>
+
+  <div class='col-sm-3 col-xs-12'>
+    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>About</big><br><br>
+    <a style='color:white' href=""><small>about us</small></a><br><br>
+    <a style='color:white' href=""><small>our staff</small></a><br><br>
+    <a style='color:white' href=""><small>our partners</small></a><br><br>
+    <a style='color:white' href=""><small>careers</small></a><br><br>
+  </div>
+
+  <div class='col-sm-3 col-xs-12'>
+    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>Site map</big><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
+  </div>
+
+  <hr>
+
+  </div>
+    <p class='col-xs-12 text-center' style='font-size: 11px; bottom: -15px; background-color: #0C1621;'>&copy; 2015-2016 AIET, All Rights Reserved.</p>
+
+</footer>
 
   </body>
 </html>
