@@ -93,111 +93,7 @@ h4 {
     margin-top: 70px;
     font-family: 'Playfair Display', serif;
   }
-  .navbar {
-    margin-bottom: 0px;
-  }
-  .navbar-default {
-    background-color: rgb(3, 1, 25);
-    border-color: transparent;
-    box-shadow: 0px 2px 15px black;
-    webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-    height: 66px;
-
-  }
-  .navbar-default .navbar-nav>li>a {
-    color: white;
-  }
-  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    color: #C4302F;
-  font-weight:bold;
-    background-color: rgba(3, 1, 25, 0.32);
-    box-shadow: 0px 2px 15px black;
-  }
-  .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: #C4302F;
-  font-weight:bold;
-    background-color: rgba(3, 1, 25, 0.32);
-    box-shadow: 0px 2px 15px black;    
-  }
-  .dropdown-menu {
-    background-color: rgba(3, 1, 25, 0.95);
-    z-index: 9999999999999999;
-  }
-  .dropdown-menu>li>a {
-    color: #C4302F;
-  font-weight:bold;
-  }
-  .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: white;
-    background-color: transparent;
-  }
-  .dropdown-menu .divider {
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-    background-image: -o-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-  }
-  .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
-    max-height: none;
-  }
-  @media (max-width: 767px){
-.navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: white;
-}
-}
-  .panel-group {
-    margin-bottom: 0;
-  }
-  .panel-default>.panel-heading {
-    background-color: transparent;
-    border: none;
-    color: white;
-  }
-  a:focus, a:hover {
-    text-decoration: none;
-  }
-  .panel {
-    background-color: transparent;
-    border: none;
-  }
-  .panel-default>.panel-heading+.panel-collapse>.panel-body {
-    border-top-color: transparent;
-    background-color: black; 
-  }
-  .btn.focus, .btn:focus, .btn:hover {
-    color: #B51918;
-  }
-  .btn {
-    background-color: transparent;
-    color: #B51918
-  }
-  .fa {
-    color: #B51918;
-  }
-  .fa-search {
-    color: #FFFFFF;
-  }
-  .fa-bars.ClickedIn
-  {
-  color:#777777; 
-  background-color:rgba(0, 0, 0, 0.2); 
-  }
-  .fa-bars {
-    font-size: 23px;
-    cursor: pointer;
-  }
-  .input-group-addon {
-    background-color: #B41817;
-    border: 1px solid #B41817;
-    border-radius: 0;
-  }
-  .form-control {
-    border-radius: 0;
-  }
+  
   /***** MODAL PROPERTIES *****/
  .modal-content {
     -webkit-box-shadow: none;
@@ -776,53 +672,6 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: rgba(255, 255, 255, 0.5);
   }
 }
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border: none;
-}
-.navbar-form {
-  padding: auto;
-}
-.dropdown-menu-lang {
-    background-color: white;
-    box-shadow: 0 3px 15px #141823;
-    -webkit-box-shadow: 0 3px 15px #141823;
-    border-radius: 0px;
-    margin-right: -20px;
-    min-width: 130px;
-    z-index: 99999999999999;
-
-}
-.lang-btn:hover {
-  background-color: transparent;
-  color: white
-}
-.lang-btn:active {
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-
-.lang-btn:focus {
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
-    background-color: transparent;
-  color: white;
-    border: none;
-}
-.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
-    background-color: transparent;
-    border: none;
-      color: white;
-}
-.tiny-nav {
-        webkit-transition: all 3s ease;
-      -moz-transition: all 3s ease;
-      -o-transition: all 3s ease;
-      transition: all 3s ease;
-}
 .lobsterFont {
   font-family: 'Lobster', cursive;
 }
@@ -967,21 +816,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
   </head>
   <body>
-    <div class='VerticalMenu'>
-	
-	<div class="navbar_container"></div>
+    <div class="navbar_container"></div>
 	
 	<script>
 	$( ".navbar_container" ).load( "navbar_onlyone.html" );
-	</script>
-
-  <script type="text/javascript">
-    $('ul.nav li.dropdown').hover(function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    });
-  </script>
+	</script>]
 
 <!-- window Section -->
 <div class="window mac">
@@ -1051,9 +890,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	  
 	});
   </script>
-
-
-</div>
+  
 <!-- Footer section -->
 <div class="footer_container"></div>
 

@@ -96,160 +96,7 @@ h4 {
     margin-top: 70px;
     font-family: 'Playfair Display', serif;
   }
-  .navbar {
-    margin-bottom: 0px;
-  }
-  .navbar-default {
-    background-color: rgb(3, 1, 25);
-    border-color: transparent;
-    box-shadow: 0px 2px 15px black;
-    webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-    height: auto;
-
-  }
-  .navbar-default .navbar-nav>li>a {
-    color: white;
-  }
-  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    color: #C4302F;
-  font-weight:bold;
-    background-color: rgba(3, 1, 25, 0.32);
-    box-shadow: 0px 2px 15px black;
-  }
-  .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: #C4302F;
-  font-weight:bold;
-    background-color: rgba(3, 1, 25, 0.32);
-    box-shadow: 0px 2px 15px black;    
-  }
-  .dropdown-menu {
-    background-color: rgba(3, 1, 25, 0.95);
-    z-index: 9999999999999999;
-  }
-  .dropdown-menu>li>a {
-    color: #C4302F;
-  font-weight:bold;
-  }
-  .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: white;
-    background-color: transparent;
-  }
-  .dropdown-menu .divider {
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-    background-image: -o-linear-gradient(left, rgba(0,0,0,0), #F6F4F4, rgba(0,0,0,0));
-  }
-  .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
-    max-height: none;
-  }
-  @media (max-width: 767px){
-.navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: white;
-}
-}
-  .panel-group {
-    margin-bottom: 0;
-  }
-  .panel-default>.panel-heading {
-    background-color: transparent;
-    border: none;
-    color: white;
-  }
-  a:focus, a:hover {
-    text-decoration: none;
-  }
-  .panel {
-    background-color: transparent;
-    border: none;
-  }
-  .panel-default>.panel-heading+.panel-collapse>.panel-body {
-    border-top-color: transparent;
-    background-color: black; 
-  }
-  .btn.focus, .btn:focus, .btn:hover {
-    color: #B51918;
-  }
-  .btn {
-    background-color: transparent;
-    color: #B51918
-  }
-  .fa {
-    color: #B51918;
-  }
-  .fa-search {
-    color: #FFFFFF;
-  }
-  .fa-bars.ClickedIn
-  {
-  color:#777777; 
-  background-color:rgba(0, 0, 0, 0.2); 
-  }
-  .fa-bars {
-    font-size: 23px;
-    cursor: pointer;
-  }
-  .VerticalMenu {
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    z-index: 9999999999;
-    margin-top: 6.3%;
-    overflow: hidden;
-    background-color: rgb(3, 1, 25);
-    -webkit-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
-    -moz-box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
-    box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
-    color: #B51918;
-    display: none;
-  }
-  .verticalMenuItems
-  {
-    padding:4%;
-  }
-  .verticalMenuItems:hover 
-  {
-    -webkit-animation: verticalMenuItemsAnim 0.7s ease-in-out; /* Chrome, Safari, Opera */
-    -webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
-    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
-    animation: verticalMenuItemsAnim 0.7s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
-  /* Chrome, Safari, Opera */
-  @-webkit-keyframes verticalMenuItemsAnim 
-  {
-    to 
-    {
-      border-radius: 1%;
-      font-weight:bold;
-      background-color: #01031E;
-      box-shadow:6px 6px 7px 3px black;
-    }
-  }
-  /* Standard syntax */
-  @keyframes verticalMenuItemsAnim 
-  {
-    to 
-    {
-      border-radius: 1%;
-      font-weight:bold;
-      background-color: #01031E;
-      box-shadow:6px 6px 7px 3px black;
-    }
-  }
-  .input-group-addon {
-    background-color: #B41817;
-    border: 1px solid #B41817;
-    border-radius: 0;
-  }
-  .form-control {
-    border-radius: 0;
-  }
+  
   /***** MODAL PROPERTIES *****/
  .modal-content {
     -webkit-box-shadow: none;
@@ -832,53 +679,6 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
   }
 }
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border: none;
-}
-.navbar-form {
-  padding: auto;
-}
-.dropdown-menu-lang {
-    background-color: white;
-    box-shadow: 0 3px 15px #141823;
-    -webkit-box-shadow: 0 3px 15px #141823;
-    border-radius: 0px;
-    margin-right: -20px;
-    min-width: 130px;
-    z-index: 99999999999999;
-
-}
-.lang-btn:hover {
-  background-color: transparent;
-  color: white
-}
-.lang-btn:active {
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-
-.lang-btn:focus {
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
-    background-color: transparent;
-  color: white;
-    border: none;
-}
-.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
-    background-color: transparent;
-    border: none;
-      color: white;
-}
-.tiny-nav {
-        webkit-transition: all 3s ease;
-      -moz-transition: all 3s ease;
-      -o-transition: all 3s ease;
-      transition: all 3s ease;
-}
 /*Loading screen*/
 .sk-circle {
   margin: 100px auto;
@@ -1017,59 +817,12 @@ body {
 
   </head>
   <body>
-    <div class='VerticalMenu'>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          <i class='fa fa-user'></i> Quality Assurance Center
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <button class='btn'>Vision & Mission</button>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          <i class='fa fa-user'></i> Staff
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <button class='btn'>Acadimic Staff</button>
-        <button class='btn'>Assisting Staff</button>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <i class='fa fa-user'></i> Medical Excuses
-        </a>
-      </h4>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <i class='fa fa-user'></i> Continuing Education
-        </a>
-      </h4>
-    </div>
-  </div>
-</div>    
-</div>
- 
-
+	<div class="navbar_container"></div>
+	
+	<script>
+	$( ".navbar_container" ).load( "navbar.html" );
+	</script>
+	
     <section class='vid-header'>
       <div class='blue-effect'></div>
 
@@ -1156,159 +909,6 @@ body {
         <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease;' data-toggle="tooltip" data-placement="top" title="Take a tour !" class="fa fa-play-circle"></i>
       <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease;' class="fa fa-stop-circle"></i>
       </center>
-
-
-<nav class="navbar navbar-default navbar-fixed-top">
-
-  <div style='' class='tiny-nav'>
-
-    <form class="navbar-form navbar-left col-lg-11 col-xs-6" role="search" style='margin-top: 0; margin-bottom: 0; padding-left: 0;'>
-      <div class="input-group">
-        <input style='height: 32px;' type="text" class="form-control" placeholder="What can we help you find" aria-describedby="basic-addon2">
-        <span class="input-group-addon" id="basic-addon2"><i class='fa fa-search' style='height: 5px; font-size: 10px;'></i></span>
-      </div>
-</form>
-
-
-<!-- Single button -->
-<a style='color: white; float: right; padding-right: 8px; padding-top: 10px;' href="#">العربية<img style='width: 20px; height: 20px; margin-left: 15px;' src="img/ar.png"></a>
-<a style='color: white; float: right; padding-right: 40px; padding-top: 10px;' href="#">English <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/en.png"></a>
-
-</div>
-
-<div style='background-color: rgb(3, 1, 25)' class='clearfix'></div>
-
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand">
-        <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%;"></i>
-        <script type="text/javascript">
-      var verticalNavBarShown = false;
-      
-      // Show or hide vertical nav bar
-      function ToggleVerticalNavBar(toggle)
-      {
-        verticalNavBarShown = toggle;
-        if(toggle == false)
-        {
-          $('.fa-bars').removeClass('ClickedIn');
-          $('.VerticalMenu').addClass('animated reversedSlideInLeft');
-        }
-        else
-        {
-      $('.fa-bars').addClass('ClickedIn');
-      $('.VerticalMenu').addClass('animated slideInLeft');
-      
-      // See if the top nav bar is scrolled or not to show our vertical menu with a proper height (margin from top side)
-      if(TopNavBarScrolled)
-      {
-        $('.VerticalMenu').css('margin-top', '3.8%');
-      }
-      else
-      {
-        $('.VerticalMenu').css('margin-top', '6.3%');
-      }
-        }
-        $('.VerticalMenu').toggle(1000, function(){});
-      }
-      
-      $(function()
-      {
-        // When the toggle button (bars) have been clicked...
-        $('.fa-bars').click(function() 
-        {
-          ToggleVerticalNavBar(!verticalNavBarShown);
-        });
-      });
-
-      $(document).on( 'click', function ( e ) 
-      {
-        // See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
-        if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
-        {
-          if(verticalNavBarShown)
-            ToggleVerticalNavBar(false);
-        }
-      });
-          
-      // Handle key presses...
-      $(document).on( 'keydown', function ( e ) 
-      {
-        // If the ESC key (value 27) has been pressed...
-        if ( e.keyCode === 27 ) 
-        {
-          // See if the vertical menu is shown
-          if(verticalNavBarShown)
-          {
-            // It's shown. Hide it!
-            ToggleVerticalNavBar(false);
-          }
-        }
-      });
-        </script>
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-    <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Admission Requirements</a></li>
-            <li><a href="#">Fees</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acadmeics <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Departments</a></li>
-            <li><a href="#">curriculum & course synopses</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Acadmeic Rules</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Q A & Accreditation</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Acadimic Calender <span class="sr-only"></span></a></li>
-        <li><a href="#">Summer Training</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Activities <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Student Union</a></li>
-            <li><a href="#">Clubs & Societies</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Achievements</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</nav>
-  <script type="text/javascript">
-    $('ul.nav li.dropdown').hover(function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-    }, function() {
-      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    });
-  </script>
-
-
     </section>
 
 <!-- About us Section -->
@@ -2025,39 +1625,9 @@ $(function(){
 });
   </script>
   
-  <!-- navbar animation with scroll to top button -->
-    <script type="text/javascript">
-  var TopNavBarScrolled = false;
+  <script type="text/javascript">
   $(document).ready(function()
   {
-    //Check to see if the window is top if not then display button
-    $(window).scroll(function()
-    {
-      if ($(this).scrollTop() > 400 && !TopNavBarScrolled) 
-      {
-        TopNavBarScrolled = true;
-        $('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
-        $('.navbar-default').css('height', 'auto');
-        
-        // Handle vertical bar height
-        if(verticalNavBarShown)
-        {
-          $('.VerticalMenu').css('margin-top', '3.8%');
-        }
-      } 
-      else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
-      {
-        TopNavBarScrolled = false;
-        $('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
-        
-        // Handle vertical bar height
-        if(verticalNavBarShown)
-        {
-          $('.VerticalMenu').css('margin-top', '6.3%');
-        }
-      }
-    });
-  
     //Click event to scroll to top
     $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
@@ -2068,66 +1638,13 @@ $(function(){
   </script>
 
 
-  <!-- Tiny navbar animation -->
-    <script type="text/javascript">
-  $(document).ready(function(){
-  
-  //Check to see if the window is top if not then display button
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 50) {
-      $('.tiny-nav').fadeOut(500);
-    } else {
-      $('.tiny-nav').fadeIn(500);
-    }
-  });
-  
-  
-});
-  </script>
-
-
 </div>
 <!-- Footer section -->
-<footer class='footerSec' style='background-color: #0A1017; color: #FFF; padding: 30px 0 30px 0;'>
-  <div class='container text-center'>
+<div class="footer_container"></div>
 
-  <div class='col-sm-3 col-xs-12'>
-    <img src="img/logo1.png">
-    <br><br>
-    <big style='padding-bottom: 10px;'>Alexandria Institute Of Engineering And Technology - AIET</big>
-  </div>
-
-  <div class='col-sm-3 col-xs-12'>
-    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>Connect</big><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-envelope'></i>Help@aiet.com</small><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-map-marker'></i>Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</small><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-phone'></i>+2 0123 456789</small><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-envelope'></i>Help@aiet.com</small><br><br>
-  </div>
-
-  <div class='col-sm-3 col-xs-12'>
-    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>About</big><br><br>
-    <a style='color:white' href=""><small>about us</small></a><br><br>
-    <a style='color:white' href=""><small>our staff</small></a><br><br>
-    <a style='color:white' href=""><small>our partners</small></a><br><br>
-    <a style='color:white' href=""><small>careers</small></a><br><br>
-  </div>
-
-  <div class='col-sm-3 col-xs-12'>
-    <big style='border-bottom: 1px groove #B51918; padding-bottom: 10px;'>Site map</big><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
-    <small><i style='padding-right: 10px;' class='fa fa-angle-right'></i>Link here</small><br><br>
-  </div>
-
-  <hr>
-
-  </div>
-    <p class='col-xs-12 text-center' style='font-size: 11px; bottom: -15px; background-color: #0C1621;'>&copy; 2015-2016 AIET, All Rights Reserved.</p>
-
-</footer>
+<script>
+$( ".footer_container" ).load( "footer.html" );
+</script>
 
   </body>
 </html>
