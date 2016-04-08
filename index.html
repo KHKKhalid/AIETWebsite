@@ -1081,82 +1081,80 @@ body {
       <script type="text/javascript">
         $(function(){
 
+          //long blur function
+          function longBlur(element, size) {
+            var filterVal = 'blur(' + size + 'px)';
+            $(element)
+           .css('filter', filterVal)
+           .css('webkitFilter', filterVal)
+           .css('mozFilter', filterVal)
+           .css('oFilter', filterVal)
+           .css('msFilter', filterVal)
+           .css('transition', 'all 3s ease-out')
+           .css('-webkit-transition', 'all 3s ease-out')
+           .css('-moz-transition', 'all 3s ease-out')
+           .css('-o-transition', 'all 3s ease-out');
+          }
+
+          //short blur function
+          function shortBlur(element, size) {
+            var filterVal = 'blur(' + size + 'px)';
+            $(element)
+           .css('filter', filterVal)
+           .css('webkitFilter', filterVal)
+           .css('mozFilter', filterVal)
+           .css('oFilter', filterVal)
+           .css('msFilter', filterVal)
+           .css('transition', 'all .5s ease-out')
+           .css('-webkit-transition', 'all .5s ease-out')
+           .css('-moz-transition', 'all .5s ease-out')
+           .css('-o-transition', 'all .5s ease-out');
+          }
           //playing the video
 
           $('.fa-play-circle').click(function(){
-            $('.vid-header').css({"position": "fixed", "z-index": "99999999999999"});
-            $("#bgvid").prop('autoplay', true);
+            longBlur(".landing-content, .navbar", 20);
+            $(".landing-content, .navbar, .fa-play-circle, .bgphoto").fadeOut(1000, function(){
+              $("#bgvid").prop('autoplay', true);
             $("#bgvid").attr("preload", "auto");
-            $('#bgvid').fadeIn();
-            $('.bgphoto').fadeOut();
-            $('.landing-content').fadeOut();
-            $('.fa-stop-circle').fadeIn();
-            $('.navbar').css({
-              "opacity": ".2",
-              "-webkit-filter": "blur(2px)",
-              "-moz-filter": "blur(5px)",
-              "-o-filter": "blur(5px)",
-              "-ms-filter": "blur(5px)",
-              "filter": "blur(5px)",
+              $(".fa-stop-circle, #bgvid").fadeIn(1000);
             });
           })
 
-          //hover effects
-
+          //play button hover effects
           $('.fa-play-circle').mouseenter(function(){
-            $('.blue-effect').css({
-                "transition": "all 5s ease",
-                "background": "-webkit-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)",/* For Safari 5.1 to 6.0 */
-                "background": "-o-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Opera 11.1 to 12.0 */
-                "background": "-moz-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Firefox 3.6 to 15 */
-                "background": "linear-gradient(rgba(141, 31, 30, 0.69), rgba(255, 255, 255, 0.57))", /* Standard syntax (must be last) */
-            });
+            $(this).css({"-webkit-text-shadow": "5px 5px 7px rgba(0,0,0,0.5)", "text-shadow": "5px 5px 7px rgba(0,0,0,0.5)"});
+            shortBlur(".landing-content, .navbar", 2);
           });
           
           $('.fa-play-circle').mouseleave(function(){
-            $('.blue-effect').css({
-                "background": "-webkit-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)",/* For Safari 5.1 to 6.0 */
-                "background": "-o-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Opera 11.1 to 12.0 */
-                "background": "-moz-linear-gradient(rgba(0, 0, 48, 0.37), #FFF)", /* For Firefox 3.6 to 15 */
-                "background": "linear-gradient(rgba(141, 31, 30, 0.69), rgba(255, 255, 255, 0.79))", /* Standard syntax (must be last) */
-            });
-
+            $(this).css({"-webkit-text-shadow": "none", "text-shadow": "none"});
+            shortBlur(".landing-content, .navbar", 0);
           });
           
 
           // Stoping the video
-
           $('.fa-stop-circle').click(function(){
-            $('.vid-header').css({"position": "static"});
-            $('#bgvid').fadeOut();
-            $('.bgphoto').fadeIn();
-            $('.landing-content').fadeIn();
-            $('.fa-stop-circle').fadeOut();
-            $('.navbar').css({
-              "opacity": "1",
-              "-webkit-filter": "blur(0px)",
-              "-moz-filter": "blur(5px)",
-              "-o-filter": "blur(5px)",
-              "-ms-filter": "blur(5px)",
-              "filter": "blur(5px)",
+            $("#bgvid, .fa-stop-circle").fadeOut(1000, function(){
+              
+              shortBlur(".landing-content, .navbar", 0);
+              $(".bgphoto, .landing-content, .fa-play-circle, .navbar").fadeIn();
             });
           });
-
-
-
         });
+
       </script>
 
 
 
 
       <center>
-      <div class="landing-content" style='transition: all 1s ease;'>
+      <div class="landing-content" style='transition: all .5s ease;'>
         <img class='logo' src="img/logo.png">
-        <h1 class='mainTxt' style="font-family: 'Playfair Display', serif; cursor: pointer;">Alexandria Higher Institute of Engineering & Technology</h1>
-        <i style='font-size: 90px; padding-top: 30px; cursor: pointer;' class="fa fa-play-circle"></i>
+        <h1 class='mainTxt' style="font-family: 'Playfair Display', serif; cursor: default;">Alexandria Higher Institute of Engineering & Technology</h1>
       </div>
-      <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; opacity: .4;' class="fa fa-stop-circle"></i>
+        <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease;' data-toggle="tooltip" data-placement="top" title="Take a tour !" class="fa fa-play-circle"></i>
+      <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease;' class="fa fa-stop-circle"></i>
       </center>
 
 
