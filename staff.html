@@ -50,10 +50,6 @@ body {
     padding:0;
     margin:0;
 }
-.close {
-    font-size: 80px;
-    margin:-20px 0 0 0;
-}
 /* staff section */
 
 
@@ -350,11 +346,20 @@ body {
   width: 80%;
   height: 80vh;
   position: fixed;
-  background-color: #333;
+  background-color: rgba(3, 1, 25, 0.96);
   z-index: 999999;
   top: 10px;
   bottom: 10px;
   overflow: scroll;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.6);
+}
+.modalBox {
+  padding: 10px; 
+  background-color: rgba(255, 255, 255, 0.25); 
+  box-shadow: 9px 5px 33px black;
+}
+a:hover {
+  text-decoration: none;
 }
 </style>    
 
@@ -378,7 +383,7 @@ body {
     <center>
     <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
       <span style="font-size: 40px; background-color: #FFFFFF; padding: 0 10px;">
-        <i class='fa fa-bolt'></i>
+        <i style="color: #B51918;" class='fa fa-bolt'></i>
       </span>
     </div>
     </center><br><br>
@@ -423,184 +428,210 @@ body {
             </div>
         </div>
           <div class='overflowModal col-xs-12' style='padding-right: 0px; padding-left: 0px; border-radius: 10px;'>
+          <div class="col-xs-12" style="position: fixed; background-color: rgb(11, 9, 33); width: 78.87%; z-index: 100;">
+            <h3 class="close" style="color: #FFFFFF; float: right; margin: 10px; cursor: pointer; opacity: .8;">x</h3>
+          </div>
 
-            <div class='col-xs-12' style='background-color: aliceblue; height: 50px; padding-right: 0px; padding-left: 0px;'>
-                <h1 class='out' style='float:right; margin:0px 10px 5px 5px; color:#B51918; cursor:pointer'>x</h1>
-                <center><h3 style='color:#B51918; margin: 10px;'>Dr.Tamer Fouad Ahmed</h3></center>
+          <!-- big first box bg -->
+          <img src="img/stay1.jpg" style='width: 100%; height: 300px;'>
+
+          <!-- name and most important titles -->
+          <div style="margin: -170px 100px 50px 100px; position: relative; background-color: white; height: 250px; box-shadow: 0px 10px 20px black;">
+          <img style="height: 100%; padding-left: 0px;" class="img-responsive col-lg-3" src="img/Dr.jpg">
+          <div class="col-lg-9">
+            <h3><b>Dr.Tamer Fouad Ahmed</b></h3>
+            <br>
+            <br>
+            <p style="color: #4C514B"><b>- Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering &  Technology.</b></p>
+            <p style="color: #4C514B"><b>- Doctor of philosophy in Information Technology, 2009. Institute of Graduate Studies and Research, Alexandria University .</b></p>
+          </div>
+          </div>
+
+          <!-- *Box1* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">Contact</h3>
+            <ul style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
+
+              <li style='margin-bottom: 15px; color:#DDD;'><i style='color:#ee3733' class="fa fa-globe">  </i> <strong style='color:#eee;'>Address:</strong> Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'><i style='color:#ee3733' class="fa fa-phone">  </i> <strong style='color:#eee;'>Phone:</strong> 20-3-425 4370/80.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'><i style='color:#ee3733' class="fa fa-fax">  </i> <strong style='color:#eee;'>Fax:</strong> 20-3-4254942.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'><i style='color:#ee3733' class="fa fa-envelope">  </i> <strong style='color:#eee;'>Email:</strong> tamer.fouad@aiet.edu.eg</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'><i style='color:#ee3733' class="fa fa-globe">  </i> <strong style='color:#eee;'>Address:</strong> Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'><i style='color:#ee3733' class="fa fa-globe">  </i> <strong style='color:#eee;'>Website:</strong> <a href="https://drtamerfouad.wordpress.com/" target='_blank'>www.drtamerfouad.wordpress.com</a></li>
+
+              </ul>
             </div>
+          </div>
+          
+          <!-- *Box2* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">PRESENT RESEARCH INTERESTS:</h3>
+            <ol style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
 
-            <div class='col-xs-12' style='padding-top: 20px'>
+              <li style='margin-bottom: 15px; color:#DDD;'>Data Structures, Advanced Programming, Web Programming, System Programming, Computer Network, Software Engineering, and Artificial Intelligence.</li>
 
-              <img src="img/Dr.jpg" style='box-shadow:0px 2px 15px black;' class='col-xs-2 img-responsive'>
-              <div class='col-xs-10'>
-                <h4 style='color:#f5f5f5;'>Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering &  Technology. .</h4> <br>
-              <ul style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
-
-              <li style='margin-bottom: 4px; color:#DDD;'><i style='color:#ee3733' class="fa fa-globe">  </i> <strong style='color:#eee;'>Address:</strong> Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</li>
-
-              <li style='margin-bottom: 4px; color:#DDD;'><i style='color:#ee3733' class="fa fa-phone">  </i> <strong style='color:#eee;'>Phone:</strong> 20-3-425 4370/80.</li>
-
-              <li style='margin-bottom: 4px; color:#DDD;'><i style='color:#ee3733' class="fa fa-fax">  </i> <strong style='color:#eee;'>Fax:</strong> 20-3-4254942.</li>
-
-              <li style='margin-bottom: 4px; color:#DDD;'><i style='color:#ee3733' class="fa fa-envelope">  </i> <strong style='color:#eee;'>Email:</strong> tamer.fouad@aiet.edu.eg</li>
-
-              <li style='margin-bottom: 4px; color:#DDD;'><i style='color:#ee3733' class="fa fa-globe">  </i> <strong style='color:#eee;'>Address:</strong> Mohamed Aboul Fotouh Hassab, SMOUHA, Police stations of Sidi Gaber, Alexandria 21311</li>
-
-              <li style='margin-bottom: 4px; color:#DDD;'><i style='color:#ee3733' class="fa fa-globe">  </i> <strong style='color:#eee;'>Address:</strong> <a href="https://drtamerfouad.wordpress.com/" target='_blank'>www.drtamerfouad.wordpress.com</a></li>
-
-              </ul> <br>
-              </div>
-              <div class='col-xs-6'>
-                <strong style='color:#eee;'>Education degrees :</strong>
-                <ol>
-                  <li style='color:#DDDDDD'>
-                    Doctor of philosophy in Information Technology, 2009. Institute of Graduate Studies and Research, Alexandria University .
-                  </li>
-                  
-                  <li style='color:#DDDDDD'>
-                    Master of Science in Information Technology, 2004. Institute of Graduate Studies and Research, Alexandria University.
-                  </li>
-                  
-                  <li style='color:#DDDDDD'>
-                    Post Graduate Diploma in Information Technology, 2000. Institute of Graduate Studies and Research, Alexandria University.
-                  </li>
-                  
-                  <li style='color:#DDDDDD'>
-                    B.Sc. in Computer Engineering, 1997. Faculty of Engineering and Technology, Arab Academy for Science & Technology and Maritime Transport (AASTMT).
-                  </li>
-                  
-                </ol>
-              </div>
-
-              <div class='col-xs-6'>
-                <strong style='color:#eee;'>Positions held :</strong>
-                <ol>
-                  <li style='color:#DDDDDD'>
-                    2009-2011: Head of the Continuing Education and Training Center, Alexandria Higher Institute of Engineering & Technology.
-                  </li>
-                  
-                  <li style='color:#DDDDDD'>
-                      1999-2009  :Teaching Assistant in Computer Engineering Department, Alexandria Higher Institute of Engineering & Technology
-                  </li>                  
-                </ol>
-                
-                <strong style='color:#eee;'>PRESENT RESEARCH INTERESTS:</strong>
-                <ol>
-                  <li style='color:#DDDDDD'>
-                    Data Structures, Advanced Programming, Web Programming, System Programming, Computer Network, Software Engineering, and Artificial Intelligence.
-                  </li>                  
-                </ol>
-                
-              </div>
-
-              <div class='col-xs-12'>
-                <div class='col-xs-6'>
-                <strong style='color:#eee;'>TEACHING, RESEARCH AND EDUCATIONAL EXPERIENCE :</strong>
-                <h4 style='color:#DDDDDD'>Post Graduates Courses:</h4>
-                <ol>
-                  <li style='color:#DDDDDD'>
-                    Post Graduates Courses:
-                  </li>
-                  
-                  <li style='color:#DDDDDD'>
-                      Post Graduates Courses:
-                  </li>                  
-                </ol>
-                </div>
-                
-                <div class='col-xs-6'>
-                <h4 style='color:#DDDDDD'>Under Graduates Courses:</h4>
-                <ol>
-                  <li style='color:#DDDDDD'>Introduction to computer systems.</li>
-                  <li style='color:#DDDDDD'> Computer Programming</li>
-                  <li style='color:#DDDDDD'> Structured Programming and Data Structures</li>
-                  <li style='color:#DDDDDD'> Advanced Algorithms</li>
-                  <li style='color:#DDDDDD'> Web Programming</li>
-                  <li style='color:#DDDDDD'>Mobile Programming</li>
-                  <li style='color:#DDDDDD'> Database systems.</li>
-                  <li style='color:#DDDDDD'> System Programming.</li>
-                  <li style='color:#DDDDDD'> Operating Systems.</li>
-                  <li style='color:#DDDDDD'> Software Engineering.</li>
-                  <li style='color:#DDDDDD'> Computer Network.</li>
-                  <li style='color:#DDDDDD'> Computer Graphics .</li>
-                  <li style='color:#DDDDDD'> Management Information System.</li>
-                  <li style='color:#DDDDDD'> E-Business.</li>                                          
-                </ol>
-                </div>
-                           
-              </div>
-
-              <div class='col-xs-12'>
-                <div class='col-xs-6'>
-                <strong style='color:#eee;'>PUBLICATIONS:</strong>
-                <ol>
-                  <li style='color:#DDDDDD'>                     
-Tamer F. Mabrouk and Ghada A. El Khayat, Cloud Computing in Education, The AEAS 38th Annual International Conference, Ain Shams University, December 2011. 
-                  </li>
-                  
-                  <li style='color:#DDDDDD'>
-                        Tamer F. Mabrouk, Mohamed M. Sherbiny, Shawkat K. Guirguis, Ayman Y. Shawky, A Multi-Agent Role-Based System for Business Intelligence, Innovations and Advances in Computer Sciences and Engineering, Springer Netherlands, March  2010.
-                  </li> 
-                                   
-                  <li style='color:#DDDDDD'>
-                    Tamer F. Mabrouk, Mohamed M. Sherbiny, Shawkat K. Guirguis, Ayman Y. Shawky, A Multi-Agent Role-Based System for Business Intelligence, Innovations and Advances in Computer Sciences and Engineering, Springer Netherlands, March  2010.
-                  </li> 
-                                   
-                  <li style='color:#DDDDDD'>
-                  Tamer F. Mabrouk, Mohamed M. Sherbiny, Shawkat K. Guirguis, Ayman Y. Shawky, A Survey on Multi-Agent Systems Programming Languages and Development Tools, The 41th Annual Conference of Institute of statistical Studies and Researches, Cairo University, December  2006.                  
-                  </li> 
-                                   
-                  <li style='color:#DDDDDD'>
-                          Tamer F. Mabrouk, Shawkat K. Guirguis, Ayman Y. Shawky, A Survey on Multi Agent Role-Based Systems, The 40th Annual Conference of Institute of statistical Studies and Researches, Cairo Univeristy, December  2005.
-                  </li> 
-                                   
-                  <li style='color:#DDDDDD'>
-                          Tamer F. Mabrouk, Shawkat K. Guirguis, Ayman Y. Shawky, An Expert System for Product Management, Case Study: Pharmaceutical companies in Egypt, the 2nd International Conference on Advances in Engineering Sciences & Technologies, National Research Centre, November  2005.
-                  </li> 
-                                   
-                </ol>
-                </div>
-                
-                <div class='col-xs-6'>
-                <h4 style='color:#DDDDDD'>Under Graduates Courses:</h4>
-                <ol>
-                  <li style='color:#DDDDDD'>Introduction to computer systems.</li>
-                  <li style='color:#DDDDDD'> Computer Programming</li>
-                  <li style='color:#DDDDDD'> Structured Programming and Data Structures</li>
-                  <li style='color:#DDDDDD'> Advanced Algorithms</li>
-                  <li style='color:#DDDDDD'> Web Programming</li>
-                  <li style='color:#DDDDDD'>Mobile Programming</li>
-                  <li style='color:#DDDDDD'> Database systems.</li>
-                  <li style='color:#DDDDDD'> System Programming.</li>
-                  <li style='color:#DDDDDD'> Operating Systems.</li>
-                  <li style='color:#DDDDDD'> Software Engineering.</li>
-                  <li style='color:#DDDDDD'> Computer Network.</li>
-                  <li style='color:#DDDDDD'> Computer Graphics .</li>
-                  <li style='color:#DDDDDD'> Management Information System.</li>
-                  <li style='color:#DDDDDD'> E-Business.</li>                                          
-                </ol>
-                </div>
-                           
-                <div class='col-xs-6'>
-                <h4 style='color:#DDDDDD'>OTHERS:</h4>
-                <ol>
-                  <li style='color:#DDDDDD'>Member, Association of Egyptian American Scholars (AEAS), 2011.</li>
-                  <li style='color:#DDDDDD'>Keynote speaker, Workshop on ICT in our lives, Faculty of Commerce, Alexandria University, 2011.</li>
-                  <li style='color:#DDDDDD'>Invited reviewer, Journal of Computer and Communication (JCC), from 2010 till present.</li>
-                  <li style='color:#DDDDDD'>Certified Instructor, Egyptian Banking Institute (EBI), from 2006 till present.</li>
-                  <li style='color:#DDDDDD'>Programmer, Atomic Energy Authority – Egypt (Alexandria Branch) from 1997 until 1998.</li>
-                </ol>
-                </div>
-                           
-              </div>
+              </ol>
+            </div>         
+          </div>
 
 
+          <!-- *Box3* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">Positions held :</h3>
+            <ul style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
 
+              <li style='margin-bottom: 15px; color:#DDD;'>2009-2011: Head of the Continuing Education and Training Center, Alexandria Higher Institute of Engineering & Technology.</li>
 
+              <li style='margin-bottom: 15px; color:#DDD;'>1999-2009 :Teaching Assistant in Computer Engineering Department, Alexandria Higher Institute of Engineering & Technology</li>
 
-
-
+              </ul>
             </div>
+          </div>
+          
+          <!-- *Box4* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">Education degrees :</h3>
+            <ol style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Doctor of philosophy in Information Technology, 2009. Institute of Graduate Studies and Research, Alexandria University .</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Master of Science in Information Technology, 2004. Institute of Graduate Studies and Research, Alexandria University.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Post Graduate Diploma in Information Technology, 2000. Institute of Graduate Studies and Research, Alexandria University.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>B.Sc. in Computer Engineering, 1997. Faculty of Engineering and Technology, Arab Academy for Science & Technology and Maritime Transport (AASTMT).</li>
+
+              </ol>
+            </div>         
+          </div>
+
+
+          <!-- *Box5* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">Post Graduates Courses:</h3>
+            <ul style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Advanced Database.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Software Engineering.</li>
+
+              </ul>
+            </div>
+          </div>
+          
+          <!-- *Box6* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">Education degrees :</h3>
+            <ol style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Doctor of philosophy in Information Technology, 2009. Institute of Graduate Studies and Research, Alexandria University .</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Master of Science in Information Technology, 2004. Institute of Graduate Studies and Research, Alexandria University.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Post Graduate Diploma in Information Technology, 2000. Institute of Graduate Studies and Research, Alexandria University.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>B.Sc. in Computer Engineering, 1997. Faculty of Engineering and Technology, Arab Academy for Science & Technology and Maritime Transport (AASTMT).</li>
+
+              </ol>
+            </div>         
+          </div>
+
+          <!-- *Box7* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">Under Graduates Courses:</h3>
+            <ul style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Introduction to computer systems.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Computer Programming</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Structured Programming and Data Structures</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Advanced Algorithms</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Web Programming</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Mobile Programming</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Database systems.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>System Programming.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Operating Systems.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Software Engineering.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Computer Network.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Computer Graphics .</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Management Information System.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>E-Business.</li>
+
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- *Box8* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">PUBLICATIONS:</h3>
+            <ul style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Tamer F. Mabrouk and Ghada A. El Khayat, Cloud Computing in Education, The AEAS 38th Annual International Conference, Ain Shams University, December 2011.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Tamer F. Mabrouk, Mohamed M. Sherbiny, Shawkat K. Guirguis, Ayman Y. Shawky, A Multi-Agent Role-Based System for Business Intelligence, Innovations and Advances in Computer Sciences and Engineering, Springer Netherlands, March 2010.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Tamer F. Mabrouk, Mohamed M. Sherbiny, Shawkat K. Guirguis, Ayman Y. Shawky, A Multi-Agent Role-Based System for Business Intelligence, Innovations and Advances in Computer Sciences and Engineering, Springer Netherlands, March 2010.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Tamer F. Mabrouk, Mohamed M. Sherbiny, Shawkat K. Guirguis, Ayman Y. Shawky, A Survey on Multi-Agent Systems Programming Languages and Development Tools, The 41th Annual Conference of Institute of statistical Studies and Researches, Cairo University, December 2006.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Tamer F. Mabrouk, Shawkat K. Guirguis, Ayman Y. Shawky, A Survey on Multi Agent Role-Based Systems, The 40th Annual Conference of Institute of statistical Studies and Researches, Cairo Univeristy, December 2005.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Tamer F. Mabrouk, Shawkat K. Guirguis, Ayman Y. Shawky, An Expert System for Product Management, Case Study: Pharmaceutical companies in Egypt, the 2nd International Conference on Advances in Engineering Sciences & Technologies, National Research Centre, November 2005.</li>
+
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- *Box9* -->
+          <div class="col-lg-6" style="margin-bottom: 50px;">
+            <div class="modalBox">
+            <h3 style="color: #f5f5f5; border-bottom: 1px solid white; padding-bottom: 3px;">OTHERS:</h3>
+            <ul style=' list-style-type: none; margin-bottom: 6px; padding: 0; margin: 0; 'class="icons-list">
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Member, Association of Egyptian American Scholars (AEAS), 2011.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Keynote speaker, Workshop on ICT in our lives, Faculty of Commerce, Alexandria University, 2011.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Invited reviewer, Journal of Computer and Communication (JCC), from 2010 till present.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Certified Instructor, Egyptian Banking Institute (EBI), from 2006 till present.</li>
+
+              <li style='margin-bottom: 15px; color:#DDD;'>Programmer, Atomic Energy Authority – Egypt (Alexandria Branch) from 1997 until 1998.</li>
+
+
+              </ul>
+            </div>
+          </div>
+
+
+
           </div>
         <script type="text/javascript">
           $(function(){
@@ -609,8 +640,8 @@ Tamer F. Mabrouk and Ghada A. El Khayat, Cloud Computing in Education, The AEAS 
               $('.overflowModal').fadeIn(1000);
             });
 
-            $('.out').click(function(){
-              $('.overflowModal').fadeOut(1000);
+            $(".close").click(function(){
+              $('.overflowModal').fadeOut(500);
             });
 
           });
