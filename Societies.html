@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Alexandria Higher Institute of Engineering & Technology</title>
+    <!-- jQuery -->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- counter -->
+    <script src="js/jQuerySimpleCounter.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+body {
+      webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+          font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #666;
+    background-color: #334455;
+
+}
+.scrollToTop{
+  color: #FFFFFF;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 38px;
+  cursor: pointer;
+  background-color: rgba(10, 16, 23, 0.71);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+        webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+
+
+}
+.scrollToTop:hover{
+  color: #B51918;
+  border-radius: 0px;
+
+}
+  .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    padding-left: 25px;
+    transition: 1s ease;
+}
+
+#t-cards {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #345;    
+}
+
+/* Panel cards */
+.panel.panel-card {
+    position: relative;
+    height: 265px;
+    border: none;
+    overflow: hidden;
+}
+.panel.panel-card .panel-heading {
+    position: relative;
+    z-index: 2;
+    height: 120px;
+    border-bottom-color: #fff;
+    overflow: hidden;
+    
+    -webkit-transition: height 600ms ease-in-out;
+            transition: height 600ms ease-in-out;
+}
+.panel.panel-card .panel-heading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 120%;
+    
+    -webkit-transform: translate3d(-50%,-50%,0);
+            transform: translate3d(-50%,-50%,0);
+}
+.panel.panel-card .panel-heading button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 3;
+}
+.panel.panel-card .panel-figure {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    z-index: 3;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    -webkit-box-shadow: 0 0 0 3px #fff;
+            box-shadow: 0 0 0 3px #fff;
+    
+    -webkit-transform: translate3d(-50%,-50%,0);
+            transform: translate3d(-50%,-50%,0);
+    
+    -webkit-transition: opacity 400ms ease-in-out;
+            transition: opacity 400ms ease-in-out;
+}
+
+.panel.panel-card .panel-body {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    -webkit-transition: padding 400ms ease-in-out;
+            transition: padding 400ms ease-in-out;
+} 
+
+.panel.panel-card .panel-thumbnails {
+    padding: 0 15px 20px;
+}
+.panel-thumbnails .thumbnail {
+    width: 60px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+} 
+
+
+.panel.panel-card:hover .panel-heading {
+    height: 55px;
+    
+    -webkit-transition: height 400ms ease-in-out;
+            transition: height 400ms ease-in-out;
+}
+.panel.panel-card:hover .panel-figure {
+    opacity: 0;
+    
+    -webkit-transition: opacity 400ms ease-in-out;
+            transition: opacity 400ms ease-in-out;
+}
+.panel.panel-card:hover .panel-body {
+    padding-top: 20px;
+    
+    -webkit-transition: padding 400ms ease-in-out;
+            transition: padding 400ms ease-in-out;
+}
+a:hover {
+  text-decoration: none;
+}
+</style>    
+
+  </head>
+  <body>
+    <div class="navbar_container"></div>
+  
+  <script>
+  $( ".navbar_container" ).load( "navbar.html" );
+  </script>
+ 
+
+    <section class='vid-header'>
+    <section id="t-cards">
+    <div class="container">
+        <div class="row">
+             <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+ <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+ <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+ <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+ <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+ <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+ <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+ <div class="col-sm-6 col-md-3">
+                <div class="panel panel-default panel-card">
+                    <div class="panel-heading">
+                        <img src="img/sootakCover.jpg" />
+                        
+                    </div>
+                    <div class="panel-figure">
+                        <img class="img-responsive img-circle" src="img/sootak.jpg" />
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn">أسرة صوت معهد رجب</a></h4>
+                        <small><strong>رائد الأسرة : </strong>د. داليا الكمشوشي</small><br>
+                        <small><strong>عدد اعضائها عند بداية التكوين : </strong>27 طالب</small><br>
+                        <small><strong>الفترة : </strong>تجديد للعام الثالث</small><br>
+                    </div>
+                    <div class="panel-thumbnails">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-facebook-official"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-twitter-square"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div style="border: none;" class="thumbnail">
+                                    <a href="#" target="_blank"><i style="font-size: 20px;" class="fa fa-google-plus-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </div>
+
+
+
+      </div>
+    </div>
+</section>
+
+
+
+
+<br><br>
+  <script type="text/javascript">
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+  </script>
+
+</section>
+
+<!-- scroll to top -->
+<i class="scrollToTop fa fa-angle-up"></i>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 1) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
+  </script>
+
+</div>
+<!-- Footer section -->
+<div class="footer_container"></div>
+
+<script>
+$( ".footer_container" ).load( "footer.html" );
+</script>
+
+  </body>
+</html>
