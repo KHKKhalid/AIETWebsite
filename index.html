@@ -25,8 +25,8 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
     <!-- animate -->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -822,14 +822,64 @@ body {
 	</script>
 	
     <section class='vid-header'>
-      <div class='blue-effect'></div>
+    <div class='blue-effect'></div>
 
-          <img class="bgphoto" src="img/video.jpg">
+    <img class="bgphoto" src="img/video.jpg">
 
-      <video preload="none" loop poster="video.jpg" id="bgvid" style='display: none;'>
-          <source src="img/video.mp4" type="video/mp4">
+	<div id="VideoQualityContainer" style="display:none; text-align:center; position:absolute; right:1%; bottom:3%; font-family: 'Open Sans Condensed', sans-serif; font-weight:bold;">
+		<p style="color:white;">Quality</p>&nbsp;
+		<select id="VideoQualitySwitcher" onchange="HandleVideoQuality()">
+			<option value="medium">Medium</option>
+			<option value="high">High</option>
+			<option value="low">Low</option>
+			<option value="verylow">Very low</option>
+		</select>
+	</div>
+	  
+      <video loop poster="img/video.jpg" id="bgvid" style='display: none; background-color: black; width:auto; height:100%;' preload="none">
+          <source id="vidmp4source" src="img/aietvideo_medium.mp4" type="video/mp4">
       </video>
+	  
       <script type="text/javascript">
+		function HandleVideoQuality()
+		{
+			// This code handles switching video quality
+			var player = document.getElementById('bgvid');
+			var playerMP4Source = document.getElementById('vidmp4source');
+
+			// Stop the player for a while
+			player.pause();
+			
+			// Get the value that our user selected
+			var selectedQuality = document.getElementById("VideoQualitySwitcher").value;
+			
+			// Check values and change video source
+			if(selectedQuality == "high")
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_high.mp4");
+			}
+			else if(selectedQuality == "medium")
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
+			}
+			else if(selectedQuality == "low")
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_low.mp4");
+			}
+			else if(selectedQuality == "verylow")
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_verylow.mp4");
+			}
+			else // not supposed to happen, unrecognized option selected
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
+			}
+
+			// Reload the player
+			player.load();
+			player.play();
+		}
+	  
         $(function(){
 
           //long blur function
@@ -861,14 +911,16 @@ body {
            .css('-moz-transition', 'all .5s ease-out')
            .css('-o-transition', 'all .5s ease-out');
           }
+		  
           //playing the video
-
           $('.fa-play-circle').click(function(){
             longBlur(".landing-content, .navbar", 20);
             $(".landing-content, .navbar, .fa-play-circle, .bgphoto").fadeOut(1000, function(){
-              $("#bgvid").prop('autoplay', true);
-            $("#bgvid").attr("preload", "auto");
-              $(".fa-stop-circle, #bgvid").fadeIn(1000);
+              var player = document.getElementById('bgvid');
+			  player.currentTime = 0;
+			  player.play();
+			  $(".blue-effect").css("display", "none");
+              $(".fa-stop-circle, #bgvid, #VideoQualityContainer").fadeIn(1000);
             });
           })
 
@@ -883,13 +935,16 @@ body {
             shortBlur(".landing-content, .navbar", 0);
           });
           
-
           // Stoping the video
           $('.fa-stop-circle').click(function(){
-            $("#bgvid, .fa-stop-circle").fadeOut(1000, function(){
-              
-              shortBlur(".landing-content, .navbar", 0);
-              $(".bgphoto, .landing-content, .fa-play-circle, .navbar").fadeIn();
+            $("#bgvid, .fa-stop-circle, #VideoQualityContainer").fadeOut(1000, function()
+			{
+				$(".blue-effect").css("display", "block");
+				var player = document.getElementById('bgvid');
+				player.pause();
+				player.currentTime = 0;
+				shortBlur(".landing-content, .navbar", 0);
+				$(".bgphoto, .landing-content, .fa-play-circle, .navbar").fadeIn();
             });
           });
         });
