@@ -395,11 +395,23 @@ a:hover {
   <section class='staff'>
 	
 	<br><br><br><br><br><br>
-  <ol class="breadcrumb">
-  <li ><a style="color: #B51918;" href="Ac-staff.html">Academic Staff</a></li>
-  <li><a href="As-staff.html">Assisting Staff</a></li>
-</ol>
-<br><br>
+	<div style="margin: 0 auto; text-align:center; font-weight:bold; width:70%; height:20%;">
+		<a style="float:left; border-style: solid; border-width:thin; border-color:#B51918; padding:1%; border-top-left-radius: 50%; border-bottom-left-radius: 50%; width:50%; background-color:#B51918; color: white;" href="Ac-staff.html">Academic Staff</a>
+		<a id="staffPageSwitch" style="float:left; border-style: solid; border-width:thin; border-color:#B51918; padding:1%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; width:50%; background-color:white; color: #B51918;" href="As-staff.html">Assisting Staff</a>
+	</div>
+	<script> 
+      $('#staffPageSwitch').bind('mouseenter', 
+        function(event){ 
+           $(event.target).css('background-color', '#B51918');
+		   $(event.target).css('color', '#FFFFFF');
+		});
+      $('#staffPageSwitch').bind('mouseleave', 
+        function(event){ 
+           $(event.target).css('background-color', '#FFFFFF');
+		   $(event.target).css('color', '#B51918');
+      });
+     </script>
+	<br><br><br><br><br><br>
     <p class='text-center' style="font-size: 2em; font-weight: bold;">Our fantastic professors and doctors</p>
     <center>
     <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
