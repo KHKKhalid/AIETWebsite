@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Alexandria Higher Institute of Engineering & Technology</title>
+    <!-- jQuery -->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- counter -->
+    <script src="js/jQuerySimpleCounter.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- favicon -->
+    <link rel="icon" href="img/icon.ico">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+body {
+      webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+          font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #666;
+
+}
+.scrollToTop{
+  color: #FFFFFF;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 38px;
+  cursor: pointer;
+  background-color: rgba(10, 16, 23, 0.71);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+        webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+
+
+}
+.scrollToTop:hover{
+  color: #B51918;
+  border-radius: 0px;
+
+}
+  .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    padding-left: 25px;
+    transition: 1s ease;
+}
+
+
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+
+body {
+    background-color: rgb(229, 229, 229);
+}
+
+.panel-google-plus {
+    position: relative;
+    border-radius: 0px;
+    border: 1px solid rgb(216, 216, 216);
+    font-family: 'Roboto', sans-serif;
+}
+.panel-google-plus > .dropdown {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+.panel-google-plus > .dropdown > span > span {
+    font-size: 10px;   
+}
+.panel-google-plus > .dropdown > .dropdown-menu {
+    left: initial;
+    right: 0px;
+    border-radius: 2px;
+}
+.panel-google-plus > .panel-google-plus-tags {
+    position: absolute;
+    top: 35px;
+    right: -3px;
+}
+.panel-google-plus > .panel-google-plus-tags > ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.panel-google-plus > .panel-google-plus-tags > ul:hover {
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);   
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);   
+}
+.panel-google-plus > .panel-google-plus-tags > ul > li {
+    display: block;
+    right: 0px;
+    width: 0px;
+    padding: 5px 0px 5px 0px;
+    background-color: rgb(245, 245, 245);
+    font-size: 12px;
+    overflow: hidden;
+}
+.panel-google-plus > .panel-google-plus-tags > ul > li::after {
+    content:"";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+  border-right: 3px solid rgb(66, 127, 237);
+}
+.panel-google-plus > .panel-google-plus-tags > ul:hover > li,
+.panel-google-plus > .panel-google-plus-tags > ul > li:first-child {
+    padding: 5px 15px 5px 10px;
+    width: auto;
+    cursor: pointer;
+    margin-left: auto;
+}
+.panel-google-plus > .panel-google-plus-tags > ul:hover > li {
+    background-color: rgb(255, 255, 255);   
+}
+.panel-google-plus > .panel-google-plus-tags > ul > li:hover {
+    background-color: rgb(66, 127, 237);
+    color: rgb(255, 255, 255);
+}
+.panel-google-plus > .panel-heading,
+.panel-google-plus > .panel-footer {
+    background-color: rgb(255, 255, 255);
+    border-width: 0px; 
+}
+.panel-google-plus > .panel-heading {
+    margin-top: 20px;    
+    padding-bottom: 5px; 
+}
+.panel-google-plus > .panel-heading > img { 
+    margin-right: 15px;
+}
+.panel-google-plus > .panel-heading > h3 {
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.panel-google-plus > .panel-heading > h5 {
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-weight: 400;
+}
+.panel-google-plus > .panel-body {
+    padding-top: 5px;
+    font-size: 13px;
+}
+.panel-google-plus > .panel-body > .panel-google-plus-image {
+    display: block;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(217, 217, 217);
+}
+.panel-google-plus > .panel-body > .panel-google-plus-image > img {
+    max-width: 100%;
+
+}
+
+.panel-google-plus > .panel-footer {
+    font-size: 14px;
+    font-weight: 700;
+    min-height: 54px;
+}
+.panel-google-plus > .panel-footer > .btn {
+    float: left;
+    margin-right: 8px;
+}
+
+.panel-google-plus > .panel-google-plus-comment > .panel-google-plus-textarea > .btn {
+    margin-top: 10px;
+    margin-right: 8px;
+    width: 100%;
+}
+@media (min-width: 992px) {
+    .panel-google-plus > .panel-google-plus-comment > .panel-google-plus-textarea > .btn {
+        width: auto;
+    }    
+}
+
+
+.panel-google-plus .btn {
+    border-radius: 3px;   
+}
+.panel-google-plus .btn-default {
+    border: 1px solid rgb(217, 217, 217);
+    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 0px 0px;
+}
+.panel-google-plus .btn-default:hover, 
+.panel-google-plus .btn-default:focus, 
+.panel-google-plus .btn-default:active {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);    
+}
+</style>    
+
+  </head>
+  <body>
+    <div class="navbar_container"></div>
+  
+  <script>
+  $( ".navbar_container" ).load( "navbar.html" );
+  </script>
+ 
+
+    <section class='vid-header' style="margin-top: 100px;">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-google-plus">
+                <div class="panel-heading">
+                    <img style="width: 50px; height: 50px; min-height: 50px; min-width: 50px;" class="img-circle pull-left" src="img/logo1.png" alt="Mouse0270" />
+                    <h3>Aiet Announcement Center</h3>
+                    <h5><span>updated on</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+                <div class="panel-body">
+                    <p>Do people born in 2000 get to choose if they are Generation Y or Generation Z? How do you decide what generation you want to belong to?</p>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-default like"><i class="fa fa-thumbs-o-up"></i></button>
+                    <button type="button" class="btn btn-default dislike"><i class="fa fa-thumbs-o-down"></i></button>
+                    <h6 class="voteCounter" style="display: none;"><span style="color: blue">420 total likes</span>  -  <span style="color: red">100 total dislikes</span></h6>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-google-plus">
+                <div class="panel-heading">
+                    <img style="width: 50px; height: 50px; min-height: 50px; min-width: 50px;" class="img-circle pull-left" src="img/logo1.png" alt="Mouse0270" />
+                    <h3>Aiet Announcement Center</h3>
+                    <h5><span>updated on</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+                <div class="panel-body">
+                    <p>Do people born in 2000 get to choose if they are Generation Y or Generation Z? How do you decide what generation you want to belong to?</p>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-default like"><i class="fa fa-thumbs-o-up"></i></button>
+                    <button type="button" class="btn btn-default dislike"><i class="fa fa-thumbs-o-down"></i></button>
+                    <h6 class="voteCounter" style="display: none;"><span style="color: blue">420 total likes</span>  -  <span style="color: red">100 total dislikes</span></h6>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-google-plus">
+                <div class="panel-heading">
+                    <img style="width: 50px; height: 50px; min-height: 50px; min-width: 50px;" class="img-circle pull-left" src="img/logo1.png" alt="Mouse0270" />
+                    <h3>Aiet Announcement Center</h3>
+                    <h5><span>updated on</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+                <div class="panel-body">
+                    <p>Do people born in 2000 get to choose if they are Generation Y or Generation Z? How do you decide what generation you want to belong to?</p>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-default like"><i class="fa fa-thumbs-o-up"></i></button>
+                    <button type="button" class="btn btn-default dislike"><i class="fa fa-thumbs-o-down"></i></button>
+                    <h6 class="voteCounter" style="display: none;"><span style="color: blue">420 total likes</span>  -  <span style="color: red">100 total dislikes</span></h6>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-google-plus">
+                <div class="panel-heading">
+                    <img style="width: 50px; height: 50px; min-height: 50px; min-width: 50px;" class="img-circle pull-left" src="img/logo1.png" alt="Mouse0270" />
+                    <h3>Aiet Announcement Center</h3>
+                    <h5><span>updated on</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+                <div class="panel-body">
+                    <p>Do people born in 2000 get to choose if they are Generation Y or Generation Z? How do you decide what generation you want to belong to?</p>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-default like"><i class="fa fa-thumbs-o-up"></i></button>
+                    <button type="button" class="btn btn-default dislike"><i class="fa fa-thumbs-o-down"></i></button>
+                    <h6 class="voteCounter" style="display: none;"><span style="color: blue">420 total likes</span>  -  <span style="color: red">100 total dislikes</span></h6>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-google-plus">
+                <div class="panel-heading">
+                    <img style="width: 50px; height: 50px; min-height: 50px; min-width: 50px;" class="img-circle pull-left" src="img/logo1.png" alt="Mouse0270" />
+                    <h3>Aiet Announcement Center</h3>
+                    <h5><span>updated on</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+                <div class="panel-body">
+                    <p>Do people born in 2000 get to choose if they are Generation Y or Generation Z? How do you decide what generation you want to belong to?</p>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-default like"><i class="fa fa-thumbs-o-up"></i></button>
+                    <button type="button" class="btn btn-default dislike"><i class="fa fa-thumbs-o-down"></i></button>
+                    <h6 class="voteCounter" style="display: none;"><span style="color: blue">420 total likes</span>  -  <span style="color: red">100 total dislikes</span></h6>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-google-plus">
+                <div class="panel-heading">
+                    <img style="width: 50px; height: 50px; min-height: 50px; min-width: 50px;" class="img-circle pull-left" src="img/logo1.png" alt="Mouse0270" />
+                    <h3>Aiet Announcement Center</h3>
+                    <h5><span>updated on</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+                <div class="panel-body">
+                    <p>Do people born in 2000 get to choose if they are Generation Y or Generation Z? How do you decide what generation you want to belong to?</p>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-default like"><i class="fa fa-thumbs-o-up"></i></button>
+                    <button type="button" class="btn btn-default dislike"><i class="fa fa-thumbs-o-down"></i></button>
+                    <h6 class="voteCounter" style="display: none;"><span style="color: blue">420 total likes</span>  -  <span style="color: red">100 total dislikes</span></h6>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-google-plus">
+                <div class="panel-heading">
+                    <img style="width: 50px; height: 50px; min-height: 50px; min-width: 50px;" class="img-circle pull-left" src="img/logo1.png" alt="Mouse0270" />
+                    <h3>Aiet Announcement Center</h3>
+                    <h5><span>updated on</span> - <span>Jun 27, 2014</span> </h5>
+                </div>
+                <div class="panel-body">
+                    <p>Do people born in 2000 get to choose if they are Generation Y or Generation Z? How do you decide what generation you want to belong to?</p>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-default like"><i class="fa fa-thumbs-o-up"></i></button>
+                    <button type="button" class="btn btn-default dislike"><i class="fa fa-thumbs-o-down"></i></button>
+                    <h6 class="voteCounter" style="display: none;"><span style="color: blue">420 total likes</span>  -  <span style="color: red">100 total dislikes</span></h6>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        
+    </div>
+</div>
+
+
+
+                    <script type="text/javascript">
+                      $(function(){
+                        $(".like").click(function(){
+                          $(".fa-thumbs-o-up").css({
+                            "color": "blue",
+                            "-ms-transform": "rotate(360deg)", /* IE 9 */
+                            "-webkit-transform": "rotate(360deg)", /* Safari */
+                            "transform": "rotate(360deg)",
+                            "transition": "all 1s ease",
+                            "font-size": "20px"
+                          });
+                          $(".fa-thumbs-o-down").css({
+                            "color": "#333",
+                            "-ms-transform": "rotate(0deg)", /* IE 9 */
+                            "-webkit-transform": "rotate(0deg)", /* Safari */
+                            "transform": "rotate(0deg)",
+                            "transition": "all 1s ease",
+                            "font-size": "13px"
+                          });
+                          $(".voteCounter").fadeIn(400);
+                        });
+
+                        $(".dislike").click(function(){
+                          $(".fa-thumbs-o-down").css({
+                            "color": "red",
+                            "-ms-transform": "rotate(360deg)", /* IE 9 */
+                            "-webkit-transform": "rotate(360deg)", /* Safari */
+                            "transform": "rotate(360deg)",
+                            "transition": "all 1s ease",
+                            "font-size": "20px"
+                          });
+                          $(".fa-thumbs-o-up").css({
+                            "color": "#333",
+                            "-ms-transform": "rotate(0deg)", /* IE 9 */
+                            "-webkit-transform": "rotate(0deg)", /* Safari */
+                            "transform": "rotate(0deg)",
+                            "transition": "all 1s ease",
+                            "font-size": "13px"
+                          });
+                          $(".voteCounter").fadeIn(400);
+                        });
+                      });
+                    </script>
+
+
+
+<br><br>
+  <script type="text/javascript">
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+  </script>
+
+</section>
+
+<!-- scroll to top -->
+<i class="scrollToTop fa fa-angle-up"></i>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 1) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
+  </script>
+
+</div>
+<!-- Footer section -->
+<div class="footer_container"></div>
+
+<script>
+$( ".footer_container" ).load( "footer.html" );
+</script>
+
+  </body>
+</html>
