@@ -13,43 +13,43 @@
     box-shadow: 14px 0px 39px -8px rgba(0,0,0,0.95);
     color: #B51918;
     display: none;
-	transform: translateX(-120%);
+  transform: translateX(-120%);
     -webkit-transform: translateX(-120%);
  }
 .verticalMenuItems
 {
-	padding:4%;
+  padding:4%;
 }
 .verticalMenuItems:hover 
 {
-	-webkit-animation: verticalMenuItemsAnim 0.7s ease-in-out; /* Chrome, Safari, Opera */
-	-webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
-	-webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
-	animation: verticalMenuItemsAnim 0.7s ease-in-out;
-	animation-fill-mode: forwards;
-	animation-iteration-count: 1;
+  -webkit-animation: verticalMenuItemsAnim 0.7s ease-in-out; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: 1;  /* Chrome, Safari, Opera */
+  -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+  animation: verticalMenuItemsAnim 0.7s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes verticalMenuItemsAnim 
 {
 to 
 {
-	border-radius: 1%;
-	font-weight:bold;
-	background-color: #01031E;
-	box-shadow:6px 6px 7px 3px black;
+  border-radius: 1%;
+  font-weight:bold;
+  background-color: #01031E;
+  box-shadow:6px 6px 7px 3px black;
 }
 }
 /* Standard syntax */
 @keyframes verticalMenuItemsAnim 
 {
-	to 
-	{
-		border-radius: 1%;
-		font-weight:bold;
-		background-color: #01031E;
-		box-shadow:6px 6px 7px 3px black;
-	}
+  to 
+  {
+    border-radius: 1%;
+    font-weight:bold;
+    background-color: #01031E;
+    box-shadow:6px 6px 7px 3px black;
+  }
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border: none;
@@ -221,7 +221,24 @@ to
   a:focus, a:hover {
     text-decoration: none;
   }
-  
+  .panel {
+    background-color: transparent;
+    border: none;
+  }
+  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: transparent;
+    background-color: black; 
+  }
+  .btn.focus, .btn:focus, .btn:hover {
+    color: #B51918;
+  }
+  .btn {
+  background-color: transparent;
+  color: #B51918
+  }
+  .fa {
+    color: #B51918;
+  }
   .fa-search {
     color: #FFFFFF;
   }
@@ -243,37 +260,37 @@ to
   }
   .slide-in 
   {
-		animation: slide-in 0.5s forwards;
-		-webkit-animation: slide-in 0.5s forwards;
-	}
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+  }
 
-	.slide-out 
-	{
-		animation: slide-out 0.5s forwards;
-		-webkit-animation: slide-out 0.5s forwards;
-	}
-		
-	@keyframes slide-in 
-	{
-		100% { transform: translateX(0%); }
-	}
+  .slide-out 
+  {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+  }
+    
+  @keyframes slide-in 
+  {
+    100% { transform: translateX(0%); }
+  }
 
-	@-webkit-keyframes slide-in 
-	{
-		100% { -webkit-transform: translateX(0%); }
-	}
-		
-	@keyframes slide-out 
-	{
-		0% { transform: translateX(0%); }
-		100% { transform: translateX(-120%); }
-	}
+  @-webkit-keyframes slide-in 
+  {
+    100% { -webkit-transform: translateX(0%); }
+  }
+    
+  @keyframes slide-out 
+  {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-120%); }
+  }
 
-	@-webkit-keyframes slide-out 
-	{
-		0% { -webkit-transform: translateX(0%); }
-		100% { -webkit-transform: translateX(-120%); }
-	}
+  @-webkit-keyframes slide-out 
+  {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-120%); }
+  }
     .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     padding-left: 25px;
     transition: 1s ease;
@@ -341,7 +358,7 @@ to
         <input style='height: 32px;' type="text" class="form-control" placeholder="What can we help you find" size="25" aria-describedby="basic-addon2">
         <span class="input-group-addon" id="basic-addon2"><i class='fa fa-search' style='height: 5px; font-size: 10px;'></i></span>
       </div>
-	</form>
+  </form>
 
 
 <!-- Single button -->
@@ -373,29 +390,29 @@ to
         verticalNavBarShown = toggle;
         if(toggle == false)
         {
-			setTimeout(3000, function() { $('.VerticalMenu').css('display', 'none') });
-			$('.fa-bars').removeClass('ClickedIn');
-			$('.VerticalMenu').removeClass('slide-out');
-			$('.VerticalMenu').removeClass('slide-in');
-			$('.VerticalMenu').addClass('slide-out');
+      setTimeout(3000, function() { $('.VerticalMenu').css('display', 'none') });
+      $('.fa-bars').removeClass('ClickedIn');
+      $('.VerticalMenu').removeClass('slide-out');
+      $('.VerticalMenu').removeClass('slide-in');
+      $('.VerticalMenu').addClass('slide-out');
         }
         else
         {
-			$('.VerticalMenu').css('display', 'block');
-			$('.fa-bars').addClass('ClickedIn');
-			$('.VerticalMenu').removeClass('slide-out');
-			$('.VerticalMenu').removeClass('slide-in');
-			$('.VerticalMenu').addClass('slide-in');
-			
-			// See if the top nav bar is scrolled or not to show our vertical menu with a proper height (margin from top side)
-			if(TopNavBarScrolled)
-			{
-				$('.VerticalMenu').css('margin-top', '3.8%');
-			}
-			else
-			{
-				$('.VerticalMenu').css('margin-top', '6.3%');
-			}
+      $('.VerticalMenu').css('display', 'block');
+      $('.fa-bars').addClass('ClickedIn');
+      $('.VerticalMenu').removeClass('slide-out');
+      $('.VerticalMenu').removeClass('slide-in');
+      $('.VerticalMenu').addClass('slide-in');
+      
+      // See if the top nav bar is scrolled or not to show our vertical menu with a proper height (margin from top side)
+      if(TopNavBarScrolled)
+      {
+        $('.VerticalMenu').css('margin-top', '3.8%');
+      }
+      else
+      {
+        $('.VerticalMenu').css('margin-top', '6.3%');
+      }
         }
       }
       
@@ -439,7 +456,7 @@ to
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-		<li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -489,44 +506,44 @@ to
   </script>
   <!-- navbar animation with scroll to top button -->
     <script type="text/javascript">
-	var TopNavBarScrolled = false;
-	$(document).ready(function()
-	{
-		//Check to see if the window is top if not then display button
-		$(window).scroll(function()
-		{
-			if ($(this).scrollTop() > 400 && !TopNavBarScrolled) 
-			{
-				TopNavBarScrolled = true;
-				$('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
-				$('.navbar-default').css('height', 'auto');
-				$('.tiny-nav').toggle();
-				
-				// Handle vertical bar height
-				if(verticalNavBarShown)
-				{
-					$('.VerticalMenu').css('margin-top', '3.8%');
-				}
-			} 
-			else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
-			{
-				TopNavBarScrolled = false;
-				$('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
-				$('.tiny-nav').toggle();
-				
-				// Handle vertical bar height
-				if(verticalNavBarShown)
-				{
-					$('.VerticalMenu').css('margin-top', '6.3%');
-				}
-			}
-		});
+  var TopNavBarScrolled = false;
+  $(document).ready(function()
+  {
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function()
+    {
+      if ($(this).scrollTop() > 400 && !TopNavBarScrolled) 
+      {
+        TopNavBarScrolled = true;
+        $('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
+        $('.navbar-default').css('height', 'auto');
+        $('.tiny-nav').toggle();
+        
+        // Handle vertical bar height
+        if(verticalNavBarShown)
+        {
+          $('.VerticalMenu').css('margin-top', '3.8%');
+        }
+      } 
+      else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
+      {
+        TopNavBarScrolled = false;
+        $('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
+        $('.tiny-nav').toggle();
+        
+        // Handle vertical bar height
+        if(verticalNavBarShown)
+        {
+          $('.VerticalMenu').css('margin-top', '6.3%');
+        }
+      }
+    });
   
-	  //Click event to scroll to top
-	  $('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	  });
-	  
-	});
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
   </script>
