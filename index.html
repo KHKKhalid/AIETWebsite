@@ -1172,21 +1172,20 @@ a:hover {
       // This variable is used to indicate whether the counter has finished its job or not
       var alreadyDoneCounting = false; 
           
-      $(function() {
+      $(function() 
+	  {
             $(window).scroll(function()
-      {
-        // If the counter has never started...
-        if(!alreadyDoneCounting)
-        {
-          var countDownOffset = $('.countDown').offset(); // Get offset of 'countDown' element
-          
-          // See if the user has scrolled our page enough to 'countDown' element top edgle
-          if ($('body').scrollTop() > ((countDownOffset.top - window.innerHeight) + 15))
-          {
-            // Start counting
-            start_count();
-          }
-        }
+			{
+				// If the counter has never started...
+				if(!alreadyDoneCounting)
+				{
+					// See if the user has scrolled our page enough to 'countDown' element top edgle
+					if (document.body.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15) || document.documentElement.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15))
+					{
+						// Start counting
+						start_count();
+					}
+				}
             });
         });
 
