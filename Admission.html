@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Alexandria Higher Institute of Engineering & Technology</title>
+    <!-- jQuery -->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- counter -->
+    <script src="js/jQuerySimpleCounter.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- favicon -->
+    <link rel="icon" href="img/icon.ico">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+body {
+      webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+          font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #666;
+
+}
+.scrollToTop{
+  color: #FFFFFF;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 38px;
+  cursor: pointer;
+  background-color: rgba(10, 16, 23, 0.71);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+        webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+
+
+}
+.scrollToTop:hover{
+  color: #B51918;
+  border-radius: 0px;
+
+}
+  .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    padding-left: 25px;
+    transition: 1s ease;
+}
+</style>    
+
+  </head>
+  <body>
+    <div class="navbar_container"></div>
+  
+  <script>
+  $( ".navbar_container" ).load( "navbar.html" );
+  </script>
+ 
+
+    <section class='vid-header' style="margin-top: 100px;">
+    <div class="page-header">
+      <h1>Admission</h1>
+    </div>
+
+  <div class="container">
+
+  <div class="col-lg-6 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+      <h3>Admission of International Students</h3>
+        <p>
+          Applicants from Arab and foreign countries are considered for admission on the bases of credentials certifying the completion of secondary school. Their secondary school certificate should be recognized by the Egyptian Ministry of Higher Education and should be equivalent to the Egyptian high school certificate.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-lg-6 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <p>
+          Student must hold the Egyptian high school certificate, Mathematics Section, or an equivalent certificate accepted by the Egyptian Government. Egyptian Students are nominated for admission to the AIET Institute through the Ministry of Higher Education Admission Coordination Office for Universities and High Institutes. Foreign students are nominated for admission to the AIET Institute according to the general regulations of the Egyptian Ministry of Higher Education.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="clearfix"></div>
+
+<div class="col-lg-6 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <p>
+          In pursue of selecting the best qualified candidates, students must obtain a high grade in an entrance examination. Entrance examination in mathematics, physics, chemistry, and English language are held with grades having the weights of 3, 2, 1, and 1, respectively.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+<div class="col-lg-6 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <p>
+          Students must fulfill all requirements and comply with the rules of the AIET Institute. Full-time study is required by all students.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+
+
+<br><br>
+  <script type="text/javascript">
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+  </script>
+
+</section>
+
+<!-- scroll to top -->
+<i class="scrollToTop fa fa-angle-up"></i>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 1) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
+  </script>
+
+</div>
+<!-- Footer section -->
+<div class="footer_container"></div>
+
+<script>
+$( ".footer_container" ).load( "footer.html" );
+</script>
+
+  </body>
+</html>
