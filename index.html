@@ -58,16 +58,15 @@
     <img class="bgphoto" src="img/video.jpg">
 
 	<div id="VideoQualityContainer" style="display:none; text-align:center; position:absolute; right:1%; bottom:3%; font-family: 'Open Sans Condensed', sans-serif; font-weight:bold;">
-		<p style="color:white;">Quality</p>&nbsp;
-		<select id="VideoQualitySwitcher" onchange="HandleVideoQuality()">
+		<p style="color:white; background-color:rgba(0, 0, 0, 0.9); padding:10%; border-top-left-radius:50%; border-top-right-radius:50%;">Quality</p>
+		<select id="VideoQualitySwitcher" style="display:block;" onchange="HandleVideoQuality()">
 			<option value="medium">Medium</option>
 			<option value="high">High</option>
 			<option value="low">Low</option>
-			<option value="verylow">Very low</option>
 		</select>
 	</div>
 	  
-      <video loop poster="img/video.jpg" id="bgvid" style='display: none; background-color: black; width:auto; height:100%;' preload="none">
+      <video loop poster="img/video.jpg" id="bgvid" style='display: none; background-color: black; margin: 0 auto; width:100%;' preload="none">
           <source id="vidmp4source" src="img/aietvideo_medium.mp4" type="video/mp4">
       </video>
 	  
@@ -97,10 +96,6 @@
 			{
 				$(playerMP4Source).attr('src', "img/aietvideo_low.mp4");
 			}
-			else if(selectedQuality == "verylow")
-			{
-				$(playerMP4Source).attr('src', "img/aietvideo_verylow.mp4");
-			}
 			else // not supposed to happen, unrecognized option selected
 			{
 				$(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
@@ -110,6 +105,22 @@
 			player.load();
 			player.play();
 		}
+	  
+		var VideoViewerTimer = -1, WatchingVideo = false;
+		$(document).ready(function()
+		{
+			$(document).mousemove(function(event)
+			{
+				if(WatchingVideo)
+				{
+					if(VideoViewerTimer != -1)
+						clearTimeout(VideoViewerTimer);
+						
+					$(".fa-stop-circle, #VideoQualityContainer").fadeIn(1000);
+					VideoViewerTimer = setTimeout(function() { $(".fa-stop-circle, #VideoQualityContainer").fadeOut(1000); }, 6000);
+				}
+			});
+		});
 	  
         $(function(){
 
@@ -145,6 +156,7 @@
 		  
           //playing the video
           $('.fa-play-circle').click(function(){
+			WatchingVideo = true;
             longBlur(".landing-content, .navbar", 20);
             $(".landing-content, .navbar, .fa-play-circle, .bgphoto").fadeOut(1000, function(){
               var player = document.getElementById('bgvid');
@@ -168,6 +180,7 @@
           
           // Stoping the video
           $('.fa-stop-circle').click(function(){
+			WatchingVideo = false;
             $("#bgvid, .fa-stop-circle, #VideoQualityContainer").fadeOut(1000, function()
 			{
 				$(".blue-effect").css("display", "block");
@@ -190,7 +203,7 @@
         <img class='logo' src="img/logo.png">
         <h1 class='mainTxt' style="font-family: 'Playfair Display', serif; cursor: default;">Alexandria Higher Institute of Engineering & Technology</h1>
       </div>
-        <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease;' data-toggle="tooltip" data-placement="top" title="Take a tour !" class="fa fa-play-circle"></i>
+        <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease;' data-toggle="tooltip" data-placement="top" title="Take a tour!" class="fa fa-play-circle"></i>
       <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease;' class="fa fa-stop-circle"></i>
       </center>
     </section>
