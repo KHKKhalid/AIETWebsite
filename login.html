@@ -31,6 +31,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+            <!-- our style -->
+    <link href="css/navbar-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/public-style.css">
+
+
 <style type="text/css">
 body {
       webkit-transition: all 1s ease;
@@ -211,6 +216,7 @@ body {
   width: 100%;
   height: 100%;
 }
+/*
 .input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle {
       background-color: transparent;
     border: none;
@@ -226,6 +232,7 @@ body {
     border-radius: 0;
     color: aliceblue;
 }
+*/
 .LoginBtn {
     border-color: #B51918;
     color: #B51918;
@@ -276,13 +283,22 @@ body {
                 <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
                    
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="user" type="text" class="form-control" name="user" value="" placeholder="Educational email (e.g my_name@aiet.edu.eg)">                                        
+                        <span style="background-color: transparent; color: white; border: none; border-bottom: 2px solid white;" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="user" type="text" class="form-control" name="user" value="" placeholder="Educational email (e.g my_name@aiet.edu.eg)" style="
+                          background-color: transparent;
+                          border: none;
+                          border-bottom: 2px solid #B51918;
+                          color: white;
+
+                        ">                                        
                     </div>
 
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                        <span style="background-color: transparent; color: white; border: none; border-bottom: 2px solid white;" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password" style="background-color: transparent;
+                          border: none;
+                          border-bottom: 2px solid #B51918;
+                          color: white;">
                     </div>                                                                  
 
                     <div class="form-group">
@@ -627,6 +643,11 @@ $(function(){
 <script>
 $( ".footer_container" ).load( "footer.html" );
 </script>
-
+<!-- Loading Page -->
+<section style='background: #0A1017; color: #FFF; position: fixed; left: 0; top: 0; width:100%; height: 100%; z-index: 9999;' class='bgOverlay'>
+</section>
+<script type="text/javascript">
+  $(".bgOverlay").load("loading-screen.html");
+</script>
   </body>
 </html>
