@@ -256,23 +256,22 @@ body {
   </head>
   <body>
     <div class="navbar_container"></div>
-	
-	<script>
-	$( ".navbar_container" ).load( "navbar.html" );
-	</script>
+  
+  <script>
+  $( ".navbar_container" ).load( "navbar.html" );
+  </script>
  
 
 
-<br><br><br><br><br><br><br>
-<div style='height: 100vh;'>
+
+<div style='height: 100vh; margin-top: 100px;'>
   <center>
 
 
-  <img src="img/logo.png" style='width: 200px; height: 200px;'>
 
   <div class="container">
   <br><br>    
-          <div style="margin-bottom: 0px; background-color: rgba(242, 222, 222, 0.7)" class="alert alert-danger col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3" role="alert">The email and password you entered don't match.</div>
+          <div style="margin-bottom: 0px; background-color: rgba(242, 222, 222, 0.7)" class="alert alert-success col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3" role="alert">You successfully logged into your account.</div>
 
     <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
         
@@ -283,36 +282,16 @@ body {
 
             <div class="panel-body" >
 
-                <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
-                   
-                    <div class="input-group">
-                        <span style="background-color: transparent; color: white; border: none; border-bottom: 2px solid white;" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="user" type="text" class="form-control" name="user" value="" placeholder="Educational email (e.g my_name@aiet.edu.eg)" style="
-                          background-color: transparent;
-                          border: none;
-                          border-bottom: 2px solid #B51918;
-                          color: white;
-
-                        ">                                        
-                    </div>
-
-                    <div class="input-group">
-                        <span style="background-color: transparent; color: white; border: none; border-bottom: 2px solid white;" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password" style="background-color: transparent;
-                          border: none;
-                          border-bottom: 2px solid #B51918;
-                          color: white;">
-                    </div>                                                                  
-
-                    <div class="form-group">
-                        <!-- Button -->
-                        <div class="col-sm-12 controls">
-                            <button type="submit" href="#" class="LoginBtn btn pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>                          
-                        </div>
-                    </div>
-
-                </form>     
-
+              <a class="col-xs-6" href="user-quizzes.html">
+                <img style="width: 100px; height: 100px;" src="img/quiz.png">
+                <h3 style="color: white;">Take a quiz !?</h3>  
+              </a>
+              
+              <a class="col-xs-6" href="user-grade.html">
+                <img style="width: 90px; height: 100px;" src="img/grade.png">
+                <h3 style="color: white;">Trace your grade</h3>  
+              </a>
+              
             </div>                     
         </div>  
     </div>
@@ -629,14 +608,14 @@ $(function(){
   </script>
 
   <script type="text/javascript">
-	  $(document).ready(function(){
-	  //Click event to scroll to top
-	  $('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	  });
-	  
-	});
+    $(document).ready(function(){
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
   </script>
 
 </div>
@@ -645,6 +624,17 @@ $(function(){
 
 <script>
 $( ".footer_container" ).load( "footer.html" );
+</script>
+<script type="text/javascript">
+  $(function(){
+    $(".login-Btn").attr("href", "user.html");
+    $(".login-Btn").text("Logged in as Hossam");
+    $(window).scroll(function(){
+    if ($(this).scrollTop() > 1) {
+      $('.alert-success').fadeOut(2000);
+    }
+  });
+  });
 </script>
   </body>
 </html>
