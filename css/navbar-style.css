@@ -3,7 +3,7 @@
     height: 100vh;
     width: 250px;
     position: fixed;
-    z-index: 9999999999;
+    z-index: 1;
     margin-top: 6.3%;
     overflow: hidden;
     background-color: rgb(3, 1, 25);
@@ -51,7 +51,7 @@ to
     border-radius: 0px;
     margin-right: -20px;
     min-width: 130px;
-    z-index: 99999999999999;
+    z-index: 1;
 
 }
 .lang-btn:hover {
@@ -110,7 +110,7 @@ to
   }
   .dropdown-menu {
     background-color: rgba(3, 1, 25, 0.95);
-    z-index: 9999999999999999;
+    z-index: 1;
   }
   .dropdown-menu>li>a {
     color: #C4302F;
@@ -160,7 +160,7 @@ to
   }
   .dropdown-menu {
     background-color: rgba(3, 1, 25, 0.95);
-    z-index: 9999999999999999;
+    z-index: 1;
   }
   .dropdown-menu>li>a {
     color: #C4302F;
