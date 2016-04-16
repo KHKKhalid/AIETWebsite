@@ -1,81 +1,31 @@
-<link rel="stylesheet" type="text/css" href="css/help_bubbles.css">
-
-<script>
-// Help bubble messages
-
-var cursorX;
-var cursorY;
-
-document.onmousemove = function(e)
-{
-	cursorX = e.pageX;
-	cursorY = e.pageY;
-}
-
-function HideHelpMessage()
-{
-	$('#help_bubble_message').html('N/A');
-	$('#help_bubble_message').css('display', 'none');
-	CanShowHelpMessage = false;
-}
-
-function FixHelpMessagePosition()
-{
-	$('#help_bubble_message').css('left', cursorX - 100);
-	$('#help_bubble_message').css('top', cursorY + 30);
-}
-
-function ShowHelpMessage(handler_obj, message, marginLeft = 0)
-{
-	CanShowHelpMessage = true;
-	handler_obj.addEventListener("mouseleave", HideHelpMessage);
-	setTimeout(function() 
-	{
-		if(!CanShowHelpMessage)
-			return;
-			
-		setTimeout(FixHelpMessagePosition, 300);
-		$('#help_bubble_message').html(message);
-		$('#help_bubble_message').css('left', cursorX - 100);
-		$('#help_bubble_message').css('top', cursorY + 30);
-		if(marginLeft)
-			$('#help_bubble_message').css('margin-left', marginLeft+'px');
-		else
-			$('#help_bubble_message').css('margin-left', '0');
-		$('#help_bubble_message').css('display', 'block');
-	}, 
-	700);
-}
-</script>
-
 <div class='VerticalMenu'>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-bottom: 0;">
   <div class="panel panel-default" style="background-color: transparent; border: none;">
     <div class="panel-heading" role="tab" id="headingOne" style="background-color: transparent; border: none; color: white;">
       <h4 class="panel-title">
-        <a onmouseenter="ShowHelpMessage(this, 'The Quality Assurance & Accreditation Unit', 60)" class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <a class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           <i class='fa fa-circle'></i>&nbsp;Quality Assurance Center&nbsp;&nbsp;<i class='fa fa-caret-down'></i>
         </a>
       </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body" style="border-top-color: transparent; background-color: black;">
-        <a onmouseenter="ShowHelpMessage(this, 'Our vision, mission and promises', 70)" href="Vision_Mission.html"><button class='btn'>Vision & Mission</button></a>
+        <a href="Vision_Mission.html"><button class='btn'>Vision & Mission</button></a>
       </div>
     </div>
   </div>
   <div class="panel panel-default" style="background-color: transparent; border: none;">
     <div class="panel-heading" role="tab" id="headingTwo" style="background-color: transparent; border: none; color: white;">
       <h4 class="panel-title">
-        <a onmouseenter="ShowHelpMessage(this, 'All you wish to know about our staff should be here', 100)" class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           <i class='fa fa-circle'></i>&nbsp;Staff&nbsp;&nbsp;<i class='fa fa-caret-down'></i>
         </a>
       </h4>
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body" style="border-top-color: transparent; background-color: black;">
-        <a onmouseenter="ShowHelpMessage(this, 'All you wish to know about our staff should be here', 70)" href="Ac-staff.html"><button class='btn'>Acadimic Staff</button></a>
-        <a onmouseenter="ShowHelpMessage(this, 'All you wish to know about our staff should be here', 70)" href="As-staff.html"><button class='btn'>Assisting Staff</button></a>
+        <a href="Ac-staff.html"><button class='btn'>Acadimic Staff</button></a>
+        <a href="As-staff.html"><button class='btn'>Assisting Staff</button></a>
       </div>
     </div>
   </div>
@@ -83,7 +33,7 @@ function ShowHelpMessage(handler_obj, message, marginLeft = 0)
     <div class="panel-heading" role="tab" id="headingThree" style="background-color: transparent; border: none; color: white;">
       <h4 class="panel-title">
         <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <a onmouseenter="ShowHelpMessage(this, 'Need to make a medical excuse? This will help you out.', 60)" href="Medical.html"><i class='fa fa-circle'></i>&nbsp;Medical Excuses</a>
+          <a href="Medical.html"><i class='fa fa-circle'></i>&nbsp;Medical Excuses</a>
         </a>
       </h4>
     </div>
@@ -92,7 +42,7 @@ function ShowHelpMessage(handler_obj, message, marginLeft = 0)
     <div class="panel-heading" role="tab" id="headingThree" style="background-color: transparent; border: none; color: white;">
       <h4 class="panel-title">
         <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          <a onmouseenter="ShowHelpMessage(this, 'Continuous education & training department program', 60)" href="ContinuingEducation.html"><i class='fa fa-circle'></i>&nbsp;Continuing Education</a>
+          <a href="ContinuingEducation.html"><i class='fa fa-circle'></i>&nbsp;Continuing Education</a>
         </a>
       </h4>
     </div>
@@ -113,13 +63,17 @@ function ShowHelpMessage(handler_obj, message, marginLeft = 0)
 
 
 <!-- Single button -->
+<<<<<<< HEAD
 <a onmouseenter="ShowHelpMessage(this, 'ترجمة الموقع باللغة العربية')" style='color: white; float: right; padding:10px 15px;' href="#">العربية <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/ar.png"></a>
 <a onmouseenter="ShowHelpMessage(this, 'Translate website into English')" style='color: white; float: right; padding:10px 15px;' href="#">English <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/en.png"></a>
+=======
+<a style='color: white; float: right; padding-right: 8px;' href="#">العربية <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/ar.png"></a>
+<a style='color: white; float: right; padding-right: 8px' href="#">English <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/en.png"></a>
+>>>>>>> origin/master
 
 </div>
 
 <div style='background-color: rgb(3, 1, 25)' class='clearfix'></div>
-<div id="help_bubble_message" class="arrow_box"></div>
 
     <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -208,40 +162,40 @@ function ShowHelpMessage(handler_obj, message, marginLeft = 0)
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-    <li><a onmouseenter="ShowHelpMessage(this, 'Head to homepage')" href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admission <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a onmouseenter="ShowHelpMessage(this, 'Admission of International Students')" href="Admission.html">Admission Requirements</a></li>
-            <li><a onmouseenter="ShowHelpMessage(this, 'Fees and expenses')" href="Fees.html">Fees</a></li>
+            <li><a href="Admission.html">Admission Requirements</a></li>
+            <li><a href="Fees.html">Fees</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acadmeics <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a onmouseenter="ShowHelpMessage(this, 'Information about our engineering departments')" href="Departments.html">Departments</a></li>
-            <li><a onmouseenter="ShowHelpMessage(this, 'Curriculum & course synopses')" href="AllYears_Course.html">Curriculum & course synopses</a></li>
+            <li><a href="Departments.html">Departments</a></li>
+            <li><a href="AllYears_Course.html">curriculum & course synopses</a></li>
             <li role="separator" class="divider"></li>
-            <li><a onmouseenter="ShowHelpMessage(this, 'Academic rules and regulations which apply to all undergraduate programs at the Institute')" href="AcademicRules.html">Acadmeic Rules</a></li>
+            <li><a href="AcademicRules.html">Acadmeic Rules</a></li>
             <li role="separator" class="divider"></li>
-            <li><a onmouseenter="ShowHelpMessage(this, 'Q A & Accreditation')" href="QA.html">Q A & Accreditation</a></li>
+            <li><a href="QA.html">Q A & Accreditation</a></li>
           </ul>
         </li>
-        <li><a onmouseenter="ShowHelpMessage(this, 'Full academic calender')" href="NewTimeLine.html">Acadimic Calender <span class="sr-only"></span></a></li>
-        <li><a onmouseenter="ShowHelpMessage(this, 'Summer training')" href="SummerTraining.html">Summer Training</a></li>
-        <li><a onmouseenter="ShowHelpMessage(this, 'Address, phone numbers, email and more info')" href="contact.html">Contact Us</a></li>
+        <li><a href="NewTimeLine.html">Acadimic Calender <span class="sr-only"></span></a></li>
+        <li><a href="SummerTraining.html">Summer Training</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a onmouseenter="ShowHelpMessage(this, 'Student login area to view grades, quizzes and more')" class="login-Btn" href="login.html"><i class="fa fa-user login-Icon" style="display: none;"></i> Login</a></li>
+        <li><a class="login-Btn" href="login.html"><i class="fa fa-user login-Icon" style="display: none;"></i> Login</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Area<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Activities <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a onmouseenter="ShowHelpMessage(this, 'Our faithful student union')" href="Activities.html">Student Union</a></li>
-            <li><a onmouseenter="ShowHelpMessage(this, 'Information about clubs and communities')" href="Societies.html">Clubs & Communities</a></li>
-            <li><a onmouseenter="ShowHelpMessage(this, 'Our achievements')" href="Achievements.html">Achievements</a></li>
+            <li><a href="Activities.html">Student Union</a></li>
+            <li><a href="Societies.html">Clubs & Societies</a></li>
+            <li><a href="Achievements.html">Achievements</a></li>
             <li role="separator" class="divider"></li>
-            <li><a onmouseenter="ShowHelpMessage(this, 'Download lectures, sheets, working documents and more')" href="lectures.html">Working paper</a></li>
+            <li><a href="lectures.html">Download Lectures</a></li>
           </ul>
         </li>
       </ul>
