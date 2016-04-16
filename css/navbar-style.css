@@ -184,12 +184,7 @@ to
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
     color: white;
 }
-}
-
-  
-
-
-  
+}  
   .btn.focus, .btn:focus, .btn:hover {
     color: #B51918;
   }
@@ -199,8 +194,9 @@ to
   .panel .fa-bars {
     color: #B51918;
   }
-  .fa-user {
+  .fa-circle {
     color: #B51918;
+    font-size:70%;
   }
   .fa-search {
     color: #FFFFFF;
