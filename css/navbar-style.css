@@ -254,3 +254,6 @@ to
     padding-left: 25px;
     transition: 1s ease;
 }
+.tooltip-inner {
+    width: 350px; 
+}
