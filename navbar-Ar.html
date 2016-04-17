@@ -1,0 +1,257 @@
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
+<div class='VerticalMenu'>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-bottom: 0;">
+  <div class="panel panel-default" style="background-color: transparent; border: none;">
+    <div class="panel-heading" role="tab" id="headingOne" style="background-color: transparent; border: none; color: white;">
+      <h4 class="panel-title">
+        <a  class="verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <i class='fa fa-circle'></i>&nbsp;Quality Assurance Center&nbsp;&nbsp;<i class='fa fa-caret-down'></i>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body" style="border-top-color: transparent; background-color: black;">
+        <a href="Vision_Mission.html"><button class='btn'>Vision & Mission</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" style="background-color: transparent; border: none;">
+    <div class="panel-heading" role="tab" id="headingTwo" style="background-color: transparent; border: none; color: white;">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class='fa fa-circle'></i>&nbsp;Staff&nbsp;&nbsp;<i class='fa fa-caret-down'></i>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body" style="border-top-color: transparent; background-color: black;">
+        <a href="Ac-staff.html"><button class='btn'>Acadimic Staff</button></a>
+        <a href="As-staff.html"><button class='btn'>Assisting Staff</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default" style="background-color: transparent; border: none;">
+    <div class="panel-heading" role="tab" id="headingThree" style="background-color: transparent; border: none; color: white;">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <a href="Medical.html"><i class='fa fa-circle'></i>&nbsp;Medical Excuses</a>
+        </a>
+      </h4>
+    </div>
+  </div>
+  <div class="panel panel-default" style="background-color: transparent; border: none;">
+    <div class="panel-heading" role="tab" id="headingThree" style="background-color: transparent; border: none; color: white;">
+      <h4 class="panel-title">
+        <a class="collapsed verticalMenuItems" role="right" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <a href="ContinuingEducation.html"><i class='fa fa-circle'></i>&nbsp;Continuing Education</a>
+        </a>
+      </h4>
+    </div>
+  </div>
+</div>    
+</div>
+ 
+ <nav class="navbar navbar-default navbar-fixed-top">
+
+<div style='' class='tiny-nav'>
+
+	<form class="navbar-form navbar-left col-lg-11 col-xs-6" role="search" style='margin-top: 0; margin-bottom: 0; padding-left: 0;'>
+		<div class="input-group">
+			<input style='height: 32px;' type="text" class="form-control" placeholder="What can we help you find" size="25" aria-describedby="basic-addon2">
+			<span class="input-group-addon" id="basic-addon2"><i class='fa fa-search' style='height: 5px; font-size: 10px;'></i></span>
+		</div>
+	</form>
+
+
+	<!-- Single button -->
+	<a data-toggle="tooltip" data-placement="bottom" title="ترجمة الموقع باللغة العربية" style='color: white; float: right; padding:10px 15px;' href="#">العربية <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/ar.png"></a>
+	<a data-toggle="tooltip" data-placement="bottom" title="Translate website into English" style='color: white; float: right; padding:10px 15px;' href="#">English <img style='width: 20px; height: 20px; margin-left: 15px;' src="img/en.png"></a>
+
+</div>
+
+<div style='background-color: rgb(3, 1, 25)' class='clearfix'></div>
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">
+        <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%; color: #B51918"></i>
+        <script type="text/javascript">
+      var verticalNavBarShown = false;
+      
+      // Show or hide vertical nav bar
+      function ToggleVerticalNavBar(toggle)
+      {
+        verticalNavBarShown = toggle;
+        if(toggle == false)
+        {
+      setTimeout(3000, function() { $('.VerticalMenu').css('display', 'none') });
+      $('.fa-bars').removeClass('ClickedIn');
+      $('.VerticalMenu').removeClass('slide-out');
+      $('.VerticalMenu').removeClass('slide-in');
+      $('.VerticalMenu').addClass('slide-out');
+        }
+        else
+        {
+      $('.VerticalMenu').css('display', 'block');
+      $('.fa-bars').addClass('ClickedIn');
+      $('.VerticalMenu').removeClass('slide-out');
+      $('.VerticalMenu').removeClass('slide-in');
+      $('.VerticalMenu').addClass('slide-in');
+      
+      // See if the top nav bar is scrolled or not to show our vertical menu with a proper height (margin from top side)
+      if(TopNavBarScrolled)
+      {
+        $('.VerticalMenu').css('margin-top', '3.8%');
+      }
+      else
+      {
+        $('.VerticalMenu').css('margin-top', '6.3%');
+      }
+        }
+      }
+      
+      $(function()
+      {
+        // When the toggle button (bars) have been clicked...
+        $('.fa-bars').click(function() 
+        {
+          ToggleVerticalNavBar(!verticalNavBarShown);
+        });
+      });
+
+      $(document).on( 'click', function ( e ) 
+      {
+        // See if the user clicked anywhere outside the vertical menu (except the toggle button/bars)
+        if ( $( e.target ).closest('.VerticalMenu').length === 0 && !$(e.target).is('.fa-bars')) 
+        {
+          if(verticalNavBarShown)
+            ToggleVerticalNavBar(false);
+        }
+      });
+          
+      // Handle key presses...
+      $(document).on( 'keydown', function ( e ) 
+      {
+        // If the ESC key (value 27) has been pressed...
+        if ( e.keyCode === 27 ) 
+        {
+          // See if the vertical menu is shown
+          if(verticalNavBarShown)
+          {
+            // It's shown. Hide it!
+            ToggleVerticalNavBar(false);
+          }
+        }
+      });
+        </script>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+    <li><a href="index.html">الرئيسية</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">الالتحاق <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tooltip" data-placement="right" title="Admission of International Students" href="Admission.html">متطلبات القبول</a></li>
+            <li><a data-toggle="tooltip" data-placement="right" title="Fees and expenses" href="Fees.html">رسمو الالتحاق</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">شئون الطلبة <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tooltip" data-placement="right" title="Information about our engineering departments" href="Departments.html">Departments</a></li>
+            <li><a data-toggle="tooltip" data-placement="right" title="Curriculum & course synopses" href="AllYears_Course.html">Curriculum & course synopses</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a data-toggle="tooltip" data-placement="right" title="Academic rules and regulations which apply to all undergraduate programs at the Institute" href="AcademicRules.html">Acadmeic Rules</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a data-toggle="tooltip" data-placement="right" title="Q A & Accreditation" href="QA.html">Q A & Accreditation</a></li>
+          </ul>
+        </li>
+        <li><a data-toggle="tooltip" data-placement="bottom" title="Full year academic calender" href="NewTimeLine.html">Acadimic Calender <span class="sr-only"></span></a></li>
+        <li><a href="SummerTraining.html">Summer Training</a></li>
+        <li><a data-toggle="tooltip" data-placement="bottom" title="Address, phone numbers, email and more info" href="contact.html">Contact Us</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-left">
+        <li><a data-toggle="tooltip" data-placement="bottom" title="Student login area to view grades, quizzes and more" class="login-Btn" href="login.html"><i class="fa fa-user login-Icon" style="display: none;"></i> Login</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Area<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tooltip" data-placement="left" title="Our faithful student union" href="Activities.html">Student Union</a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Information about clubs and communities" href="Societies.html">Clubs & Communities</a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Our achievements" href="Achievements.html">Achievements</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Get lectures, sheets, working documents and more" href="lectures.html">Working paper</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</nav>
+  <script type="text/javascript">
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+  </script>
+  <!-- navbar animation with scroll to top button -->
+    <script type="text/javascript">
+  var TopNavBarScrolled = false;
+  $(document).ready(function()
+  {
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function()
+    {
+      if ($(this).scrollTop() > 400 && !TopNavBarScrolled) 
+      {
+        TopNavBarScrolled = true;
+        $('.navbar-default').css('background-color', 'rgba(3, 1, 25, 0.6) ');
+        $('.navbar-default').css('height', 'auto');
+        $('.tiny-nav').toggle();
+        
+        // Handle vertical bar height
+        if(verticalNavBarShown)
+        {
+          $('.VerticalMenu').css('margin-top', '3.8%');
+        }
+      } 
+      else if($(this).scrollTop() <= 400 && TopNavBarScrolled)
+      {
+        TopNavBarScrolled = false;
+        $('.navbar-default').css('background-color', 'rgb(3, 1, 25)');
+        $('.tiny-nav').toggle();
+        
+        // Handle vertical bar height
+        if(verticalNavBarShown)
+        {
+          $('.VerticalMenu').css('margin-top', '6.3%');
+        }
+      }
+    });
+  
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
+  </script>

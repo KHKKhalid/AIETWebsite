@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Alexandria Higher Institute of Engineering & Technology</title>
+    <!-- jQuery -->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <!-- counter -->
+    <script src="js/jQuerySimpleCounter.js"></script>
+    <!-- favicon -->
+    <link rel="icon" href="img/icon.ico">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
+	   <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- our style -->
+    <link href="css/index-style.css" rel="stylesheet">
+    <link href="css/navbar-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/public-style.css">
+   
+   <style type="text/css">
+    @import url(http://fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+   </style>
+  </head>
+  <body>
+	<div class="navbar_container"></div>
+	
+	<script>
+	$( ".navbar_container" ).load( "navbar-Ar.html" );
+	</script>
+	
+    <section class='vid-header'>
+    <div class='blue-effect'></div>
+
+    <img class="bgphoto" src="img/video.jpg">
+
+	<div id="VideoQualityContainer" style="display:none; text-align:center; position:absolute; right:1%; bottom:3%; font-family: 'Open Sans Condensed', sans-serif; font-weight:bold;">
+		<p style="color:white; background-color:rgba(0, 0, 0, 0.9); padding:10%; border-top-left-radius:50%; border-top-right-radius:50%;">Quality</p>
+		<select id="VideoQualitySwitcher" style="display:block;" onchange="HandleVideoQuality()">
+			<option value="medium">Medium</option>
+			<option value="high">High</option>
+			<option value="low">Low</option>
+		</select>
+	</div>
+
+	  
+      <video loop poster="img/video.jpg" id="bgvid" style='display: none; background-color: black; margin: 0 auto; width:100%;' preload="none">
+          <source id="vidmp4source" src="img/aietvideo_medium.mp4" type="video/mp4">
+      </video>
+	  
+      <script type="text/javascript">
+		function HandleVideoQuality()
+		{
+			// This code handles switching video quality
+			var player = document.getElementById('bgvid');
+			var playerMP4Source = document.getElementById('vidmp4source');
+
+			// Stop the player for a while
+			player.pause();
+			
+			// Get the value that our user selected
+			var selectedQuality = document.getElementById("VideoQualitySwitcher").value;
+			
+			// Check values and change video source
+			if(selectedQuality == "high")
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_high.mp4");
+			}
+			else if(selectedQuality == "medium")
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
+			}
+			else if(selectedQuality == "low")
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_low.mp4");
+			}
+			else // not supposed to happen, unrecognized option selected
+			{
+				$(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
+			}
+
+			// Reload the player
+			player.load();
+			player.play();
+		}
+	  
+		var VideoViewerTimer = -1, WatchingVideo = false;
+		$(document).ready(function()
+		{
+			$(document).mousemove(function(event)
+			{
+				if(WatchingVideo)
+				{
+					if(VideoViewerTimer != -1)
+						clearTimeout(VideoViewerTimer);
+						
+					$(".fa-stop-circle, #VideoQualityContainer").fadeIn(1000);
+					VideoViewerTimer = setTimeout(function() { $(".fa-stop-circle, #VideoQualityContainer").fadeOut(1000); }, 6000);
+				}
+			});
+		});
+	  
+        $(function(){
+
+          //long blur function
+          function longBlur(element, size) {
+            var filterVal = 'blur(' + size + 'px)';
+            $(element)
+           .css('filter', filterVal)
+           .css('webkitFilter', filterVal)
+           .css('mozFilter', filterVal)
+           .css('oFilter', filterVal)
+           .css('msFilter', filterVal)
+           .css('transition', 'all 3s ease-out')
+           .css('-webkit-transition', 'all 3s ease-out')
+           .css('-moz-transition', 'all 3s ease-out')
+           .css('-o-transition', 'all 3s ease-out');
+          }
+
+          //short blur function
+          function shortBlur(element, size) {
+            var filterVal = 'blur(' + size + 'px)';
+            $(element)
+           .css('filter', filterVal)
+           .css('webkitFilter', filterVal)
+           .css('mozFilter', filterVal)
+           .css('oFilter', filterVal)
+           .css('msFilter', filterVal)
+           .css('transition', 'all .5s ease-out')
+           .css('-webkit-transition', 'all .5s ease-out')
+           .css('-moz-transition', 'all .5s ease-out')
+           .css('-o-transition', 'all .5s ease-out');
+          }
+		  
+          //playing the video
+          $('.fa-play-circle').click(function(){
+			WatchingVideo = true;
+            longBlur(".landing-content, .navbar", 20);
+            $(".landing-content, .navbar, .fa-play-circle, .bgphoto").fadeOut(1000, function(){
+              var player = document.getElementById('bgvid');
+			  player.currentTime = 0;
+			  player.play();
+			  $(".blue-effect").css("display", "none");
+              $(".fa-stop-circle, #bgvid, #VideoQualityContainer").fadeIn(1000);
+            });
+          })
+
+          //play button hover effects
+          $('.fa-play-circle').mouseenter(function(){
+            $(this).css({"-webkit-text-shadow": "5px 5px 7px rgba(0,0,0,0.5)", "text-shadow": "5px 5px 7px rgba(0,0,0,0.5)"});
+            shortBlur(".landing-content, .navbar", 2);
+          });
+          
+          $('.fa-play-circle').mouseleave(function(){
+            $(this).css({"-webkit-text-shadow": "none", "text-shadow": "none"});
+            shortBlur(".landing-content, .navbar", 0);
+          });
+          
+          // Stoping the video
+          $('.fa-stop-circle').click(function(){
+			WatchingVideo = false;
+            $("#bgvid, .fa-stop-circle, #VideoQualityContainer").fadeOut(1000, function()
+			{
+				$(".blue-effect").css("display", "block");
+				var player = document.getElementById('bgvid');
+				player.pause();
+				player.currentTime = 0;
+				shortBlur(".landing-content, .navbar", 0);
+				$(".bgphoto, .landing-content, .fa-play-circle, .navbar").fadeIn();
+            });
+          });
+        });
+
+      </script>
+
+
+
+
+      <center>
+      <div class="landing-content" style='transition: all .5s ease;'>
+        <img class='logo' src="img/logo.png">
+        <h1 class='mainTxt' style="font-family: 'Noto Kufi Arabic', serif; cursor: default;">المعهد العالى للهندسة والتكنولوجيا</h1>
+      </div>
+        <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease; color: rgb(3, 1, 25);' data-toggle="tooltip" data-placement="top" title="جولة داخل المعهد !" class="fa fa-play-circle"></i>
+      <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease; color: rgb(3, 1, 25);' class="fa fa-stop-circle"></i>
+      </center>
+    </section>
+
+<!-- About us Section -->
+    <section class='aboutUs gradientGrayBG'>
+      <div class='container' style='padding: 0px; padding-top:50px; padding-bottom:50px; text-align: right'>
+
+
+
+          <div class='col-md-6 col-sm-6 col-xs-12' style='background-color:black; height:327px; overflow:hidden'>
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators" style='bottom: 14vh;' >
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner"role="listbox">
+    <div class="item active">
+      <img src="img/1.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/Tour.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" >
+    <span style='margin-top: 3em; font-size: 50px;' class="fa fa-angle-double-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" >
+    <span style='margin-top: 3em; font-size: 50px;' class="fa fa-angle-double-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+          </div>
+
+
+
+                <div class='bigTitle col-md-6 col-sm-6 col-xs-12'>
+        <h1 style='font-size: 26px; line-height: 32px; font-weight: 300; color: #444;'><strong>: عن المعهد</strong></h1>
+        <br>
+
+        <!-- paragraph -->
+        <p style='color: #666; font-size: 14px; line-height: 22px; margin: 0; font-family: 'Open Sans', sans-serif;'>
+          Alexandria Higher Institute of Engineering & Technology (AIET) is a private institute of higher education founded in 1996 and owned by "Mohamed-Ragab Foundation for Social Development" which is a non-profit organization registered under No. SR 1075 with the Egyptian Government.
+
+          The motivation behind establishing this private institute is to fulfill the industry needs in Egypt for engineers well-educated and trained in modern engineering and technological fields. 
+
+          Engineering technology is a relatively new discipline. The programs of study at AIET are designed to meet the growing need created by the technological revolution for college-educated problem solvers who can support the engineering process by bridging the gap between the blueprints and the production line.The AIET Institute is a co-educational where women are admitted, parallel to men, to all departments. The language of instruction is English.
+
+          The main objective of the AIET Institute is to share in the education of the Egyptian youth as well as those from other countries, and in the advancement of knowledge...
+        </p>
+        <br>
+        <a style='width: auto;' href="#" class="readMore">Know more about us &nbsp;&nbsp;<span style="font-weight:bold;" class="fa fa-external-link"></span></a>
+      </div>
+
+
+
+      </div>
+      </section>
+  <!-- EVENTS SECTION -->
+<div class="panel panel-default">
+  <div class="panel-heading" style='background-color: rgba(3, 1, 25, 0.85); color: white; border-bottom: 4px solid #B51918; '>
+    <h3 class="text-center"><strong>اخر الأنشطة</strong></h3>
+  </div>
+  <div class="panel-body" style='padding: 0;'>
+<section class='events'>
+  <div class='container' style="padding: 0px; padding-top:50px; padding-bottom:50px;">
+        <!-- EVENT BOX START -->
+        <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
+            <div id="event1_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+            <div id="event1_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
+        </div>
+        <!-- EVENT BOX END -->
+
+        <!-- EVENT BOX START -->
+        <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
+            <div id="event2_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+            <div id="event2_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
+        </div>
+        <!-- EVENT BOX END -->
+		
+		<!-- EVENT BOX START -->
+        <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
+            <div id="event3_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+            <div id="event3_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
+        </div>
+        <!-- EVENT BOX END -->
+		
+		<!-- EVENT BOX START -->
+        <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
+            <div id="event4_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+            <div id="event4_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
+        </div>
+        <!-- EVENT BOX END -->
+		
+		<!-- EVENT BOX START -->
+        <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
+            <div id="event5_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+            <div id="event5_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
+        </div>
+        <!-- EVENT BOX END -->
+		
+		<!-- EVENT BOX START -->
+        <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
+            <div id="event6_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+            <div id="event6_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
+        </div>
+        <!-- EVENT BOX END -->
+
+		<script src="js/editor/loadevents.js"></script>
+  </div>
+</section>
+</div>
+</div>
+
+  <!-- LATEST NEWS SECTION -->
+  <div class="panel panel-default">
+  <div class="panel-heading" style='background-color: rgba(3, 1, 25, 0.85); color: white; border-bottom: 4px solid #B51918; '>
+    <h3 class="text-center"><strong><a style="color: white" href="Announcement.html">الأخبار و التنويهات</a></strong></h3>
+  </div>
+  <div class="panel-body" style='padding: 0;'>
+      <section class='stay' style='height:400px; color:white'>
+
+
+    <div class='col-sm-9 col-xs-12' style='height:200px;'>
+
+      <div class='col-sm-6 col-xs-12' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news1_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news1_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-sm-6 col-xs-12' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news2_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news2_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-sm-6 col-xs-12' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news3_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news3_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-sm-6 col-xs-12' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news4_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news4_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+      
+	  <div class='col-xs-6 hidden-xs' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news5_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news5_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6 hidden-xs' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news6_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news6_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6 hidden-xs' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news7_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news7_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+
+      <div class='col-xs-6 hidden-xs' style='height:100px;'>
+        <div style='padding-top: 20px;'>
+        <div id="news8_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
+        <div id="news8_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
+        </div>
+      </div>
+    </div>
+	
+	<script src="js/editor/loadnews.js"></script>
+
+    <div class='col-sm-3 col-xs-12' style='padding:0'>
+  <iframe style="border:none; height:400px; width:100%" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Faiet.edu.eg&amp;width=322&amp;colorscheme=light&amp;show_faces=true&amp;stream=true&amp;header=true&amp;height=400" scrolling="yes" allowTransparency="true" frameborder="0"></iframe>
+  </div>
+</section>
+
+
+  </div>
+</div>
+  <!-- Count Down Section -->
+          <script type="text/javascript">
+      
+      // This variable is used to indicate whether the counter has finished its job or not
+      var alreadyDoneCounting = false; 
+          
+      $(function() 
+	  {
+            $(window).scroll(function()
+			{
+				// If the counter has never started...
+				if(!alreadyDoneCounting)
+				{
+					// See if the user has scrolled our page enough to 'countDown' element top edgle
+					if (document.body.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15) || document.documentElement.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15))
+					{
+						// Start counting
+						start_count();
+					}
+				}
+            });
+        });
+
+    
+    // Starts counting professors, students and etc...
+        function start_count()
+    {
+      // Indicate that the counter has started at least once.
+      alreadyDoneCounting = true;
+      
+      // Do the counting...
+      $('.studentCount').jQuerySimpleCounter({
+        start:  0,
+        end:    470,
+        duration: 5000,
+      });
+
+      $('.professorCount').jQuerySimpleCounter({
+        start:  0,
+        end:    60,
+        duration: 3000,
+      });
+
+      $('.assistantCount').jQuerySimpleCounter({
+        start:  0,
+        end:    80,
+        duration: 3000,
+      });
+
+      $('.deptCount').jQuerySimpleCounter({
+        start:  0,
+        end:    4,
+        duration: 3000,
+      });
+        }
+        </script>
+
+  <section class='countDown gradientGrayBG'>
+    <div class='container' style="font-family: 'Open Sans Condensed', sans-serif; font-weight:bold; padding:0; padding-bottom:2%;">
+
+      <div class='col-sm-3 col-xs-12 text-center' style='height:200px; padding:30px 0 30px 0;'>
+          <i class='col-xs-12 fa fa-graduation-cap' style='font-size: 45px; color: rgb(3, 1, 25);'></i><br><br><br><br>
+          <div style='display: inline-flex; padding-bottom: 20px; '>
+          <h2 style='padding-right: 5px;'>+</h2>
+          <h2 class='studentCount'></h2>
+          </div>
+          <h2>طالب</h2>
+      </div>
+
+      <div class='col-sm-3 col-xs-12 text-center' style='height:200px; padding:30px 0 30px 0;'>
+          <i class='col-xs-12 fa fa-user' style='font-size: 45px; color: rgb(3, 1, 25);'></i><br><br><br><br>
+          <div style='display: inline-flex; padding-bottom: 20px; '>
+          <h2 class='professorCount'></h2>
+          </div>
+          <h2>دكتور</h2>
+      </div>
+
+      <div class='col-sm-3 col-xs-12 text-center' style='height:200px; padding:30px 0 30px 0;'>
+          <i class='col-xs-12 fa fa-users' style='font-size: 45px; color: rgb(3, 1, 25);'></i><br><br><br><br>
+          <div style='display: inline-flex; padding-bottom: 20px; '>
+          <h2 class='assistantCount'></h2>
+          </div>
+          <h2>معيد</h2>
+      </div>
+
+      <div class='col-sm-3 col-xs-12 text-center' style='height:200px; padding:30px 0 30px 0;'>
+          <i class='col-xs-12 fa fa-pie-chart' style='font-size: 45px; color: rgb(3, 1, 25);'></i><br><br><br><br>
+          <div style='display: inline-flex; padding-bottom: 20px; '>
+          <h2 class='deptCount'></h2>
+          </div>
+          <h2>قسم</h2>
+      </div>
+
+  </section>
+  <br>
+
+
+  <!-- Featuerd instructors -->
+  <section class='staff' style='margin-top:50px;'>
+
+    <h1 class='text-center fInstructors' style="color: rgb(3, 1, 25);">المعلمون المتميزون</h1>
+    <center>
+    <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
+      <span style="font-size: 40px; background-color: #FFFFFF; padding: 0 10px;">
+        <i class='fa fa-bolt' style="color: rgb(3, 1, 25);"></i>
+      </span>
+    </div>
+    </center><br><br>
+
+
+
+
+      <div class="container">
+  <div class="row">
+
+    <div class="col-lg-3 col-sm-6">
+		<div class="card hovercard">
+			<div id="instructor1_headerphoto" class="cardheader">
+			</div>
+			<div id="instructor1_photo" class="avatar">
+				<img alt="" src="img/Dr.jpg">
+			</div>
+			<div class="info">
+				<div class="title">
+					<a id="instructor1_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+				</div>
+				<div id="instructor1_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+				<hr class='hr'>
+				<div id="instructor1_department" class="desc">Departmet: Computer Engineenring</div>
+			</div>
+			<div id="instructor1_contacts" class="bottom">
+				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-google-plus"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-globe"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+    <div class="col-lg-3 col-sm-6">
+		<div class="card hovercard">
+			<div id="instructor2_headerphoto" class="cardheader">
+			</div>
+			<div id="instructor2_photo" class="avatar">
+				<img alt="" src="img/Dr.jpg">
+			</div>
+			<div class="info">
+				<div class="title">
+					<a id="instructor2_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+				</div>
+				<div id="instructor2_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+				<hr class='hr'>
+				<div id="instructor2_department" class="desc">Departmet: Computer Engineenring</div>
+			</div>
+			<div id="instructor2_contacts" class="bottom">
+				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-google-plus"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-globe"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-3 col-sm-6">
+		<div class="card hovercard">
+			<div id="instructor3_headerphoto" class="cardheader">
+			</div>
+			<div id="instructor3_photo" class="avatar">
+				<img alt="" src="img/Dr.jpg">
+			</div>
+			<div class="info">
+				<div class="title">
+					<a id="instructor3_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+				</div>
+				<div id="instructor3_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+				<hr class='hr'>
+				<div id="instructor3_department" class="desc">Departmet: Computer Engineenring</div>
+			</div>
+			<div id="instructor3_contacts" class="bottom">
+				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-google-plus"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-globe"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-3 col-sm-6">
+		<div class="card hovercard">
+			<div id="instructor4_headerphoto" class="cardheader">
+			</div>
+			<div id="instructor4_photo" class="avatar">
+				<img alt="" src="img/Dr.jpg">
+			</div>
+			<div class="info">
+				<div class="title">
+					<a id="instructor4_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+				</div>
+				<div id="instructor4_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+				<hr class='hr'>
+				<div id="instructor4_department" class="desc">Departmet: Computer Engineenring</div>
+			</div>
+			<div id="instructor4_contacts" class="bottom">
+				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-google-plus"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+					<i class="fa fa-globe"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/editor/loadinstructors.js"></script>
+
+  </div>
+</div>
+  </section>
+
+
+ <!-- Contacts Section -->
+  <section class='stay' style='height:200px; color:white'>
+
+      <div class='social col-sm-3 col-sm-push-1 hidden-xs' style=' height:200px;'>
+        <div style='margin: 50px 0px 50px 0px; padding:3%; border-radius:2%; text-align:center; background-color:rgba(0, 0, 0, 0.8); box-shadow: 0px 2px 15px black;
+'>
+        <h3 style="font-family: 'Ubuntu', sans-serif; font-weight:bold; border-bottom: thin solid #333333;">شبكات التواصل الاجتمعاي</h3><br>
+        <div style='font-size:30px;'>
+			<a target="_blank" href="https://www.facebook.com/aiet.edu.eg/" class='fa fa-facebook-square' style='color: #3B579D'></a>
+			<a target="_blank" href="https://www.linkedin.com/company/alexandria-higher-institute-for-engineering-and-technology" class='fa fa-linkedin-square' style='color: #007bb5'></a>
+			<a target="_blank" href="https://twitter.com/aiet_edu_eg" class='fa fa-twitter-square' style='color: #55acee'></a>
+			<a target="_blank" href="https://en.wikipedia.org/wiki/Alexandria_Higher_Institute_of_Engineering_and_Technology" class='fa fa-wikipedia-w' style='color: #EEEEEE'></a>
+        </div>
+        </div>
+      </div>
+
+      <div class='subs col-sm-9 col-xs-12 counterStart' style='height:200px;'>
+        <center style='margin: 30px 0px 50px 0px;'>
+        <h2 style="font-family: 'Ubuntu', sans-serif; font-weight:bold;">ابق على تواصل دائما</h2><br>
+    <p style='color: rgba(240, 248, 255, 0.9);'>اشترك فى نشرة البريد الاليكتروني لتحصل على اخر الاخبار</p><br>
+              <div class="input-group col-sm-7 col-xs-12">
+        <script>
+        function OnWriteInSubscribeBox()
+        {
+          // If there's at least one character in text area
+          if(document.getElementById("keepintouch_subscribe_input").value)
+          {
+            // Enable the subscribe button
+            document.getElementById("keepintouch_subscribe_button").disabled = false;
+          }
+          else
+          {
+            // Text area is empty. Disable the subscribe button.
+            document.getElementById("keepintouch_subscribe_button").disabled = true;
+          }
+        }
+        </script>
+                <input id="keepintouch_subscribe_input" oninput="OnWriteInSubscribeBox()" type="text" class="form-control col-xs-12" placeholder="your email address (e.g my_name@mail.com)" style=' box-shadow: 0px 2px 15px black;'>
+                <span class="input-group-btn">
+          <button id="keepintouch_subscribe_button" class="btn btn-danger" disabled style='width: auto; height: 34px; background-color: #B51918; color: white; border-color: white; font-weight:bold;' type="button">SUBSCRIBE</button>
+        </span>
+              </div><!-- /input-group -->
+        </center>
+      </div>
+
+  </section>
+ 
+
+  <!-- Our Happy Students -->
+  <section class='happyS' style='margin-top:50px;'>
+        <h1 class='text-center HappysFont'>ماذا يقولون طلاب المعهد ؟</h1>
+    <center>
+    <div style="width: 60%; height: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.21); text-align: center">
+      <span style="font-size: 40px; background-color: #FFFFFF; padding: 0 10px;">
+        <i class='fa fa-smile-o'></i>
+      </span>
+    </div>
+    </center><br><br>
+
+
+    <div class="container">
+<div class="row">
+                    <div class="col-md-12" data-wow-delay="0.2s">
+                        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                            <!-- Bottom Carousel Indicators -->
+                            <ol class="carousel-indicators hidden-xs">
+                                <li id="happystudents1_photo" data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/test.png" alt="">
+                                </li>
+                                <li id="happystudents2_photo" data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/test.png" alt="">
+                                </li>
+                                <li id="happystudents3_photo" data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/test.png" alt="">
+                                </li>
+                            </ol>
+
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner text-center">
+
+                                <!-- Quote 1 -->
+                                <div class="item active">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+
+                                                <p id="happystudents1_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
+                                                <small id="happystudents1_name">Student Name</small>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+
+                                                <p id="happystudents2_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                                <small id="happystudents2_name">Student Name</small>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+
+                                                <p id="happystudents3_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+                                                <small id="happystudents3_name">Student Name</small>
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+								
+								<script src="js/editor/loadhappystudents.js"></script>
+								
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+</div>
+
+  </section>
+
+
+
+<!-- scroll to top -->
+<i class="scrollToTop fa fa-angle-up"></i>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 400) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+  </script>
+  
+  <script type="text/javascript">
+  $(document).ready(function()
+  {
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+    });
+    
+  });
+  </script>
+
+
+</div>
+<!-- Footer section -->
+<div class="footer_container"></div>
+
+<script>
+$( ".footer_container" ).load( "footer-Ar.html" );
+</script>
+
+<!-- Loading Page -->
+<section style='background: #0A1017; color: #FFF; position: fixed; left: 0; top: 0; width:100%; height: 100%; z-index: 9999;' class='bgOverlay'>
+</section>
+<script type="text/javascript">
+  $(".bgOverlay").load("loading-screen.html");
+</script>
+
+  </body>
+</html>
