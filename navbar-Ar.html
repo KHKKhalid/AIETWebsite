@@ -82,14 +82,14 @@ $(document).ready(function(){
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button style="border: none;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span style="background-color: rgb(181, 25, 24);" class="icon-bar"></span>
+        <span style="background-color: rgb(181, 25, 24);" class="icon-bar"></span>
+        <span style="background-color: rgb(181, 25, 24);" class="icon-bar"></span>
       </button>
       <a class="navbar-brand">
-        <i class='fa fa-bars' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%; color: #B51918"></i>
+        <i class='fa fa-bars hidden-xs' style="padding-bottom:1%; padding-top:1%; padding-left:17%; padding-right:17%; color: #B51918"></i>
         <script type="text/javascript">
       var verticalNavBarShown = false;
       
@@ -198,9 +198,32 @@ $(document).ready(function(){
             <li><a data-toggle="tooltip" data-placement="left" title="Information about clubs and communities" href="Societies.html">النوادي والمجتمعات</a></li>
             <li><a data-toggle="tooltip" data-placement="left" title="Our achievements" href="Achievements.html">الإنجازات</a></li>
             <li role="separator" class="divider"></li>
-            <li><a data-toggle="tooltip" data-placement="left" title="Get lectures, sheets, working documents and more" href="lectures.html">تحميل المحاشرات</a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Get lectures, sheets, working documents and more" href="lectures.html">تحميل المحاضرات</a></li>
           </ul>
         </li>
+
+                <!-- mobile version only instead of vertical nav -->
+        <li class="dropdown hidden-lg hidden-md hidden-sm">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+مركز ضمان الجودة<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tooltip" data-placement="left" title="Our faithful student union" href="Vision_Mission.html">الرؤية والرسالة</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown hidden-lg hidden-md hidden-sm">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">فريق العمل<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tooltip" data-placement="left" title="Our faithful student union" href="Ac-staff.html">الطاقم الاكاديمي</a></li>
+            <li><a data-toggle="tooltip" data-placement="left" title="Our faithful student union" href="As-staff.html">المعيدين</a></li>
+          </ul>
+        </li>
+
+        <li class="hidden-lg hidden-md hidden-sm"><a href="Medical.html">الأعذار الطبية</a></li>
+        <li class="hidden-lg hidden-md hidden-sm"><a href="ContinuingEducation.html">اكمال التعليم</a></li>
+        <!-- mobile version only instead of vertical nav -->
+
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
