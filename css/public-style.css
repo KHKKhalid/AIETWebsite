@@ -16,7 +16,7 @@ h4 {
 
 /*LOADING PAGE*/
 body {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .scrollToTop{
