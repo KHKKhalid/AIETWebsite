@@ -206,11 +206,18 @@
 
       <center>
       <div class="landing-content" style='transition: all .5s ease;'>
-        <img class='logo' src="img/logo.png">
-        <h1 class='mainTxt' style="font-family: 'Noto Kufi Arabic', serif; cursor: default;">المعهد العالى للهندسة والتكنولوجيا</h1>
+        <img class='logo hidden-xs' src="img/logo.png">
+        <h1><h1 class='mainTxt hidden-xs' style="font-family: 'Noto Kufi Arabic', serif; cursor: default;">المعهد العالى للهندسة والتكنولوجيا</h1>
+
+        <!-- Mobile Only -->
+        <img class='logo hidden-sm' src="img/logo.png" style="width: 110px; height: 110px; margin-top: 200px;">
+        <h1><h1 class='mainTxt hidden-sm' style="font-family: 'Noto Kufi Arabic', serif; cursor: default; font-size: 20px;">المعهد العالى للهندسة والتكنولوجيا</h1>
+        <!-- Mobile Only -->
+
+
       </div>
-        <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease; color: rgb(3, 1, 25);' data-toggle="tooltip" data-placement="top" title="جولة داخل المعهد !" class="fa fa-play-circle"></i>
-      <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease; color: rgb(3, 1, 25);' class="fa fa-stop-circle"></i>
+        <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease; color: rgb(3, 1, 25);' data-toggle="tooltip" data-placement="top" title="جولة داخل المعهد !" class="fa fa-play-circle hidden-xs"></i>
+      <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease; color: rgb(3, 1, 25);' class="fa fa-stop-circle hidden-xs"></i>
       </center>
     </section>
 
@@ -795,7 +802,7 @@
 
 
 <!-- scroll to top -->
-<i class="scrollToTop fa fa-angle-up"></i>
+<i class="scrollToTop fa fa-angle-up" style="z-index: 99999999999999999;"></i>
 
   <script type="text/javascript">
   $(document).ready(function(){
