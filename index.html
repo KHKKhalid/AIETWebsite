@@ -25,8 +25,8 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
-	   <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-	   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
     <!-- animate -->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -45,83 +45,83 @@
    
   </head>
   <body>
-	<div class="navbar_container"></div>
-	
-	<script>
-	$( ".navbar_container" ).load( "navbar.html" );
-	</script>
-	
+  <div class="navbar_container"></div>
+  
+  <script>
+  $( ".navbar_container" ).load( "navbar.html" );
+  </script>
+  
     <section class='vid-header'>
     <div class='blue-effect'></div>
 
     <img class="bgphoto" src="img/video.jpg">
 
-	<div id="VideoQualityContainer" style="display:none; text-align:center; position:absolute; right:1%; bottom:3%; font-family: 'Open Sans Condensed', sans-serif; font-weight:bold;">
-		<p style="color:white; background-color:rgba(0, 0, 0, 0.9); padding:10%; border-top-left-radius:50%; border-top-right-radius:50%;">Quality</p>
-		<select id="VideoQualitySwitcher" style="display:block;" onchange="HandleVideoQuality()">
-			<option value="medium">Medium</option>
-			<option value="high">High</option>
-			<option value="low">Low</option>
-		</select>
-	</div>
+  <div id="VideoQualityContainer" style="display:none; text-align:center; position:absolute; right:1%; bottom:3%; font-family: 'Open Sans Condensed', sans-serif; font-weight:bold;">
+    <p style="color:white; background-color:rgba(0, 0, 0, 0.9); padding:10%; border-top-left-radius:50%; border-top-right-radius:50%;">Quality</p>
+    <select id="VideoQualitySwitcher" style="display:block;" onchange="HandleVideoQuality()">
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+      <option value="low">Low</option>
+    </select>
+  </div>
 
-	  
+    
       <video loop poster="img/video.jpg" id="bgvid" style='display: none; background-color: black; margin: 0 auto; width:100%;' preload="none">
           <source id="vidmp4source" src="img/aietvideo_medium.mp4" type="video/mp4">
       </video>
-	  
+    
       <script type="text/javascript">
-		function HandleVideoQuality()
-		{
-			// This code handles switching video quality
-			var player = document.getElementById('bgvid');
-			var playerMP4Source = document.getElementById('vidmp4source');
+    function HandleVideoQuality()
+    {
+      // This code handles switching video quality
+      var player = document.getElementById('bgvid');
+      var playerMP4Source = document.getElementById('vidmp4source');
 
-			// Stop the player for a while
-			player.pause();
-			
-			// Get the value that our user selected
-			var selectedQuality = document.getElementById("VideoQualitySwitcher").value;
-			
-			// Check values and change video source
-			if(selectedQuality == "high")
-			{
-				$(playerMP4Source).attr('src', "img/aietvideo_high.mp4");
-			}
-			else if(selectedQuality == "medium")
-			{
-				$(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
-			}
-			else if(selectedQuality == "low")
-			{
-				$(playerMP4Source).attr('src', "img/aietvideo_low.mp4");
-			}
-			else // not supposed to happen, unrecognized option selected
-			{
-				$(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
-			}
+      // Stop the player for a while
+      player.pause();
+      
+      // Get the value that our user selected
+      var selectedQuality = document.getElementById("VideoQualitySwitcher").value;
+      
+      // Check values and change video source
+      if(selectedQuality == "high")
+      {
+        $(playerMP4Source).attr('src', "img/aietvideo_high.mp4");
+      }
+      else if(selectedQuality == "medium")
+      {
+        $(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
+      }
+      else if(selectedQuality == "low")
+      {
+        $(playerMP4Source).attr('src', "img/aietvideo_low.mp4");
+      }
+      else // not supposed to happen, unrecognized option selected
+      {
+        $(playerMP4Source).attr('src', "img/aietvideo_medium.mp4");
+      }
 
-			// Reload the player
-			player.load();
-			player.play();
-		}
-	  
-		var VideoViewerTimer = -1, WatchingVideo = false;
-		$(document).ready(function()
-		{
-			$(document).mousemove(function(event)
-			{
-				if(WatchingVideo)
-				{
-					if(VideoViewerTimer != -1)
-						clearTimeout(VideoViewerTimer);
-						
-					$(".fa-stop-circle, #VideoQualityContainer").fadeIn(1000);
-					VideoViewerTimer = setTimeout(function() { $(".fa-stop-circle, #VideoQualityContainer").fadeOut(1000); }, 6000);
-				}
-			});
-		});
-	  
+      // Reload the player
+      player.load();
+      player.play();
+    }
+    
+    var VideoViewerTimer = -1, WatchingVideo = false;
+    $(document).ready(function()
+    {
+      $(document).mousemove(function(event)
+      {
+        if(WatchingVideo)
+        {
+          if(VideoViewerTimer != -1)
+            clearTimeout(VideoViewerTimer);
+            
+          $(".fa-stop-circle, #VideoQualityContainer").fadeIn(1000);
+          VideoViewerTimer = setTimeout(function() { $(".fa-stop-circle, #VideoQualityContainer").fadeOut(1000); }, 6000);
+        }
+      });
+    });
+    
         $(function(){
 
           //long blur function
@@ -153,16 +153,16 @@
            .css('-moz-transition', 'all .5s ease-out')
            .css('-o-transition', 'all .5s ease-out');
           }
-		  
+      
           //playing the video
           $('.fa-play-circle').click(function(){
-			WatchingVideo = true;
+      WatchingVideo = true;
             longBlur(".landing-content, .navbar", 20);
             $(".landing-content, .navbar, .fa-play-circle, .bgphoto").fadeOut(1000, function(){
               var player = document.getElementById('bgvid');
-			  player.currentTime = 0;
-			  player.play();
-			  $(".blue-effect").css("display", "none");
+        player.currentTime = 0;
+        player.play();
+        $(".blue-effect").css("display", "none");
               $(".fa-stop-circle, #bgvid, #VideoQualityContainer").fadeIn(1000);
             });
           })
@@ -180,15 +180,15 @@
           
           // Stoping the video
           $('.fa-stop-circle').click(function(){
-			WatchingVideo = false;
+      WatchingVideo = false;
             $("#bgvid, .fa-stop-circle, #VideoQualityContainer").fadeOut(1000, function()
-			{
-				$(".blue-effect").css("display", "block");
-				var player = document.getElementById('bgvid');
-				player.pause();
-				player.currentTime = 0;
-				shortBlur(".landing-content, .navbar", 0);
-				$(".bgphoto, .landing-content, .fa-play-circle, .navbar").fadeIn();
+      {
+        $(".blue-effect").css("display", "block");
+        var player = document.getElementById('bgvid');
+        player.pause();
+        player.currentTime = 0;
+        shortBlur(".landing-content, .navbar", 0);
+        $(".bgphoto, .landing-content, .fa-play-circle, .navbar").fadeIn();
             });
           });
         });
@@ -204,13 +204,19 @@
         <h1><h1 class='mainTxt hidden-xs' style="font-family: 'Playfair Display', serif; cursor: default;">Alexandria Higher Institute of Engineering & Technology</h1>
 
         <!-- Mobile Only -->
-        <img class='logo hidden-sm' src="img/logo.png" style="width: 110px; height: 110px; margin-top: 200px;">
-        <h1><h1 class='mainTxt hidden-sm' style="font-family: 'Playfair Display', serif; cursor: default; font-size: 20px;">Alexandria Higher Institute of Engineering & Technology</h1>
+        <img class='logo hidden-sm hidden-md hidden-lg' src="img/logo.png" style="width: 110px; height: 110px; margin-top: 200px;">
+        <h1><h1 class='mainTxt hidden-sm hidden-md hidden-lg' style="font-family: 'Playfair Display', serif; cursor: default; font-size: 20px;">Alexandria Higher Institute of Engineering & Technology</h1>
         <!-- Mobile Only -->
 
       </div>
         <i style='font-size: 90px; padding-top: 30px; cursor: pointer; transition: all 1s ease; color: rgb(3, 1, 25);' data-toggle="tooltip" data-placement="top" title="Take a tour!" class="fa fa-play-circle hidden-xs"></i>
       <i style='font-size: 90px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease; color: rgb(3, 1, 25);' class="fa fa-stop-circle hidden-xs"></i>
+
+      <!-- mobile only -->
+      <i style='font-size: 60px; padding-top: 30px; cursor: pointer; transition: all 1s ease; color: rgb(3, 1, 25);' data-toggle="tooltip" data-placement="top" title="Take a tour!" class="fa fa-play-circle hidden-sm hidden-md hidden-lg"></i>
+      <i style='font-size: 60px; padding-top: 30px; cursor: pointer; display: none; margin-top: 63vh; transition: all 1s ease; color: rgb(3, 1, 25);' class="fa fa-stop-circle hidden-sm hidden-md hidden-lg"></i>
+      <!-- mobile only -->
+
       </center>
     </section>
 
@@ -300,36 +306,36 @@
             <div id="event2_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
         </div>
         <!-- EVENT BOX END -->
-		
-		<!-- EVENT BOX START -->
+    
+    <!-- EVENT BOX START -->
         <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
             <div id="event3_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
             <div id="event3_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
         </div>
         <!-- EVENT BOX END -->
-		
-		<!-- EVENT BOX START -->
+    
+    <!-- EVENT BOX START -->
         <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
             <div id="event4_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
             <div id="event4_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
         </div>
         <!-- EVENT BOX END -->
-		
-		<!-- EVENT BOX START -->
+    
+    <!-- EVENT BOX START -->
         <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
             <div id="event5_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
             <div id="event5_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
         </div>
         <!-- EVENT BOX END -->
-		
-		<!-- EVENT BOX START -->
+    
+    <!-- EVENT BOX START -->
         <div class='col-sm-4 col-xs-12' style='padding-top: 20px; padding-bottom: 20px;'>
             <div id="event6_daydate" class='col-md-3 col-xs-6 text-center' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
             <div id="event6_titletime" class='col-md-9 col-xs-6 '><h4 class='eventsFont'>Arduino Workshop</h4><p class='eventsFont'>9:00 AM CS04</p></div>
         </div>
         <!-- EVENT BOX END -->
 
-		<script src="js/editor/loadevents.js"></script>
+    <script src="js/editor/loadevents.js"></script>
   </div>
 </section>
 </div>
@@ -374,7 +380,7 @@
         </div>
       </div>
       
-	  <div class='col-xs-6 hidden-xs' style='height:100px;'>
+    <div class='col-xs-6 hidden-xs' style='height:100px;'>
         <div style='padding-top: 20px;'>
         <div id="news5_daydate" class='col-xs-2' style='color:black; background-color:white; border: 1px solid black;'>TUE<br><span style='color:#DD863A;'>2 Jun</span></div>
         <div id="news5_titletime" class='col-xs-8'><h4 class='eventsFont'>News title</h4><p class='eventsFont' style='color: rgba(246, 247, 248, 0.84);'>9:00 AM CS04</p></div>
@@ -402,8 +408,8 @@
         </div>
       </div>
     </div>
-	
-	<script src="js/editor/loadnews.js"></script>
+  
+  <script src="js/editor/loadnews.js"></script>
 
     <div class='col-sm-3 col-xs-12' style='padding:0'>
   <iframe style="border:none; height:400px; width:100%" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Faiet.edu.eg&amp;width=322&amp;colorscheme=light&amp;show_faces=true&amp;stream=true&amp;header=true&amp;height=400" scrolling="yes" allowTransparency="true" frameborder="0"></iframe>
@@ -420,19 +426,19 @@
       var alreadyDoneCounting = false; 
           
       $(function() 
-	  {
+    {
             $(window).scroll(function()
-			{
-				// If the counter has never started...
-				if(!alreadyDoneCounting)
-				{
-					// See if the user has scrolled our page enough to 'countDown' element top edgle
-					if (document.body.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15) || document.documentElement.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15))
-					{
-						// Start counting
-						start_count();
-					}
-				}
+      {
+        // If the counter has never started...
+        if(!alreadyDoneCounting)
+        {
+          // See if the user has scrolled our page enough to 'countDown' element top edgle
+          if (document.body.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15) || document.documentElement.scrollTop > (($('.countDown').offset().top - window.innerHeight) + 15))
+          {
+            // Start counting
+            start_count();
+          }
+        }
             });
         });
 
@@ -529,134 +535,134 @@
   <div class="row">
 
     <div class="col-lg-3 col-sm-6">
-		<div class="card hovercard">
-			<div id="instructor1_headerphoto" class="cardheader">
-			</div>
-			<div id="instructor1_photo" class="avatar">
-				<img alt="" src="img/Dr.jpg">
-			</div>
-			<div class="info">
-				<div class="title">
-					<a id="instructor1_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
-				</div>
-				<div id="instructor1_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
-				<hr class='hr'>
-				<div id="instructor1_department" class="desc">Departmet: Computer Engineenring</div>
-			</div>
-			<div id="instructor1_contacts" class="bottom">
-				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
-					<i class="fa fa-twitter"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-google-plus"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-facebook"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-globe"></i>
-				</a>
-			</div>
-		</div>
-	</div>
+    <div class="card hovercard">
+      <div id="instructor1_headerphoto" class="cardheader">
+      </div>
+      <div id="instructor1_photo" class="avatar">
+        <img alt="" src="img/Dr.jpg">
+      </div>
+      <div class="info">
+        <div class="title">
+          <a id="instructor1_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+        </div>
+        <div id="instructor1_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+        <hr class='hr'>
+        <div id="instructor1_department" class="desc">Departmet: Computer Engineenring</div>
+      </div>
+      <div id="instructor1_contacts" class="bottom">
+        <a style='border:none; font-size:15px' class="btn btn-sm" href="">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-google-plus"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-globe"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
     <div class="col-lg-3 col-sm-6">
-		<div class="card hovercard">
-			<div id="instructor2_headerphoto" class="cardheader">
-			</div>
-			<div id="instructor2_photo" class="avatar">
-				<img alt="" src="img/Dr.jpg">
-			</div>
-			<div class="info">
-				<div class="title">
-					<a id="instructor2_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
-				</div>
-				<div id="instructor2_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
-				<hr class='hr'>
-				<div id="instructor2_department" class="desc">Departmet: Computer Engineenring</div>
-			</div>
-			<div id="instructor2_contacts" class="bottom">
-				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
-					<i class="fa fa-twitter"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-google-plus"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-facebook"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-globe"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-	<div class="col-lg-3 col-sm-6">
-		<div class="card hovercard">
-			<div id="instructor3_headerphoto" class="cardheader">
-			</div>
-			<div id="instructor3_photo" class="avatar">
-				<img alt="" src="img/Dr.jpg">
-			</div>
-			<div class="info">
-				<div class="title">
-					<a id="instructor3_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
-				</div>
-				<div id="instructor3_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
-				<hr class='hr'>
-				<div id="instructor3_department" class="desc">Departmet: Computer Engineenring</div>
-			</div>
-			<div id="instructor3_contacts" class="bottom">
-				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
-					<i class="fa fa-twitter"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-google-plus"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-facebook"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-globe"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-	<div class="col-lg-3 col-sm-6">
-		<div class="card hovercard">
-			<div id="instructor4_headerphoto" class="cardheader">
-			</div>
-			<div id="instructor4_photo" class="avatar">
-				<img alt="" src="img/Dr.jpg">
-			</div>
-			<div class="info">
-				<div class="title">
-					<a id="instructor4_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
-				</div>
-				<div id="instructor4_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
-				<hr class='hr'>
-				<div id="instructor4_department" class="desc">Departmet: Computer Engineenring</div>
-			</div>
-			<div id="instructor4_contacts" class="bottom">
-				<a style='border:none; font-size:15px' class="btn btn-sm" href="">
-					<i class="fa fa-twitter"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-google-plus"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-facebook"></i>
-				</a>
-				<a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
-					<i class="fa fa-globe"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-	<script src="js/editor/loadinstructors.js"></script>
+    <div class="card hovercard">
+      <div id="instructor2_headerphoto" class="cardheader">
+      </div>
+      <div id="instructor2_photo" class="avatar">
+        <img alt="" src="img/Dr.jpg">
+      </div>
+      <div class="info">
+        <div class="title">
+          <a id="instructor2_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+        </div>
+        <div id="instructor2_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+        <hr class='hr'>
+        <div id="instructor2_department" class="desc">Departmet: Computer Engineenring</div>
+      </div>
+      <div id="instructor2_contacts" class="bottom">
+        <a style='border:none; font-size:15px' class="btn btn-sm" href="">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-google-plus"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-globe"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-3 col-sm-6">
+    <div class="card hovercard">
+      <div id="instructor3_headerphoto" class="cardheader">
+      </div>
+      <div id="instructor3_photo" class="avatar">
+        <img alt="" src="img/Dr.jpg">
+      </div>
+      <div class="info">
+        <div class="title">
+          <a id="instructor3_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+        </div>
+        <div id="instructor3_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+        <hr class='hr'>
+        <div id="instructor3_department" class="desc">Departmet: Computer Engineenring</div>
+      </div>
+      <div id="instructor3_contacts" class="bottom">
+        <a style='border:none; font-size:15px' class="btn btn-sm" href="">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-google-plus"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-globe"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-3 col-sm-6">
+    <div class="card hovercard">
+      <div id="instructor4_headerphoto" class="cardheader">
+      </div>
+      <div id="instructor4_photo" class="avatar">
+        <img alt="" src="img/Dr.jpg">
+      </div>
+      <div class="info">
+        <div class="title">
+          <a id="instructor4_name" class='staffName' target="_blank" href="#">Dr.Tamer Fouad</a>
+        </div>
+        <div id="instructor4_info" class="desc">Assistant Professor of Computer Engineering Alexandria Higher Institute of Engineering & Technology.</div>
+        <hr class='hr'>
+        <div id="instructor4_department" class="desc">Departmet: Computer Engineenring</div>
+      </div>
+      <div id="instructor4_contacts" class="bottom">
+        <a style='border:none; font-size:15px' class="btn btn-sm" href="">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-google-plus"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a style='border:none; font-size:15px' class="btn btn-sm" rel="publisher" href="">
+          <i class="fa fa-globe"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/editor/loadinstructors.js"></script>
 
   </div>
 </div>
@@ -671,10 +677,10 @@
 '>
         <h3 style="font-family: 'Ubuntu', sans-serif; font-weight:bold; border-bottom: thin solid #333333;">Social Networks</h3><br>
         <div style='font-size:30px;'>
-			<a target="_blank" href="https://www.facebook.com/aiet.edu.eg/" class='fa fa-facebook-square' style='color: #3B579D'></a>
-			<a target="_blank" href="https://www.linkedin.com/company/alexandria-higher-institute-for-engineering-and-technology" class='fa fa-linkedin-square' style='color: #007bb5'></a>
-			<a target="_blank" href="https://twitter.com/aiet_edu_eg" class='fa fa-twitter-square' style='color: #55acee'></a>
-			<a target="_blank" href="https://en.wikipedia.org/wiki/Alexandria_Higher_Institute_of_Engineering_and_Technology" class='fa fa-wikipedia-w' style='color: #EEEEEE'></a>
+      <a target="_blank" href="https://www.facebook.com/aiet.edu.eg/" class='fa fa-facebook-square' style='color: #3B579D'></a>
+      <a target="_blank" href="https://www.linkedin.com/company/alexandria-higher-institute-for-engineering-and-technology" class='fa fa-linkedin-square' style='color: #007bb5'></a>
+      <a target="_blank" href="https://twitter.com/aiet_edu_eg" class='fa fa-twitter-square' style='color: #55acee'></a>
+      <a target="_blank" href="https://en.wikipedia.org/wiki/Alexandria_Higher_Institute_of_Engineering_and_Technology" class='fa fa-wikipedia-w' style='color: #EEEEEE'></a>
         </div>
         </div>
       </div>
@@ -776,9 +782,9 @@
                                         </div>
                                     </blockquote>
                                 </div>
-								
-								<script src="js/editor/loadhappystudents.js"></script>
-								
+                
+                <script src="js/editor/loadhappystudents.js"></script>
+                
                             </div>
 
                         </div>
