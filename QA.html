@@ -79,6 +79,23 @@ body {
     padding-left: 25px;
     transition: 1s ease;
 }
+.movinArrow {
+    position: relative;
+    -webkit-animation: mymove 1s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 1s infinite;
+    color: red;
+    font-size: 15px;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {right: 0px;}
+    to {right: 20px;}
+}
+
+@keyframes mymove {
+    from {right: 0px;}
+    to {right: 20px;}
+}
 </style>    
 
   </head>
@@ -95,9 +112,9 @@ body {
     <div class="container">
     <div class="page-header"><h1>Quality Assurance & Accreditation</h1></div>
     <h3>Please download all the below files :</h3>
-    <a href="http://aiet.edu.eg/Coursereporttemplate_New_NAQAAE_General.doc"><span style="color: gray;">>></span> Course report template_New_NAQAAE_General</a><br>
-    <a href="http://aiet.edu.eg/CoursespecificationFormno.12-Dist%20(General).doc"><span style="color: gray;">>></span> Course specification Form no. 12-Dist (General)</a><br>
-    <a href="http://aiet.edu.eg/Knowledgeandskillsmatrix_Empty.doc"><span style="color: gray;">>></span> Knowledge and skills matrix _Empty</a><br><br>
+    <a href="http://aiet.edu.eg/Coursereporttemplate_New_NAQAAE_General.doc"><small class="movinArrow"> &raquo; </small> Course report template_New_NAQAAE_General</a><br>
+    <a href="http://aiet.edu.eg/CoursespecificationFormno.12-Dist%20(General).doc"><small class="movinArrow"> &raquo; </small> Course specification Form no. 12-Dist (General)</a><br>
+    <a href="http://aiet.edu.eg/Knowledgeandskillsmatrix_Empty.doc"><small class="movinArrow"> &raquo; </small> Knowledge and skills matrix _Empty</a><br><br>
 
     <h4>The Quality Assurance & Accreditation Unit Email is : aiet.quality@aiet.edu.eg</h4>
     </div>
