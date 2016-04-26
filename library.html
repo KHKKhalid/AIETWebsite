@@ -85,6 +85,92 @@ a:hover {
 .panel-body {
   padding: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+  outline: 0;
+}
+
+.btn-custom {
+  margin-bottom: 1em;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-border {
+  border: 0;
+}
+
+.no-radius {
+  border-radius: 0;
+}
+
+
+
+
+.i-row {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.i-row-odd {
+  background-color: #ffffff;
+}
+
+.i-row-even {
+  background-color: #f7f7f7;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  font-weight: 500;
+}
+
+.section-title .fa {
+  margin-right: 5px;
+  color: #6f5499;
+}
+
+
+
+.i-accordion .panel-heading,
+.d-accordion .panel-heading,
+.accordion-2a .panel-heading,
+.accordion-2b .panel-heading,
+.accordion-3 .panel-heading {
+  cursor: pointer;
+}
+
+.d-accordion .panel-heading.collapsed .fa-chevron-up:before {
+  content: '\f078';
+}
 </style>    
 
   </head>
@@ -100,92 +186,90 @@ a:hover {
     <section class='vid-header'>
 
 
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Instructions for using the library
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGieU5rYU9OWFhlbVk/preview" width="100%" height="620"></iframe>
+
+<main id="home" class="contents">
+  <section id="one" class="i-row i-row-odd ir-white">
+    <div class="container">
+      <h2 class="section-title">Library</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Defaults -->
+          <div class="panel-group d-accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#acc1">
+                <h4 class="panel-title">Instructions for using the library <i class="fa fa-chevron-up pull-right"></i></h4>
+              </div>
+              <div id="acc1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGieU5rYU9OWFhlbVk/preview" width="100%" height="620"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#acc2">
+                <h4 class="panel-title">Books purchased for 2011 - 2012 <i class="fa fa-chevron-up pull-right"></i></h4>
+              </div>
+              <div id="acc2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGiYmJ2MUVMaFNlOTQ/preview" width="100%" height="620"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#acc3">
+                <h4 class="panel-title">New & special scientific book collection <i class="fa fa-chevron-up pull-right"></i></h4>
+              </div>
+              <div id="acc3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGib3lVdFpfX0htNE0/preview" width="100%" height="620"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#acc4">
+                <h4 class="panel-title">New & special cultural book collection <i class="fa fa-chevron-up pull-right"></i></h4>
+              </div>
+              <div id="acc4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGiV2JVbVlRRjJuUzA/preview" width="100%" height="620"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-parent=".d-accordion" href="#acc5">
+                <h4 class="panel-title">Library list <i class="fa fa-chevron-up pull-right"></i></h4>
+              </div>
+              <div id="acc5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGicnM0VjJiWkZZMDA/preview" width="100%" height="620"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+</main>
 
+<script type="text/javascript">
+  
 
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Books purchased for 2011 - 2012
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGiYmJ2MUVMaFNlOTQ/preview" width="100%" height="620"></iframe>
-      </div>
-    </div>
-  </div>
+$('.i-accordion').on('show.bs.collapse', function(n) {
+  $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-down fa-chevron-up');
+});
+$('.i-accordion').on('hide.bs.collapse', function(n) {
+  $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-chevron-up fa-chevron-down');
+});
 
-
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          New & special scientific book collection
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGib3lVdFpfX0htNE0/preview" width="100%" height="620"></iframe>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFour">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          New & special cultural book collection
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-      <div class="panel-body">
-        <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGiV2JVbVlRRjJuUzA/preview" width="100%" height="620"></iframe>
-      </div>
-    </div>
-  </div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingFive">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          Library list
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-      <div class="panel-body">
-        <iframe src="https://drive.google.com/file/d/0BxBhPsVSSIGicnM0VjJiWkZZMDA/preview" width="100%" height="620"></iframe>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-</div>
-
+/* P */
+$('.accordion-2a, .accordion-2b, .accordion-3').on('show.bs.collapse', function(n) {
+  $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-minus fa-plus');
+});
+$('.accordion-2a, .accordion-2b, .accordion-3').on('hide.bs.collapse', function(n) {
+  $(n.target).siblings('.panel-heading').find('.panel-title i').toggleClass('fa-plus fa-minus');
+});
+</script>
 
 
 
