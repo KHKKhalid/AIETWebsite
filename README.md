@@ -1,6 +1,7 @@
 # AIET Website
 Alexandria Higher Institute of Engineering &amp; Technology (AIET) - Website
 
+[![Gitter](https://badges.gitter.im/HossamSamir/AIETWebsite.svg)](https://gitter.im/HossamSamir/AIETWebsite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
 View demo: http://hossamsamir.github.io/AIETWebsite/
 
